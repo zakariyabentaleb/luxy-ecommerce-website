@@ -1,0 +1,273 @@
+[
+    {
+      "id": 1,
+      "title": "Blue Denim Jacket",
+      "price": 49.99,
+      "description": "A stylish blue denim jacket with a relaxed fit, perfect for casual outings.",
+      "rating": 4.5,
+      "img": "assets/images/product1.png",
+       "category": "Jackets"
+    },
+    {
+      "id": 2,
+      "title": "Classic White T-Shirt",
+      "price": 14.99,
+      "description": "Soft and comfortable classic white t-shirt, ideal for layering or wearing on its own.",
+      "rating": 4.2,
+      "img": "assets/images/product2.png",
+      "category": "Tops"
+    },
+    {
+      "id": 3,
+      "title": "Black Leather Boots",
+      "price": 89.99,
+      "description": "High-quality black leather boots with durable soles, suitable for everyday wear.",
+      "rating": 4.7,
+      "img": "assets/images/product3.png",
+      "category": "Boots"
+    },
+    {
+      "id": 4,
+      "title": "Red Summer Dress",
+      "price": 39.99,
+      "description": "A flowy red summer dress made from breathable fabric, perfect for warm weather.",
+      "rating": 4.3,
+      "img": "assets/images/PRODUCT4.png",
+      "category": "Dress"
+    },
+    {
+      "id": 5,
+      "title": "Grey Hooded Sweatshirt",
+      "price": 29.99,
+      "description": "A cozy grey hooded sweatshirt with a front pocket and adjustable drawstrings.",
+      "rating": 4.6,
+      "img": "assets/images/product5.png",
+      "category": "Hoode"
+    },
+    {
+      "id": 6,
+      "title": "Black Skinny Jeans",
+      "price": 34.99,
+      "description": "Stretchy black skinny jeans that offer a sleek and modern look, great for any occasion.",
+      "rating": 4.4,
+      "img": "assets/images/product6.png",
+      "category": "Jeans"
+    },
+    {
+      "id": 7,
+      "title": "Beige Trench Coat",
+      "price": 79.99,
+      "description": "A classic beige trench coat that provides a timeless and elegant appearance.",
+      "rating": 4.8,
+      "img": "assets/images/product7.png",
+      "category": "Coat"
+    },
+    {
+      "id": 8,
+      "title": "Green Cargo Pants",
+      "price": 24.99,
+      "description": "Comfortable green cargo pants with multiple pockets, perfect for a practical yet stylish look.",
+      "rating": 4.3,
+      "img": "assets/images/product8.png",
+      "category": "Pants"
+    },
+    {
+        "id": 9,
+        "title": "Blue Denim Jacket",
+        "price": 49.99,
+        "description": "A stylish blue denim jacket with a relaxed fit, perfect for casual outings.",
+        "rating": 4.5,
+        "img": "assets/images/product-9.jpg",
+        "category": "Jackets"
+      },
+      {
+        "id": 10,
+        "title": "Classic White T-Shirt",
+        "price": 14.99,
+        "description": "Soft and comfortable classic white t-shirt, ideal for layering or wearing on its own.",
+        "rating": 4.2,
+        "img": "assets/images/product-10.jpg",
+        "category": "T-shirt"
+      },
+      {
+        "id": 11,
+        "title": "Black Leather Boots",
+        "price": 89.99,
+        "description": "High-quality black leather boots with durable soles, suitable for everyday wear.",
+        "rating": 4.7,
+        "img": "assets/images/product-11.jpg",
+        "category": "Boots"
+      },
+      {
+        "id": 12,
+        "title": "Red Summer Dress",
+        "price": 39.99,
+        "description": "A flowy red summer dress made from breathable fabric, perfect for warm weather.",
+        "rating": 4.3,
+        "img": "assets/images/product-12.jpg",
+        "category": "Dress"
+      },
+      {
+        "id": 13,
+        "title": "Grey Hooded Sweatshirt",
+        "price": 29.99,
+        "description": "A cozy grey hooded sweatshirt with a front pocket and adjustable drawstrings.",
+        "rating": 4.6,
+        "img": "assets/images/product-13.jpg",
+        "category": "Hoode"
+      },
+      {
+        "id": 14,
+        "title": "Black Skinny Jeans",
+        "price": 34.99,
+        "description": "Stretchy black skinny jeans that offer a sleek and modern look, great for any occasion.",
+        "rating": 4.4,
+        "img": "assets/images/product-14.jpg",
+        "category": "Jeans"
+      },
+      {
+        "id": 15,
+        "title": "Beige Trench Coat",
+        "price": 79.99,
+        "description": "A classic beige trench coat that provides a timeless and elegant appearance.",
+        "rating": 4.8,
+        "img": "assets/images/product-15.jpg",
+        "category": "Coat"
+      },
+      {
+        "id": 16,
+        "title": "Green Cargo Pants",
+        "price": 24.99,
+        "description": "Comfortable green cargo pants with multiple pockets, perfect for a practical yet stylish look.",
+        "rating": 4.3,
+        "img": "assets/images/product-16.jpg",
+        "category": "Pants"
+      },
+      {
+        "id": 17,
+        "title": "Blue Denim Jacket",
+        "price": 49.99,
+        "description": "A stylish blue denim jacket with a relaxed fit, perfect for casual outings.",
+        "rating": 4.5,
+        "img": "assets/images/product-17.jpg",
+        "category": "Jackets"
+      },
+      {
+        "id": 18,
+        "title": "Classic White T-Shirt",
+        "price": 14.99,
+        "description": "Soft and comfortable classic white t-shirt, ideal for layering or wearing on its own.",
+        "rating": 4.2,
+        "img": "assets/images/product-18.jpg",
+        "category": "T-shirt"
+      },
+      {
+        "id": 19,
+        "title": "Black Leather Boots",
+        "price": 89.99,
+        "description": "High-quality black leather boots with durable soles, suitable for everyday wear.",
+        "rating": 4.7,
+        "img": "assets/images/product-19.jpg",
+        "category": "Boots"
+      },
+      {
+        "id": 20,
+        "title": "Red Summer Dress",
+        "price": 39.99,
+        "description": "A flowy red summer dress made from breathable fabric, perfect for warm weather.",
+        "rating": 4.3,
+        "img": "assets/images/PRODUCT-20.jpg",
+        "category": "Dress"
+      },
+      {
+        "id": 21,
+        "title": "Grey Hooded Sweatshirt",
+        "price": 29.99,
+        "description": "A cozy grey hooded sweatshirt with a front pocket and adjustable drawstrings.",
+        "rating": 4.6,
+        "img": "assets/images/product-21.jpg",
+        "category": "Hoode"
+      },
+      {
+        "id": 22,
+        "title": "Black Skinny Jeans",
+        "price": 34.99,
+        "description": "Stretchy black skinny jeans that offer a sleek and modern look, great for any occasion.",
+        "rating": 4.4,
+        "img": "assets/images/product-22.jpg",
+        "category": "Jeans"
+      },
+      {
+        "id": 23,
+        "title": "Beige Trench Coat",
+        "price": 79.99,
+        "description": "A classic beige trench coat that provides a timeless and elegant appearance.",
+        "rating": 4.8,
+        "img": "assets/images/product-23.jpg",
+        "category": "Coat"
+      },
+      {
+        "id": 24,
+        "title": "Green Cargo Pants",
+        "price": 24.99,
+        "description": "Comfortable green cargo pants with multiple pockets, perfect for a practical yet stylish look.",
+        "rating": 4.3,
+        "img": "assets/images/product-24.jpg",
+        "category": "Pants"
+      },
+       {
+        "id": 25,
+        "title": "Blue Denim Jacket",
+        "price": 49.99,
+        "description": "A stylish blue denim jacket with a relaxed fit, perfect for casual outings.",
+        "rating": 4.5,
+        "img": "assets/images/product-25.jpg",
+        "category": "Jackets"
+      },
+      {
+        "id": 26,
+        "title": "Classic White T-Shirt",
+        "price": 14.99,
+        "description": "Soft and comfortable classic white t-shirt, ideal for layering or wearing on its own.",
+        "rating": 4.2,
+        "img": "assets/images/product-26.jpg",
+        "category": "T-shirt"
+      },
+      {
+        "id": 27,
+        "title": "Black Leather Boots",
+        "price": 89.99,
+        "description": "High-quality black leather boots with durable soles, suitable for everyday wear.",
+        "rating": 4.7,
+        "img": "assets/images/product-27.jpg",
+        "category": "Boots"
+      },
+      {
+        "id": 28,
+        "title": "Red Summer Dress",
+        "price": 39.99,
+        "description": "A flowy red summer dress made from breathable fabric, perfect for warm weather.",
+        "rating": 4.3,
+        "img": "assets/images/product-28.jpg",
+        "category": "Dress"
+      },
+      {
+        "id": 29,
+        "title": "Grey Hooded Sweatshirt",
+        "price": 29.99,
+        "description": "A cozy grey hooded sweatshirt with a front pocket and adjustable drawstrings.",
+        "rating": 4.6,
+        "img": "assets/images/product-29.jpg",
+        "category": "Hoode"
+      },
+      {
+        "id": 30,
+        "title": "Black Skinny Jeans",
+        "price": 34.99,
+        "description": "Stretchy black skinny jeans that offer a sleek and modern look, great for any occasion.",
+        "rating": 4.4,
+        "img": "assets/images/product-30.jpg",
+        "category": "Jeans"
+      }  
+  ]
+  
