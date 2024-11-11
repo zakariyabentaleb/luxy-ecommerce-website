@@ -1,17 +1,272 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class=" ">
-    <h1 class="text-4xl text-center mt-10">Hello, Vite + Tailwind CSS!</h1>
-    <a href="./pages/404.html">404</a>
-    <a href="./pages/footer.html">footer</a>
-    <a href="./pages/Blog.html">blog</a>
-    <div id="products" class="flex flex-wrap"> </div>
+  <style>
+    h1,
+    h2,
+    h3,
+    p {
+      font-family: "Roboto", sans-serif;
+    }
+    a {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+  <body>
+    <header>
+      <!-- sub nav section  -->
+      <div
+        class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+      >
+        <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+          <p>luxy.contact@gmail.com</p>
+          <p>+212 6204016405</p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+        >
+          <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+          <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+            in your first order
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+        >
+          <p>
+            <a href="./pages/login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------>
+      <!-- nav section  -->
+      <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+        <div class="max-w-6xl w-full flex justify-between">
+          <div class="flex items-center">
+            <div
+              class="menu | sm:hidden h-fit cursor-pointer"
+              id="menu"
+              data-collapse-toggle="navbar-default"
+            >
+              <img
+                width="35"
+                height="20"
+                src="./assets/icons/menu.svg"
+                alt=""
+              />
+            </div>
+            <!-- fisrt child  -->
+            <div class="logo |">
+              <a href="./index.html">
+                <img src="./assets/images/logo.png" alt="luxy logo" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="cards"
+            class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+          >
+            cards
+          </div>
+          <!-- fisrt child  -->
+          <div class="nav-links flex items-center font-[lato] font-bold">
+            <ul
+              id="left-links"
+              class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+            >
+              <!-- products  -->
+              <li class="flex justify-center">
+                <span class="flex items-center gap-1">
+                  <a href="">Products</a>
+                  <img src="./assets/icons/down.svg" alt=""
+                /></span>
+                <ul class="hidden">
+                  <li>T-shirts</li>
+                  <li>shirts</li>
+                  <li>Shoes</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Our Story</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- fisrt child  -->
+          <div class="right-links flex gap-3 justify-center items-center">
+            <div class="favorite h-fit">
+              <img src="./assets/icons/heart.svg" alt="" />
+            </div>
+            <div class="cart h-fit" id="card-btn">
+              <img src="./assets/icons/shopping-cart.svg" alt="" />
+            </div>
+            <div class="user h-fit relative">
+              <img src="./assets/icons/user.svg" alt="" />
+              <span
+                class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                >user</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+    <section class=" p-1 sm:p-0 max-w-6xl w-full mt-14 mx-auto">
+      <div class="flex align-middle gap-4">
+        <div class="h-44 sm:min-h-60 w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/hero-women.png')]  bg-cover bg-center hover:opacity-85 shadow-md" >
+          <h2>NEW COLLECTION</h2>
+          <h2>SHOP WOMENS</h2>
+          <div class="w-1/2 border border-white bg-white"></div>
+        </div>
+        <div class="h-44 sm:min-h-60  w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/hero-men.png')]  bg-cover bg-center hover:opacity-85 shadow-md">
+          <h2>NEW COLLECTION</h2>
+          <h2>SHOP MEN</h2>
+          <div class="w-1/2 border border-white bg-white"></div>
+        </div>
+
+       
+
+      </div>
+
+      <div class=" text-[10px] sm:text-xl flex align-middle gap-4 mt-4">
+        <div class="h-28 sm:min-h-60  w-1/3 flex flex-col justify-center gap-1 sm:gap-5 font-semibold text-white bg-[url('./assets/images/hero-1.png')]  bg-cover bg-center hover:opacity-85 shadow-lg">
+          <h2 class="pl-[50%]">Flip Flop</h2>
+          <h2 class="pl-[50%]">SUMMER</h2>
+          <h2 class="pl-[50%]">SALE -70% OFF</h2>
+          <h2 class="pl-[50%]">SHOP NOW</h2>
+          <div class="ml-[50%] w-1/3 border border-white bg-white"></div>
+        </div>
+        <div class="h-28 sm:min-h-60  sm:font-semibold w-1/3 flex flex-col justify-center pl-5 gap-1 sm:gap-5 text-white bg-[url('./assets/images/hero-2.png')]  bg-cover bg-center hover:opacity-85 ">
+          <h2 class="text-gray-500">ACCESSORIES</h2>
+          <h2>2019 WINTER UP</h2> 
+          <h2>TO 50% OFF</h2> 
+          <h2 class="text-gray-500">SHOP NOW</h2>
+
+          <div class="w-1/2 border border-gray-500"></div>
+        </div>
+
+
+        
+        <div class="h-28 sm:min-h-60  w-1/3 flex flex-col pl-5 justify-center gap-1 sm:gap-5 text-black font-semibold bg-[url('./assets/images/hero-3.png')]  bg-cover bg-center hover:opacity-85 ">
+          <h2>ACCESSORIES</h2>
+          <div>
+           <h2>2019 WINTER UP</h2> 
+           <h2>TO 50% OFF</h2> 
+            </div>
+          <h2>SHOP NOW</h2>
+          <div class="w-1/2 border border-black"></div>
+        </div>
+      </div>
+
+
+    </section>
+  
+
+
+
+
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+  <!-- Newsletter Section -->
+  <section class="bg-blue-100 py-8 mt-16">
+    <div class="max-w-4xl mx-auto flex items-center space-x-4">
+      <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+      <input type="email" placeholder="Email" class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md">
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      
+      <!-- Brand and Description -->
+      <div>
+        <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
+        <p class="text-sm">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+        </p>
+        <p class="text-sm mt-4">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+        </p>
+      </div>
+
+      <!-- Pages Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Pages</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Our Story</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- My Account Links -->
+      <div>
+        <h3 class="font-semibold mb-3">My Account</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Sign up</a></li>
+          <li><a href="#" class="hover:underline">Wishlist</a></li>
+          <li><a href="#" class="hover:underline">View Cart</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Social Media</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">TikTok</a></li>
+          <li><a href="#" class="hover:underline">X</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Customer Service</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Payment</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center mt-8 text-sm text-gray-400">
+      © 2024 Luxy. All Rights Reserved.
+    </div>
+  </footer>
+
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
