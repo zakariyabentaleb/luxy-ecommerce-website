@@ -4,42 +4,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-slate-300">
+  <style>
+    h1,
+    h2,
+    h3,
+    p {
+      font-family: "Roboto", sans-serif;
+    }
+    a {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+  <body>
     <header>
       <!-- sub nav section  -->
-      <div class="bg-black text-[#EBE7E7]">
-        <div>
+      <div
+        class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+      >
+        <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
           <p>luxy.contact@gmail.com</p>
           <p>+212 6204016405</p>
         </div>
-        <div class="text-white">Promotion -20% in your first order</div>
-        <div>
-          <p>Login</p>
-          <p>Create account</p>
+        <div
+          class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+        >
+          <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+          <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+            in your first order
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+        >
+          <p>
+            <a href="./pages/login.html">Login</a>
+          </p>
         </div>
       </div>
 
       <!------------------------------>
       <!-- nav section  -->
-      <nav class="bg-white shadow-md">
-        <div>
-          <div class="menu | md:hidden">
-            <img width="25" height="20" src="./assets/icons/menu.svg" alt="" />
+      <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+        <div class="max-w-6xl w-full flex justify-between">
+          <div class="flex items-center">
+            <div
+              class="menu | sm:hidden h-fit cursor-pointer"
+              id="menu"
+              data-collapse-toggle="navbar-default"
+            >
+              <img
+                width="35"
+                height="20"
+                src="./assets/icons/menu.svg"
+                alt=""
+              />
+            </div>
+            <!-- fisrt child  -->
+            <div class="logo |">
+              <a href="./index.html">
+                <img src="./assets/images/logo.png" alt="luxy logo" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="cards"
+            class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+          >
+            cards
           </div>
           <!-- fisrt child  -->
-          <div class="logo |">
-            <a href="./index.html">
-              <img src="./assets/images/logo.png" alt="luxy logo" />
-            </a>
-          </div>
-          <!-- fisrt child  -->
-          <div class="nav-links">
-            <ul>
+          <div class="nav-links flex items-center font-[lato] font-bold">
+            <ul
+              id="left-links"
+              class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+            >
               <!-- products  -->
-              <li>
-                <span class="flex items-center gap-1"
-                  >Products <img src="./assets/icons/down.svg" alt=""
+              <li class="flex justify-center">
+                <span class="flex items-center gap-1">
+                  <a href="">Products</a>
+                  <img src="./assets/icons/down.svg" alt=""
                 /></span>
                 <ul class="hidden">
                   <li>T-shirts</li>
@@ -59,20 +108,27 @@
             </ul>
           </div>
           <!-- fisrt child  -->
-          <div class="right-links">
-            <div class="favorite">
+          <div class="right-links flex gap-3 justify-center items-center">
+            <div class="favorite h-fit">
               <img src="./assets/icons/heart.svg" alt="" />
             </div>
-            <div class="cart">
+            <div class="cart h-fit" id="card-btn">
               <img src="./assets/icons/shopping-cart.svg" alt="" />
             </div>
-            <div class="user">
+            <div class="user h-fit relative">
               <img src="./assets/icons/user.svg" alt="" />
-              user
+              <span
+                class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                >user</span
+              >
             </div>
           </div>
         </div>
       </nav>
     </header>
+
+  
+
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
