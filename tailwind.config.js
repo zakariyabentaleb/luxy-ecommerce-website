@@ -7,7 +7,11 @@ export default {
     './**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: { 
+      backgroundImage: {
+      'custom-image': "url('/path/to/your/image.jpg')",
+    },
+  },
   },
   plugins: [],
 };
