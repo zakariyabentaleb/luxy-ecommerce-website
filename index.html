@@ -1,17 +1,78 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body class=" ">
-    <h1 class="text-4xl text-center mt-10">Hello, Vite + Tailwind CSS!</h1>
-    <a href="./pages/404.html">404</a>
-    <a href="./pages/footer.html">footer</a>
-    <a href="./pages/Blog.html">blog</a>
-    <div id="products" class="flex flex-wrap"> </div>
-    <script src="./assets/js/app.js"></script>
+  <body class="bg-slate-300">
+    <header>
+      <!-- sub nav section  -->
+      <div class="bg-black text-[#EBE7E7]">
+        <div>
+          <p>luxy.contact@gmail.com</p>
+          <p>+212 6204016405</p>
+        </div>
+        <div class="text-white">Promotion -20% in your first order</div>
+        <div>
+          <p>Login</p>
+          <p>Create account</p>
+        </div>
+      </div>
+
+      <!------------------------------>
+      <!-- nav section  -->
+      <nav class="bg-white shadow-md">
+        <div>
+          <div class="menu | md:hidden">
+            <img width="25" height="20" src="./assets/icons/menu.svg" alt="" />
+          </div>
+          <!-- fisrt child  -->
+          <div class="logo |">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="luxy logo" />
+            </a>
+          </div>
+          <!-- fisrt child  -->
+          <div class="nav-links">
+            <ul>
+              <!-- products  -->
+              <li>
+                <span class="flex items-center gap-1"
+                  >Products <img src="./assets/icons/down.svg" alt=""
+                /></span>
+                <ul class="hidden">
+                  <li>T-shirts</li>
+                  <li>shirts</li>
+                  <li>Shoes</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Our Story</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- fisrt child  -->
+          <div class="right-links">
+            <div class="favorite">
+              <img src="./assets/icons/heart.svg" alt="" />
+            </div>
+            <div class="cart">
+              <img src="./assets/icons/shopping-cart.svg" alt="" />
+            </div>
+            <div class="user">
+              <img src="./assets/icons/user.svg" alt="" />
+              user
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
