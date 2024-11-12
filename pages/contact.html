@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form in Tailwind CSS</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-slate-100">
+    <header>
+      <!-- sub nav section  -->
+      <div
+        class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+      >
+        <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+          <p>luxy.contact@gmail.com</p>
+          <p>+212 6204016405</p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+        >
+          <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+          <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+            in your first order
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+        >
+          <p>
+            <a href="./login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------>
+      <!-- nav section  -->
+      <nav class="bg-white shadow-md flex justify-center p-3">
+        <div class="max-w-6xl w-full flex justify-between">
+          <div class="flex items-center">
+            <div
+              class="menu | sm:hidden h-fit cursor-pointer"
+              id="menu"
+              data-collapse-toggle="navbar-default"
+            >
+              <img
+                width="35"
+                height="20"
+                src="../assets/icons/menu.svg"
+                alt=""
+              />
+            </div>
+            <!-- fisrt child  -->
+            <div class="logo |">
+              <a href="./index.html">
+                <img src="../assets/images/logo.png" alt="luxy logo" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="cards"
+            class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+          >
+            cards
+          </div>
+          <!-- fisrt child  -->
+          <div class="nav-links flex items-center font-[lato] font-bold">
+            <ul
+              id="left-links"
+              class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+            >
+              <!-- products  -->
+              <li class="flex justify-center">
+                <span class="flex items-center gap-1">
+                  <a href="">Products</a>
+                  <img src="../assets/icons/down.svg" alt=""
+                /></span>
+                <ul class="hidden">
+                  <li>T-shirts</li>
+                  <li>shirts</li>
+                  <li>Shoes</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Our Story</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- fisrt child  -->
+          <div class="right-links flex gap-3 justify-center items-center">
+            <div class="favorite h-fit">
+              <img src="../assets/icons/heart.svg" alt="" />
+            </div>
+            <div class="cart h-fit" id="card-btn">
+              <img src="../assets/icons/shopping-cart.svg" alt="" />
+            </div>
+            <div class="user h-fit relative">
+              <img src="../assets/icons/user.svg" alt="" />
+              <span
+                class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                >user</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- -------------------------  -->
+    <div
+      class="bg-cover bg-center h-[250px] w-full mx-auto bg-[url('../assets/images/contact.png')] lg:h-[550px] lg:w-full"
+    >
+      <div
+        class="flex flex-col justify-center items-center h-full text-white px-8"
+      >
+        <h1
+          class="font-montserrat font-semibold text-[40px] pt-[35x] text-center lg:text-[96px]"
+        >
+          Contact Us
+        </h1>
+        <p class="text-center lg:text-[32px]">WHO WE ARE</p>
+      </div>
+    </div>
+    <!-- -------------------------  -->
+
+    <!-- ====== Contact Section Start -->
+
+    <section class="flex justify-center p-3 mt-12">
+      <div class="max-w-6xl w-full flex justify-between items-start flex-wrap md:flex-nowrap gap-8">
+        <!-- left contact  -->
+        <div
+          class="order-2 md:order-1 bg-white w-full text-center md:text-start md:w-1/3 rounded-3xl shadow-md"
+        >
+          <div class="flex flex-col gap-5 items-center md:items-start p-5">
+            <div class="flex items-center gap-3">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="40" height="40" rx="20" fill="#7B66FF" />
+                <path
+                  d="M18.5542 14.241L15.1712 10.336C14.7812 9.88601 14.0662 9.88801 13.6132 10.342L10.8312 13.129C10.0032 13.958 9.76623 15.189 10.2452 16.176C13.1069 22.101 17.8853 26.8861 23.8062 29.756C24.7922 30.235 26.0222 29.998 26.8502 29.169L29.6582 26.356C30.1132 25.901 30.1142 25.182 29.6602 24.792L25.7402 21.427C25.3302 21.075 24.6932 21.121 24.2822 21.533L22.9182 22.899C22.8484 22.9722 22.7565 23.0204 22.6566 23.0363C22.5567 23.0522 22.4543 23.0349 22.3652 22.987C20.1357 21.7031 18.2862 19.8512 17.0052 17.62C16.9573 17.5308 16.9399 17.4282 16.9558 17.3282C16.9717 17.2281 17.02 17.136 17.0932 17.066L18.4532 15.705C18.8652 15.291 18.9102 14.651 18.5542 14.24V14.241Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h2 class="font-bold text-lg">Call Us</h2>
+            </div>
+            <p>We are available 24/7, 7 days a week.</p>
+            <p>Phone: +8801611112222</p>
+            <hr />
+            <div class="flex items-center gap-3">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="40" height="40" rx="20" fill="#7B66FF" />
+                <path
+                  d="M10 13L20 20L30 13M10 27H30V13H10V27Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h2 class="font-bold text-lg">Write to Us</h2>
+            </div>
+
+            <p>Fill out our form and we will contact you within 24 hours.</p>
+            <p>Emails: customer@exclusive.com</p>
+            <p>Emails: support@exclusive.com</p>
+            <!-- <div class=""></div> -->
+          </div>
+        </div>
+        <!-- right contact  -->
+        <div class="w-full md:w-2/3 order-1 md:order-2">
+          <div class="w-full ">
+               <div class="bg-transparent relative  px-8 ">
+                  <form>
+                     <div class="mb-6">
+                        <input
+                           type="text"
+                           placeholder="Your Name"
+                           class="
+                           w-full
+                           rounded
+                           py-3
+                           px-[14px]
+                           text-body-color text-base
+                           border border-[f0f0f0]
+                           outline-none
+                           focus-visible:shadow-none
+                           focus:border-primary
+                           "
+                           />
+                     </div>
+                     <div class="mb-6">
+                        <input
+                           type="email"
+                           placeholder="Your Email"
+                           class="
+                           w-full
+                           rounded
+                           py-3
+                           px-[14px]
+                           text-body-color text-base
+                           border border-[f0f0f0]
+                           outline-none
+                           focus-visible:shadow-none
+                           focus:border-primary
+                           "
+                           />
+                     </div>
+                     <div class="mb-6">
+                        <input
+                           type="text"
+                           placeholder="Your Phone"
+                           class="
+                           w-full
+                           rounded
+                           py-3
+                           px-[14px]
+                           text-body-color text-base
+                           border border-[f0f0f0]
+                           outline-none
+                           focus-visible:shadow-none
+                           focus:border-primary
+                           "
+                           />
+                     </div>
+                     <div class="mb-6">
+                        <textarea
+                           rows="6"
+                           placeholder="Your Message"
+                           class="
+                           w-full
+                           rounded
+                           py-3
+                           px-[14px]
+                           text-body-color text-base
+                           border border-[f0f0f0]
+                           resize-none
+                           outline-none
+                           focus-visible:shadow-none
+                           focus:border-primary
+                           "
+                           ></textarea>
+                     </div>
+                     <div class="flex justify-end">
+                        <button
+                           type="submit"
+                           class="
+                           text-white
+                           bg-black
+                           rounded
+                           border border-primary
+                           py-3
+                           px-5
+                           transition
+                           hover:bg-opacity-90
+                           "
+                           >
+                        Send Message
+                        </button>
+                     </div>
+                  </form>
+                 
+               </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="mt-14">
+     <h2 class="font-semibold text-center text-4xl">Our Story</h2>
+
+     <div class="max-w-6xl  w-full mt-14  mx-auto p-2 md:p-0 flex justify-center md:justify-between items-start flex-wrap md:flex-nowrap gap-8 md:gap-0">
+
+          <!-- left  -->
+          <div class="w-full  md:w-fit flex flex-col gap-4 float-right">
+               <img class="h-[450px] w-[450px] bg-cover bg-center"  src="../assets/images/ourstory.png" alt="">
+               <div class="flex gap-3 items-center">
+                    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1492 49C11.8236 41.0901 -0.636069 29.8616 0.0253027 17.6475C1.10734 7.71758 9.25668 0 19.1492 0C29.0418 0 37.1912 7.71758 38.2732 17.6475C38.7293 30.984 27.4724 40.2121 19.1492 49Z" fill="#7B66FF"/>
+                         <path d="M26.7748 18.586C26.7748 23.0445 23.2793 26.6588 18.9675 26.6588C14.6556 26.6588 11.1602 23.0445 11.1602 18.586C11.1602 14.1275 14.6556 10.5132 18.9675 10.5132C23.2793 10.5132 26.7748 14.1275 26.7748 18.586Z" fill="white"/>
+                    </svg>
+                    <h1 class="font-bold text-4xl">Wall Street</h1>
+               </div>
+               <div class="flex gap-3 items-center">
+                    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1492 49C11.8236 41.0901 -0.636069 29.8616 0.0253027 17.6475C1.10734 7.71758 9.25668 0 19.1492 0C29.0418 0 37.1912 7.71758 38.2732 17.6475C38.7293 30.984 27.4724 40.2121 19.1492 49Z" fill="#7B66FF"/>
+                         <path d="M26.7748 18.586C26.7748 23.0445 23.2793 26.6588 18.9675 26.6588C14.6556 26.6588 11.1602 23.0445 11.1602 18.586C11.1602 14.1275 14.6556 10.5132 18.9675 10.5132C23.2793 10.5132 26.7748 14.1275 26.7748 18.586Z" fill="white"/>
+                    </svg>
+                    <p >Fill out our form and we will contact you within 24 hours.</p>
+
+               </div>
+               <div class="flex gap-3 items-center">
+                    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1492 49C11.8236 41.0901 -0.636069 29.8616 0.0253027 17.6475C1.10734 7.71758 9.25668 0 19.1492 0C29.0418 0 37.1912 7.71758 38.2732 17.6475C38.7293 30.984 27.4724 40.2121 19.1492 49Z" fill="#7B66FF"/>
+                         <path d="M26.7748 18.586C26.7748 23.0445 23.2793 26.6588 18.9675 26.6588C14.6556 26.6588 11.1602 23.0445 11.1602 18.586C11.1602 14.1275 14.6556 10.5132 18.9675 10.5132C23.2793 10.5132 26.7748 14.1275 26.7748 18.586Z" fill="white"/>
+                    </svg>
+                    <div >
+                         <h2 class="font-bold text-3xl">STORE HOURS</h2>
+                         <p>Fill out our form and we will contact you within 24 hours.</p>
+                    </div>
+
+               </div>
+          </div>
+             <!-- left  -->
+             <div class="w-full md:w-fit  flex flex-col gap-4">
+               <img class="h-[450px] w-[450px] bg-cover bg-center"  src="../assets/images/ourstory.png" alt="">
+               <div class="flex gap-3 items-center">
+                    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1492 49C11.8236 41.0901 -0.636069 29.8616 0.0253027 17.6475C1.10734 7.71758 9.25668 0 19.1492 0C29.0418 0 37.1912 7.71758 38.2732 17.6475C38.7293 30.984 27.4724 40.2121 19.1492 49Z" fill="#7B66FF"/>
+                         <path d="M26.7748 18.586C26.7748 23.0445 23.2793 26.6588 18.9675 26.6588C14.6556 26.6588 11.1602 23.0445 11.1602 18.586C11.1602 14.1275 14.6556 10.5132 18.9675 10.5132C23.2793 10.5132 26.7748 14.1275 26.7748 18.586Z" fill="white"/>
+                    </svg>
+                    <h1 class="font-bold text-4xl">Wall Street</h1>
+               </div>
+               <div class="flex gap-3 items-center">
+                    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1492 49C11.8236 41.0901 -0.636069 29.8616 0.0253027 17.6475C1.10734 7.71758 9.25668 0 19.1492 0C29.0418 0 37.1912 7.71758 38.2732 17.6475C38.7293 30.984 27.4724 40.2121 19.1492 49Z" fill="#7B66FF"/>
+                         <path d="M26.7748 18.586C26.7748 23.0445 23.2793 26.6588 18.9675 26.6588C14.6556 26.6588 11.1602 23.0445 11.1602 18.586C11.1602 14.1275 14.6556 10.5132 18.9675 10.5132C23.2793 10.5132 26.7748 14.1275 26.7748 18.586Z" fill="white"/>
+                    </svg>
+                    <p >Fill out our form and we will contact you within 24 hours.</p>
+
+               </div>
+               <div class="flex gap-3 items-center">
+                    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1492 49C11.8236 41.0901 -0.636069 29.8616 0.0253027 17.6475C1.10734 7.71758 9.25668 0 19.1492 0C29.0418 0 37.1912 7.71758 38.2732 17.6475C38.7293 30.984 27.4724 40.2121 19.1492 49Z" fill="#7B66FF"/>
+                         <path d="M26.7748 18.586C26.7748 23.0445 23.2793 26.6588 18.9675 26.6588C14.6556 26.6588 11.1602 23.0445 11.1602 18.586C11.1602 14.1275 14.6556 10.5132 18.9675 10.5132C23.2793 10.5132 26.7748 14.1275 26.7748 18.586Z" fill="white"/>
+                    </svg>
+                    <div >
+                         <h2 class="font-bold text-3xl">STORE HOURS</h2>
+                         <p>Fill out our form and we will contact you within 24 hours.</p>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+
+
+    </section>
+    <!-- -------------------------------------------------    -->
+
+    <!-- Newsletter Section -->
+    <section class="bg-blue-100 py-8 mt-12">
+      <div class="max-w-4xl mx-auto flex items-center space-x-4">
+        <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md"
+        />
+      </div>
+    </section>
+
+    <!-- --------------------------  -->
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-12">
+      <div
+        class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
+      >
+        <!-- Brand and Description -->
+        <div>
+          <img
+            src="../assets/images/1 2.png"
+            alt="Luxy Logo"
+            class="w-24 mb-4"
+          />
+          <p class="text-sm">
+            Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+            augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
+            dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+          </p>
+          <p class="text-sm mt-4">
+            Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+            augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+          </p>
+        </div>
+
+        <!-- Pages Links -->
+        <div>
+          <h3 class="font-semibold mb-3">Pages</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Products</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">Our Story</a></li>
+            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="#" class="hover:underline">Login</a></li>
+            <li><a href="#" class="hover:underline">Register</a></li>
+          </ul>
+        </div>
+
+        <!-- My Account Links -->
+        <div>
+          <h3 class="font-semibold mb-3">My Account</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Login</a></li>
+            <li><a href="#" class="hover:underline">Sign up</a></li>
+            <li><a href="#" class="hover:underline">Wishlist</a></li>
+            <li><a href="#" class="hover:underline">View Cart</a></li>
+            <li><a href="#" class="hover:underline">Help</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div>
+          <h3 class="font-semibold mb-3">Social Media</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Instagram</a></li>
+            <li><a href="#" class="hover:underline">Facebook</a></li>
+            <li><a href="#" class="hover:underline">TikTok</a></li>
+            <li><a href="#" class="hover:underline">X</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service Links -->
+        <div>
+          <h3 class="font-semibold mb-3">Customer Service</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Payment</a></li>
+            <li><a href="#" class="hover:underline">Shipping</a></li>
+            <li><a href="#" class="hover:underline">Returns</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li>
+              <a href="#" class="hover:underline">Terms and Conditions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="text-center mt-8 text-sm text-gray-400">
+        © 2024 Luxy. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
