@@ -6,15 +6,14 @@
 .listCart .item:nth-child(even){
     background-color: black;
 }
+
 body.showCart .cartTab{
     inset: 0 0 0 auto;
 }
-body.showCart .container{
+body.showCart {
     transform: translate(-250px)
 }
-body.showCart .container{
-    transform: translate(-250px);
-}
+
 .cartTab{
     transition: .5s;
 }
