@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login Form in Tailwind CSS</title>
   <link rel="stylesheet" href="../style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
 </head>
 
 
 <body>
   <header>
     <!-- sub nav section  -->
-    <div
-      class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
-    >
+    <div class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2">
       <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
         <p>luxy.contact@gmail.com</p>
         <p>+212 6204016405</p>
       </div>
-      <div
-        class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
-      >
+      <div class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center">
         <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
         <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
           in your first order
         </p>
       </div>
-      <div
-        class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
-      >
+      <div class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs">
         <p>
           <a href="./login.html">Login</a>
         </p>
@@ -40,17 +38,8 @@
     <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
       <div class="max-w-6xl w-full flex justify-between">
         <div class="flex items-center">
-          <div
-            class="menu | sm:hidden h-fit cursor-pointer"
-            id="menu"
-            data-collapse-toggle="navbar-default"
-          >
-            <img
-              width="35"
-              height="20"
-              src="../assets/icons/menu.svg"
-              alt=""
-            />
+          <div class="menu | sm:hidden h-fit cursor-pointer" id="menu" data-collapse-toggle="navbar-default">
+            <img width="35" height="20" src="../assets/icons/menu.svg" alt="" />
           </div>
           <!-- fisrt child  -->
           <div class="logo |">
@@ -60,24 +49,19 @@
           </div>
         </div>
 
-        <div
-          id="cards"
-          class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
-        >
+        <div id="cards"
+          class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden">
           cards
         </div>
         <!-- fisrt child  -->
         <div class="nav-links flex items-center font-[lato] font-bold">
-          <ul
-            id="left-links"
-            class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
-          >
+          <ul id="left-links"
+            class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300">
             <!-- products  -->
             <li class="flex justify-center">
               <span class="flex items-center gap-1">
                 <a href="">Products</a>
-                <img src="../assets/icons/down.svg" alt=""
-              /></span>
+                <img src="../assets/icons/down.svg" alt="" /></span>
               <ul class="hidden">
                 <li>T-shirts</li>
                 <li>shirts</li>
@@ -105,136 +89,173 @@
           </div>
           <div class="user h-fit relative">
             <img src="../assets/icons/user.svg" alt="" />
-            <span
-              class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-              >user</span
-            >
+            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
           </div>
         </div>
       </div>
     </nav>
   </header>
   <div class="flex items-center justify-center min-h-screen p-4 bg-[url('../assets/images/login-bg.jpg')]">
-  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-10">
-    <h3 class="text-lg text-center font-semibold">Log in</h3>
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-10">
+      <h3 class="text-lg text-center font-semibold">Log in</h3>
 
-    <form action="#">
-      <div class="mb-6">
-        <label for="email" class="block font-medium mb-2">Email</label>
-        <input type="email" id="email" placeholder="Enter email address" required class="w-full h-14 border border-gray-300 rounded-md p-4 bg-gray-100 focus:border-indigo-600 transition duration-200" />
+      <form action="#">
+        <div class="mb-6">
+          <label for="username" class="block font-medium mb-2">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" required
+            class="w-full h-14 border border-gray-300 rounded-md p-4 bg-gray-100 focus:border-indigo-600 transition duration-200" />
+        </div>
+
+        <div class="mb-6">
+          <label for="email" class="block font-medium mb-2">Email</label>
+          <input type="email" id="email" placeholder="Enter email address" required
+            class="w-full h-14 border border-gray-300 rounded-md p-4 bg-gray-100 focus:border-indigo-600 transition duration-200" />
+        </div>
+
+        <div class="mb-6">
+          <div class="flex justify-between">
+            <label for="password" class="font-medium">Password</label>
+            <a href="#" class="text-indigo-600 font-medium">Forgot Password?</a>
+          </div>
+          <input type="password" id="password" placeholder="Enter your password" required
+            class="w-full h-14 border border-gray-300 rounded-md p-4 bg-gray-100 focus:border-indigo-600 transition duration-200" />
+        </div>
+
+        <button type="submit"
+          class="w-full h-14 bg-indigo-600 text-white font-medium text-lg rounded-md uppercase transition duration-200 hover:bg-indigo-500">Log
+          In</button>
+        <p class="text-center font-medium my-4">
+          <span class="bg-white px-2">or</span>
+        </p>
+        <div class="flex justify-between items-center my-6">
+          <div class="w-1/2 mr-2">
+            <a href="#"
+              class="flex items-center justify-center h-14 bg-gray-100 border border-gray-300 rounded-md text-gray-800 font-medium transition duration-200 hover:bg-indigo-100">
+              <img src="../assets/images/google.png" alt="" class="max-w-xs mr-2" />
+              <span>Google</span>
+            </a>
+          </div>
+          <div class="w-1/2 ml-2">
+            <a href="#"
+              class="flex items-center justify-center h-14 bg-gray-100 border border-gray-300 rounded-md text-gray-800 font-medium transition duration-200 hover:bg-indigo-100">
+              <img src="../assets/images/facebook.png" alt="Facebook" class="w-6 h-6 mr-2" />
+              <span>Facebook</span>
+            </a>
+          </div>
+
+        </div>
+
+        <p class="text-center mt-4">Don't have an account? <a href="#" class="text-indigo-600 font-medium">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <!-- Newsletter Section -->
+  <section class="bg-blue-100 py-8">
+    <div class="max-w-4xl mx-auto flex items-center space-x-4">
+      <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+      <input type="email" placeholder="Email" class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md">
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+      <!-- Brand and Description -->
+      <div>
+        <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
+        <p class="text-sm">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat.
+          Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+        </p>
+        <p class="text-sm mt-4">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat.
+          Aliquam erat vo.
+        </p>
       </div>
 
-      <div class="mb-6">
-        <div class="flex justify-between">
-          <label for="password" class="font-medium">Password</label>
-          <a href="#" class="text-indigo-600 font-medium">Forgot Password?</a>
-        </div>
-        <input type="password" id="password" placeholder="Enter your password" required class="w-full h-14 border border-gray-300 rounded-md p-4 bg-gray-100 focus:border-indigo-600 transition duration-200" />
+      <!-- Pages Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Pages</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Our Story</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Register</a></li>
+        </ul>
       </div>
 
-      <button type="submit" class="w-full h-14 bg-indigo-600 text-white font-medium text-lg rounded-md uppercase transition duration-200 hover:bg-indigo-500">Log In</button>
-      <p class="text-center font-medium my-4">
-        <span class="bg-white px-2">or</span>
-      </p>
-      <div class="flex justify-between items-center my-6">
-        <div class="w-1/2 mr-2">
-          <a href="#" class="flex items-center justify-center h-14 bg-gray-100 border border-gray-300 rounded-md text-gray-800 font-medium transition duration-200 hover:bg-indigo-100">
-            <img src="../assets/images/google.png" alt="" class="max-w-xs mr-2" />
-            <span>Google</span>
-          </a>
-        </div>
-        <div class="w-1/2 ml-2">
-          <a href="#" class="flex items-center justify-center h-14 bg-gray-100 border border-gray-300 rounded-md text-gray-800 font-medium transition duration-200 hover:bg-indigo-100">
-            <img src="../assets/images/facebook.png" alt="Facebook" class="w-6 h-6 mr-2" />
-            <span>Facebook</span>
-          </a>
-        </div>
-        
+      <!-- My Account Links -->
+      <div>
+        <h3 class="font-semibold mb-3">My Account</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Sign up</a></li>
+          <li><a href="#" class="hover:underline">Wishlist</a></li>
+          <li><a href="#" class="hover:underline">View Cart</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
       </div>
 
-      <p class="text-center mt-4">Don't have an account? <a href="#" class="text-indigo-600 font-medium">Sign up</a></p>
-    </form>
-  </div>
-</div>
-<!-- Newsletter Section -->
-<section class="bg-blue-100 py-8">
-  <div class="max-w-4xl mx-auto flex items-center space-x-4">
-    <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
-    <input type="email" placeholder="Email" class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md">
-  </div>
-</section>
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Social Media</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">TikTok</a></li>
+          <li><a href="#" class="hover:underline">X</a></li>
+        </ul>
+      </div>
 
-<!-- Footer Section -->
-<footer class="bg-black text-white py-12">
-  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-    
-    <!-- Brand and Description -->
-    <div>
-      <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
-      <p class="text-sm">
-        Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-      </p>
-      <p class="text-sm mt-4">
-        Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat vo.
-      </p>
+      <!-- Customer Service Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Customer Service</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Payment</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Pages Links -->
-    <div>
-      <h3 class="font-semibold mb-3">Pages</h3>
-      <ul class="text-sm space-y-2">
-        <li><a href="#" class="hover:underline">Products</a></li>
-        <li><a href="#" class="hover:underline">Contact</a></li>
-        <li><a href="#" class="hover:underline">Our Story</a></li>
-        <li><a href="#" class="hover:underline">Blog</a></li>
-        <li><a href="#" class="hover:underline">Login</a></li>
-        <li><a href="#" class="hover:underline">Register</a></li>
-      </ul>
+    <!-- Footer Bottom -->
+    <div class="text-center mt-8 text-sm text-gray-400">
+      © 2024 Luxy. All Rights Reserved.
     </div>
+  </footer>
 
-    <!-- My Account Links -->
-    <div>
-      <h3 class="font-semibold mb-3">My Account</h3>
-      <ul class="text-sm space-y-2">
-        <li><a href="#" class="hover:underline">Login</a></li>
-        <li><a href="#" class="hover:underline">Sign up</a></li>
-        <li><a href="#" class="hover:underline">Wishlist</a></li>
-        <li><a href="#" class="hover:underline">View Cart</a></li>
-        <li><a href="#" class="hover:underline">Help</a></li>
-        <li><a href="#" class="hover:underline">Contact</a></li>
-      </ul>
-    </div>
+  <script src="../assets/js/app.js"></script>
 
-    <!-- Social Media Links -->
-    <div>
-      <h3 class="font-semibold mb-3">Social Media</h3>
-      <ul class="text-sm space-y-2">
-        <li><a href="#" class="hover:underline">Instagram</a></li>
-        <li><a href="#" class="hover:underline">Facebook</a></li>
-        <li><a href="#" class="hover:underline">TikTok</a></li>
-        <li><a href="#" class="hover:underline">X</a></li>
-      </ul>
-    </div>
 
-    <!-- Customer Service Links -->
-    <div>
-      <h3 class="font-semibold mb-3">Customer Service</h3>
-      <ul class="text-sm space-y-2">
-        <li><a href="#" class="hover:underline">Payment</a></li>
-        <li><a href="#" class="hover:underline">Shipping</a></li>
-        <li><a href="#" class="hover:underline">Returns</a></li>
-        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-        <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
-      </ul>
-    </div>
-  </div>
+  <script>
+    const username = document.getElementById("username")
+    const email = document.getElementById("email")
 
-  <!-- Footer Bottom -->
-  <div class="text-center mt-8 text-sm text-gray-400">
-    © 2024 Luxy. All Rights Reserved.
-  </div>
-</footer>
 
-<script src="../assets/js/app.js"></script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const user = {
+        username: username.value,
+        email: email.value
+      }
+
+      localStorage.setItem(user, JSON.stringify(user))
+
+   window.location.href = "index.html";
+
+
+    });
+
+
+  </script>
 </body>
+
 </html>
