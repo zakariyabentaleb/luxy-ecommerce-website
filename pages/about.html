@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="font-sans">
+
+  <header>
+    <!-- sub nav section  -->
+    <div
+      class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+    >
+      <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+        <p>luxy.contact@gmail.com</p>
+        <p>+212 6204016405</p>
+      </div>
+      <div
+        class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+      >
+        <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+        <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+          in your first order
+        </p>
+      </div>
+      <div
+        class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+      >
+        <p>
+          <a href="./pages/login.html">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <!------------------------------>
+    <!-- nav section  -->
+    <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+      <div class="max-w-6xl w-full flex justify-between">
+        <div class="flex items-center">
+          <div
+            class="menu | sm:hidden h-fit cursor-pointer"
+            id="menu"
+            data-collapse-toggle="navbar-default"
+          >
+            <img
+              width="35"
+              height="20"
+              src="./assets/icons/menu.svg"
+              alt=""
+            />
+          </div>
+          <!-- fisrt child  -->
+          <div class="logo |">
+            <a href="./index.html">
+              <img src="../assets/images/logo.png" alt="luxy logo" />
+            </a>
+          </div>
+        </div>
+
+        <div
+          id="cards"
+          class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+        >
+          cards
+        </div>
+        <!-- fisrt child  -->
+        <div class="nav-links flex items-center font-[lato] font-bold">
+          <ul
+            id="left-links"
+            class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+          >
+            <!-- products  -->
+            <li class="flex justify-center">
+              <span class="flex items-center gap-1">
+                <a href="">Products</a>
+                <img src="../assets/icons/down.svg" alt=""
+              /></span>
+              <ul class="hidden">
+                <li>T-shirts</li>
+                <li>shirts</li>
+                <li>Shoes</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Our Story</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- fisrt child  -->
+        <div class="right-links flex gap-3 justify-center items-center">
+          <div class="favorite h-fit">
+            <img src="../assets/icons/heart.svg" alt="" />
+          </div>
+          <div class="cart h-fit" id="card-btn">
+            <img src="../assets/icons/shopping-cart.svg" alt="" />
+          </div>
+          <div class="user h-fit relative">
+            <img src="../assets/icons/user.svg" alt="" />
+            <span
+              class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+              >user</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  
+    <section>
+        <div class="bg-cover bg-center h-[172px] w-[447.07px] mx-auto bg-[url('../assets/images/about.png')] lg:h-[450px] lg:w-full">
+            <div class="flex flex-col justify-center items-center h-full text-white px-8">
+                <h1 class="font-montserrat font-semibold text-[40px] pt-[35x] text-center lg:text-[96px]">About us</h1>
+                <p class="text-center lg:text-[32px]">WHO WE ARE</p>
+            </div>
+        </div>
+
+        <div class="lg:grid grid-cols-2 grid-rows-1 mt-[88px] mx-auto px-8 gap-[24px] lg:px-[95px] lg:mt-[70px]">
+            <div class="text-center mt-8 lg:text-left lg:w-[525px] ">
+                <h1 class="text-2xl font-semibold text-[48px] mt-[61px] lg:ml-7">Our Story</h1>
+                <p class="mt-[26px] mx-8 text-justify lg:justify-end">
+                    Launched in 2015, Exclusive is South Asia’s premier online shopping marketplace
+                    with an active presence in Bangladesh. Supported by a wide range of tailored marketing, data, and
+                    service solutions, Exclusive has 10,500 sellers and 300 brands, serving 3 million customers across
+                    the region.<br><br>Exclusive has more than 1 million products to offer, growing very fast. Exclusive
+                    offers a diverse assortment in categories ranging from consumer.
+                </p>
+            </div>
+            <div class="mt-8 lg:w-[616px]">
+                <img src="../assets/images/bg 2.png" alt="" class="w-full lg:h-[419px] h-full">
+            </div>
+        </div>
+
+        <div class="text-center mt-[60px]">
+            <img src="/assets/images/frame1.png" alt="" class="inline-block mx-2 mb-4">
+            <img src="/assets/images/frameLg.png" alt="" class="hidden mx-2 mb-4  lg:inline-block">
+            <img src="/assets/images/fram.png" alt="" class="inline-block mx-2 mb-4 ">
+            <img src="/assets/images/frame3.png" alt="" class="inline-block mx-2 mb-4 lg:hidden">
+            <img src="/assets/images/frame4.png" alt="" class="inline-block mx-2 mb-4">
+        </div>
+
+        <div class="mt-[44px] mx-[40px] lg:grid grid-cols-3 grid-rows-1 justify-items-center lg:mb-5 lg:gap-5">
+            <div class="mb-8 lg:mb-0">
+                <img src="../assets/images/achraf.png" alt="Achraf Hanzaz" class="text-center w-80 rounded-3xl shadow-xl">
+                <h1 class="font-semibold mt-4 text-lg">Achraf Hanzaz</h1>
+                <p class="text-sm">Founder & Chairman</p>
+                <div class="mt-2 flex gap-4">
+                    <img src="../assets/images/twitter.png" alt="twitter icon" class="w-5">
+                    <img src="../assets/images/instagram.png" alt="instagram icon" class="w-5">
+                    <img src="../assets/images/linkedin.png" alt="linkedin icon" class="w-5">
+                </div>
+            </div>
+
+            <div class="mb-8 lg:mb-0">
+                <img src="../assets/images/mehdi.png" alt="Mehdi Khamali" class="text-center w-80 rounded-3xl shadow-xl">
+                <h1 class="font-semibold mt-4 text-lg">Mehdi Khamali</h1>
+                <p class="text-sm">Founder & Chairman</p>
+                <div class="mt-2 flex gap-4">
+                    <img src="../assets/images/twitter.png" alt="twitter icon" class="w-5">
+                    <img src="../assets/images/instagram.png" alt="instagram icon" class="w-5">
+                    <img src="../assets/images/linkedin.png" alt="linkedin icon" class="w-5">
+                </div>
+            </div>
+
+            <div class="mb-8 lg:mb-0">
+                <img src="../assets/images/salma.png" alt="Salma Hamdi" class="text-center w-80 rounded-3xl shadow-xl">
+                <h1 class="font-semibold mt-4 text-lg">Salma Hamdi</h1>
+                <p class="text-sm">Founder & Chairman</p>
+                <div class="mt-2 flex gap-4">
+                    <img src="../assets/images/twitter.png" alt="twitter icon" class="w-5">
+                    <img src="../assets/images/instagram.png" alt="instagram icon" class="w-5">
+                    <img src="../assets/images/linkedin.png" alt="linkedin icon" class="w-5">
+                </div>
+            </div>
+
+        </div>
+        <div class="mt-[44px]  mx-[40px] lg:mx-[200px]  lg:grid grid-cols-2 grid-rows-1 justify-items-center lg:mb-5 lg:gap-5  ">
+            <div class="mb-8 lg:mb-0 lg:justify-end">
+                <img src="../assets/images/ali.png" alt="Salma Hamdi" class="text-center w-80 rounded-3xl shadow-xl">
+                <h1 class="font-semibold mt-4 text-lg">Ali Boutain</h1>
+                <p class="text-sm">Founder & Chairman</p>
+                <div class="mt-2 flex gap-4">
+                    <img src="../assets/images/twitter.png" alt="twitter icon" class="w-5">
+                    <img src="../assets/images/instagram.png" alt="instagram icon" class="w-5">
+                    <img src="../assets/images/linkedin.png" alt="linkedin icon" class="w-5">
+                </div>
+            </div>
+        
+            <div class="mb-8 lg:mb-0 lg:justify-start">
+                <img src="../assets/images/zakaria.png" alt="Achraf Hanzaz" class="text-center w-80 rounded-3xl shadow-xl">
+                <h1 class="font-semibold mt-4 text-lg">Zakaria Bentaleb</h1>
+                <p class="text-sm">Founder & Chairman</p>
+                <div class="mt-2 flex gap-4">
+                    <img src="../assets/images/twitter.png" alt="twitter icon" class="w-5">
+                    <img src="../assets/images/instagram.png" alt="instagram icon" class="w-5">
+                    <img src="../assets/images/linkedin.png" alt="linkedin icon" class="w-5">
+                </div>
+            </div>
+        </div>
+    </section>
+  <section class="bg-blue-100 py-8">
+    <div class="max-w-4xl mx-auto flex items-center space-x-4">
+      <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+      <input type="email" placeholder="Email" class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md">
+    </div>
+  </section>
+
+  <footer class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      
+      <div>
+        <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
+        <p class="text-sm">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+        </p>
+        <p class="text-sm mt-4">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">Pages</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Our Story</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Register</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">My Account</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Sign up</a></li>
+          <li><a href="#" class="hover:underline">Wishlist</a></li>
+          <li><a href="#" class="hover:underline">View Cart</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Social Media</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">TikTok</a></li>
+          <li><a href="#" class="hover:underline">X</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">Customer Service</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Payment</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-8 text-sm text-gray-400">
+      © 2024 Luxy. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
