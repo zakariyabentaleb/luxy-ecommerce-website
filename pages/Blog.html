@@ -1,12 +1,132 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog page</title>
-    <link rel="stylesheet" href="/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    h1,
+    h2,
+    h3,
+    p {
+      font-family: "Roboto", sans-serif;
+    }
+    a {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
 <body>
+    <header>
+        <!-- sub nav section  -->
+        <div
+          class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+        >
+          <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+            <p>luxy.contact@gmail.com</p>
+            <p>+212 6204016405</p>
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+          >
+            <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+            <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+              in your first order
+            </p>
+          </div>
+          <div
+            class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+          >
+            <p>
+              <a href="./pages/login.html">Login</a>
+            </p>
+          </div>
+        </div>
+  
+        <!------------------------------>
+        <!-- nav section  -->
+        <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+          <div class="max-w-6xl w-full flex justify-between">
+            <div class="flex items-center">
+              <div
+                class="menu | sm:hidden h-fit cursor-pointer"
+                id="menu"
+                data-collapse-toggle="navbar-default"
+              >
+                <img
+                  width="35"
+                  height="20"
+                  src="./assets/icons/menu.svg"
+                  alt=""
+                />
+              </div>
+              <!-- fisrt child  -->
+              <div class="logo |">
+                <a href="./index.html">
+                  <img src="./assets/images/logo.png" alt="luxy logo" />
+                </a>
+              </div>
+            </div>
+  
+            <div
+              id="cards"
+              class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+            >
+              cards
+            </div>
+            <!-- fisrt child  -->
+            <div class="nav-links flex items-center font-[lato] font-bold">
+              <ul
+                id="left-links"
+                class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+              >
+                <!-- products  -->
+                <li class="flex justify-center">
+                  <span class="flex items-center gap-1">
+                    <a href="">Products</a>
+                    <img src="./assets/icons/down.svg" alt=""
+                  /></span>
+                  <ul class="hidden">
+                    <li>T-shirts</li>
+                    <li>shirts</li>
+                    <li>Shoes</li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Our Story</a>
+                </li>
+                <li>
+                  <a href="./pages/Blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <!-- fisrt child  -->
+            <div class="right-links flex gap-3 justify-center items-center">
+              <div class="favorite h-fit">
+                <img src="./assets/icons/heart.svg" alt="" />
+              </div>
+              <div class="cart h-fit" id="card-btn">
+                <img src="./assets/icons/shopping-cart.svg" alt="" />
+              </div>
+              <div class="user h-fit relative">
+                <img src="./assets/icons/user.svg" alt="" />
+                <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                  >user</span
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
     <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
         <div class="text-center">
             <h1 class="text-4xl">Blog Listing</h1>
@@ -214,7 +334,7 @@
   
   <div class="grid grid-cols-[479px_636px_355px] grid-rows-[repeat(6,_383px)] ml-[16px] gap-4">
     <div class="row-start-1 row-end-2 col-start-1 col-end-2 ">
-        <img src="../assets/images/image1.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image1.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-1 row-end-2 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -224,11 +344,11 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
     <div class="row-start-2 row-end-3 col-start-1 col-end-2 ">
-        <img src="../assets/images/image2.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image2.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-2 row-end-3 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -238,11 +358,11 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
     <div class="row-start-3 row-end-4 col-start-1 col-end-2 ">
-        <img src="../assets/images/image3.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image3.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-3 row-end-4 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -252,11 +372,11 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
     <div class="row-start-4 row-end-5 col-start-1 col-end-2 ">
-        <img src="../assets/images/image4.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image4.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-4 row-end-5 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -266,11 +386,11 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
     <div class="row-start-4 row-end-5 col-start-1 col-end-2 ">
-        <img src="../assets/images/image4.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image4.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-4 row-end-5 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -280,11 +400,11 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
     <div class="row-start-5 row-end-6 col-start-1 col-end-2 ">
-        <img src="../assets/images/image5.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image5.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-5 row-end-6 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -294,11 +414,11 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
     <div class="row-start-6 row-end-7 col-start-1 col-end-2 ">
-        <img src="../assets/images/image5.png" alt="" class="w-full h-full object-cover rounded-md">
+        <img src="../assets/images/image5.png" alt="" class="w-[443px] h-[339px] ">
     </div>
     <div class="row-start-6 row-end-7 col-start-2 col-end-3">
             <div class="flex flex-col space-y-4">
@@ -308,7 +428,7 @@
                  <p class="text-[20px]">A lot of speaking and talking about how important shopping
                     is and how it drastically changed and made our life better and
                     prettier lifestyle lifestyle...</p>
-                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[50px] block">Continue Reading</a></h2>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
             </div>
     </div>
 
@@ -412,7 +532,7 @@
     <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">shopping</span>
     <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">hobbies</span>
   </div>
-  <div class="grid grid-cols-1 grid-rows-[50px_100px] mt-[50px] gap-3">
+      <div class="grid grid-cols-1 grid-rows-[50px_100px] mt-[50px] gap-3">
 
     <div class="flex justify-center content-end">
         <h1 class="text-[36px]">About Blog</h1>
@@ -424,11 +544,12 @@
             randomness is, isn't crazy
             truly freaky.</p>
     </div>
-</div>
+        </div>
     </div>
-
-
   </div>
+
+  
+  
  
 
 </body>
