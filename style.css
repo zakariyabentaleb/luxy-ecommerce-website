@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.listCart .item:nth-child(even){
+    background-color: black;
+}
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+body.showCart .container{
+    transform: translate(-250px)
+}
+body.showCart .container{
+    transform: translate(-250px);
+}
+.cartTab{
+    transition: .5s;
+}
+.container{
+    transition: .5s;
+}
