@@ -76,8 +76,9 @@ const addCartToHTML = () => {
             newCart.classList.add('item');
             let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
             let info = listProducts[positionProduct];
-            newCart.dataset.id = cart.product_id; // Set the product ID
+            newCart.dataset.id = cart.product_id;
             newCart.innerHTML = `
+            <div class="item grid grid-cols-[70px_150px_50px_1fr] gap-[10px] text-center items-center">
                 <div class="image">
                     <img src="/${info.img}" alt="" class="w-full">
                 </div>
@@ -89,6 +90,7 @@ const addCartToHTML = () => {
                     <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">&lt;</span>
                     <span class="">${cart.quantity}</span>
                     <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">></span>
+                </div>
                 </div>
             `;
             listCartHTML.appendChild(newCart);
@@ -130,3 +132,9 @@ const initApp = () => {
 };
 
 initApp();
+
+function updateCounter(){
+    let list = document.getElementById("list");
+    let getCards = list.getElementsByClassName("item");
+    
+}
