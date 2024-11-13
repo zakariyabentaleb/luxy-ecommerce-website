@@ -218,9 +218,15 @@
     </div>
   </section>
 
-  <!------------------------------------------------>
-  <!------------------------------------------------>
-  <!------------------------------------------------>
+  <section>
+    <div class="flex justify-center mt-12">
+      <h1 class="text-3xl font-semibold">EXPLORE MORE </h1>
+    </div>
+  </section>
+  <section>
+    <div class="flex gap-10 justify-center mt-12 mb-52 " id="explore-more">
+    </div>
+  </section>
 
   <!-- <div class="h-44 sm:min-h-60  w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/quality-section.png')]  bg-cover bg-center hover:opacity-85 shadow-md"> -->
   <section
@@ -418,48 +424,86 @@
   </footer>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      console.log("ana hnaya");
-
-      fetch("./assets/js/data.json")
-        .then(response => {
-          console.log("Response:", response);
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then(data => {
-          const productList = document.getElementById("product-list");
-
-          if (!productList) {
-            console.error("Element with id 'product-list' not found.");
-            return;
-          }
-
-          const firstSixProducts = data.slice(0, 6);
-
-          firstSixProducts.forEach(product => {
-            const productDiv = document.createElement("div");
-            productDiv.classList.add(
-              "w-64", "h-48", "flex", "flex-col", "items-center",
-              "transition-transform", "transform", "hover:scale-110", "duration-300"
-            );
-
-            productDiv.innerHTML = `
-          <img src="${product.img}" alt="${product.title}" class="shadow-lg rounded-2xl">
-          <p class="text-slate-400">${product.category}</p>
-          <h1 class="font-semibold">${product.title}</h1>
-          <h2 class="text-yellow-500">$${product.price}</h2>
-          <img src="./assets/icons/heart.svg" alt="" class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24">
-        `;
-
-            productList.appendChild(productDiv);
-          });
-        })
-        .catch(error => console.error("Error loading the data:", error));
+        // Fetch pour la section TOP PRODUCTS
+        fetch("http://localhost:3000/products")
+            .then(response => {
+                console.log("Response:", response);
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const productList = document.getElementById("product-list");
+    
+                if (!productList) {
+                    console.error("Element with id 'product-list' not found.");
+                    return;
+                }
+    
+                const firstThreeProducts = data.slice(0, 3);
+    
+                firstThreeProducts.forEach(product => {
+                    const productDiv = document.createElement("div");
+                    productDiv.classList.add(
+                        "w-64", "h-48", "flex", "flex-col", "items-center",
+                        "transition-transform", "transform", "hover:scale-110", "duration-300"
+                    );
+    
+                    productDiv.innerHTML = `
+                        <img src="${product.img}" alt="${product.title}" class="shadow-lg rounded-2xl">
+                        <p class="text-slate-400">${product.category}</p>
+                        <h1 class="font-semibold">${product.title}</h1>
+                        <h2 class="text-yellow-500">$${product.price}</h2>
+                        <img src="./assets/icons/heart.svg" alt="" class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24">
+                    `;
+    
+                    productList.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error("Error loading the data:", error));
+    
+        // Fetch pour la section EXPLORE MORE
+        fetch("http://localhost:3000/products")
+            .then(response => {
+                console.log("Response:", response);
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const exploreMoreList = document.getElementById("explore-more");
+    
+                if (!exploreMoreList) {
+                    console.error("Element with id 'explore-more' not found.");
+                    return;
+                }
+    
+                const nextThreeProducts = data.slice(3, 6);
+    
+                nextThreeProducts.forEach(product => {
+                    const productDiv = document.createElement("div");
+                    productDiv.classList.add(
+                        "w-64", "h-48", "flex", "flex-col", "items-center",
+                        "transition-transform", "transform", "hover:scale-110", "duration-300"
+                    );
+    
+                    productDiv.innerHTML = `
+                        <img src="${product.img}" alt="${product.title}" class="shadow-lg rounded-2xl">
+                        <p class="text-slate-400">${product.category}</p>
+                        <h1 class="font-semibold">${product.title}</h1>
+                        <h2 class="text-yellow-500">$${product.price}</h2>
+                        <img src="./assets/icons/heart.svg" alt="" class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24">
+                    `;
+    
+                    exploreMoreList.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error("Error loading the data:", error));
     });
-
-  </script>
+    </script>
+    
   <script src="./assets/js/app.js"></script>
 </body>
 </html>
