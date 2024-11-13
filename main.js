@@ -61,16 +61,17 @@ const addToCart = (product_id) => {
             quantity: 1,
         });
     } else {
-        carts[positionThisProductInCart].quantity += 1; // Increment the quantity
+        carts[positionThisProductInCart].quantity += 1; 
     }
     addCartToHTML();
 };
 
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
-    
+    let totalQuantity = 0;
     if (carts.length > 0) {
         carts.forEach(cart => {
+            totalQuantity = totalQuantity + cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add('item');
             let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
@@ -93,6 +94,7 @@ const addCartToHTML = () => {
             listCartHTML.appendChild(newCart);
         });
     }
+    iconCartSpan.innerText = totalQuantity;
 };
 
 listCartHTML.addEventListener('click', (event) => {
@@ -121,10 +123,10 @@ const initApp = () => {
         .then(response => response.json())
         .then(data => {
             listProducts = data;
-            console.log(listProducts); // Check the loaded data
+            console.log(listProducts); 
             addDataToHTML();
         })
-        .catch(error => console.error('Error fetching data:', error)); // Error handling
+        .catch(error => console.error('Error fetching data:', error));
 };
 
 initApp();
