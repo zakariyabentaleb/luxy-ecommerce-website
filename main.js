@@ -5,7 +5,6 @@ let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let ironCartSpan = document.querySelector('.icon-cart span');
 
-
 let listProducts = [];
 let carts = [];
 
@@ -40,19 +39,82 @@ const addDataToHTML = () => {
         });
     }
 };
-listProductHTML.addEventListener('click', (event) =>{
+
+listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
-    if(positionClick.classList.contains('addCart')){
+    if (positionClick.classList.contains('addCart')) {
         let product_id = positionClick.parentElement.dataset.id;
         addToCart(product_id);
     }
-})
+});
 
 const addToCart = (product_id) => {
+    let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
+    if (carts.length <= 0) {
+        carts = [{
+            product_id: product_id,
+            quantity: 1,
+        }];
+    } else if (positionThisProductInCart < 0) {
+        carts.push({
+            product_id: product_id,
+            quantity: 1,
+        });
+    } else {
+        carts[positionThisProductInCart].quantity += 1; // Increment the quantity
+    }
+    addCartToHTML();
+};
 
-}
+const addCartToHTML = () => {
+    listCartHTML.innerHTML = '';
+    
+    if (carts.length > 0) {
+        carts.forEach(cart => {
+            let newCart = document.createElement('div');
+            newCart.classList.add('item');
+            let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
+            let info = listProducts[positionProduct];
+            newCart.dataset.id = cart.product_id; // Set the product ID
+            newCart.innerHTML = `
+                <div class="image">
+                    <img src="/${info.img}" alt="" class="w-full">
+                </div>
+                <div class="name">
+                    ${info.title}
+                </div>
+                <div class="totalPrice">$${info.price * cart.quantity}</div>
+                <div class="quantity">
+                    <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">&lt;</span>
+                    <span class="">${cart.quantity}</span>
+                    <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">></span>
+                </div>
+            `;
+            listCartHTML.appendChild(newCart);
+        });
+    }
+};
 
+listCartHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    let product_id = positionClick.closest('.item').dataset.id;
 
+    if (positionClick.classList.contains('minus')) {
+        let productInCart = carts.find((cart) => cart.product_id == product_id);
+        if (productInCart && productInCart.quantity > 1) {
+            productInCart.quantity -= 1;
+            addCartToHTML();
+        }
+    }
+
+    if (positionClick.classList.contains('plus')) {
+        let productInCart = carts.find((cart) => cart.product_id == product_id);
+        if (productInCart) {
+            productInCart.quantity += 1;
+            addCartToHTML();
+        }
+    }
+});
 
 const initApp = () => {
     fetch('/assets/js/data.json')
