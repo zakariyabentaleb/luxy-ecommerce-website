@@ -1,12 +1,132 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog page</title>
-    <link rel="stylesheet" href="/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    h1,
+    h2,
+    h3,
+    p {
+      font-family: "Roboto", sans-serif;
+    }
+    a {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
 <body>
+    <header>
+        <!-- sub nav section  -->
+        <div
+          class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+        >
+          <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+            <p>luxy.contact@gmail.com</p>
+            <p>+212 6204016405</p>
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+          >
+            <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+            <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+              in your first order
+            </p>
+          </div>
+          <div
+            class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+          >
+            <p>
+              <a href="./pages/login.html">Login</a>
+            </p>
+          </div>
+        </div>
+  
+        <!------------------------------>
+        <!-- nav section  -->
+        <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+          <div class="max-w-6xl w-full flex justify-between">
+            <div class="flex items-center">
+              <div
+                class="menu | sm:hidden h-fit cursor-pointer"
+                id="menu"
+                data-collapse-toggle="navbar-default"
+              >
+                <img
+                  width="35"
+                  height="20"
+                  src="./assets/icons/menu.svg"
+                  alt=""
+                />
+              </div>
+              <!-- fisrt child  -->
+              <div class="logo |">
+                <a href="./index.html">
+                  <img src="./assets/images/logo.png" alt="luxy logo" />
+                </a>
+              </div>
+            </div>
+  
+            <div
+              id="cards"
+              class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+            >
+              cards
+            </div>
+            <!-- fisrt child  -->
+            <div class="nav-links flex items-center font-[lato] font-bold">
+              <ul
+                id="left-links"
+                class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+              >
+                <!-- products  -->
+                <li class="flex justify-center">
+                  <span class="flex items-center gap-1">
+                    <a href="">Products</a>
+                    <img src="./assets/icons/down.svg" alt=""
+                  /></span>
+                  <ul class="hidden">
+                    <li>T-shirts</li>
+                    <li>shirts</li>
+                    <li>Shoes</li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Our Story</a>
+                </li>
+                <li>
+                  <a href="./pages/Blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <!-- fisrt child  -->
+            <div class="right-links flex gap-3 justify-center items-center">
+              <div class="favorite h-fit">
+                <img src="./assets/icons/heart.svg" alt="" />
+              </div>
+              <div class="cart h-fit" id="card-btn">
+                <img src="./assets/icons/shopping-cart.svg" alt="" />
+              </div>
+              <div class="user h-fit relative">
+                <img src="./assets/icons/user.svg" alt="" />
+                <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                  >user</span
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
     <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
         <div class="text-center">
             <h1 class="text-4xl">Blog Listing</h1>
@@ -14,15 +134,15 @@
         </div>
     </div>    
 
-    <!-- Navigation Bar -->
+    
 <nav class=" py-4 ">
     <div class="container mx-auto flex justify-start space-x-6 ml-2 mb-2">
-        <a href="#" class="text-gray-800 hover:text-black">Home </a>
-        <a href="#" class="text-gray-800 hover:text-black">Blog </a>
-        <a href="#" class="text-gray-800 hover:text-black">Listing</a>
+        <a href="#" class="text-gray-800 hover:text-black lg:text-[25px]">Home </a>
+        <a href="#" class="text-gray-800 hover:text-black lg:text-[25px]">Blog </a>
+        <a href="#" class="text-gray-800 hover:text-black lg:text-[25px]">Listing</a>
     </div>
 </nav>
-<div class="grid grid-cols-[155px_225px] gap-5 grid-rows-[repeat(6,_140px)] ml-2">
+<div class="grid grid-cols-[155px_225px] gap-5 grid-rows-[repeat(6,_140px)] ml-2 lg:hidden">
 
         <div class="row-start-1 col-start-1">
             <img src="../assets/images/image1.png" class="w-full h-full object-cover rounded-sm">
@@ -118,11 +238,404 @@
              <h2 class="text-[12px] text-orange-500"><a href="">Continue Reading</a></h2>   
         </div>
 </div>
-
-<div class="">
-
+<div class="flex justify-center mt-5 lg:hidden">
+    <div class="grid grid-cols-[294px] grid-rows-[323px]">
+       <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center flex justify-center items-center flex-col space-y-6">
+        <h3 class="text-gray-500 opacity-60 text-[10px] ">online & store</h3>
+        <h2>SPRING SALE</h2>
+        <h1 class="font-bold">UP TO 60% OFF</h1>
+        <h1 class="font-bold">FROM $5.99</h1>
+        <button><a href="../index.html">SHOP NOW</a></button>
+       </div>
+    </div>
+</div>
+<div class="flex justify-center mt-5 lg:hidden">
+ <div class="grid grid-cols-[287px] grid-rows-[repeat(5,_50px)]">
+    <h1 class="font-bold flex justify-center ">Categories</h1>
+    <div class="flex justify-between flex-row">
+    <h3 class="text-gray-500 opacity-65">Life Style</h3>
+    <h3 class="text-gray-500 opacity-65">3</h3>
+    </div>
+    <div class="flex justify-between flex-row">
+        <h3 class="text-gray-500 opacity-65">Shopping</h3>
+        <h3 class="text-gray-500 opacity-65">3</h3>
+    </div>
+    <div class="flex justify-between flex-row">
+        <h3 class="text-gray-500 opacity-65">Traveling</h3>
+        <h3 class="text-gray-500 opacity-65">0</h3>
+    </div>
+    <div class="flex justify-between flex-row">
+        <h3 class="text-gray-500 opacity-65">Hobbies</h3>
+        <h3 class="text-gray-500 opacity-65">2</h3>
+    </div>
+ </div>
 </div>
 
-    
+<div class="flex justify-center lg:hidden">
+<div class="grid grid-cols-[116px_155px] grid-rows-[repeat(5,_90px)] mt-5 gap-4">
+    <div class="col-span-2 row-start-1 row-end-2 flex items-center justify-center">
+        <h1 class=" font-bold">Popular Post</h1>
+    </div>
+    <div class="row-start-2 row-end-3 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost1.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-2 row-end-3 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+
+    <div class="row-start-3 row-end-4 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost2.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-3 row-end-4 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+
+    <div class="row-start-4 row-end-5 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost3.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-4 row-end-5 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+
+    <div class="row-start-5 row-end-6 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost4.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-5 row-end-6 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+</div>
+</div>
+
+<div class="text-center my-4 lg:hiddend">
+    <h2 class="text-2xl font-bold lg:hidden">Browse Tags</h2>
+  </div>
+  
+  <div class="flex flex-wrap gap-3 justify-center lg:hidden">
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">fashion</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">style</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">women</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">photography</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">travel</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">shopping</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">hobbies</span>
+  </div>
+     
+
+
+  <!-- desktop version -->
+
+  <div class="hidden lg:block">
+    <!-- Your entire code block here -->
+
+
+  <div class="lg:grid grid-cols-[479px_636px_320px] grid-rows-[repeat(6,_383px)] lg:ml-[16px] lg:gap-4 ">
+    <div class="lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-2 ">
+        <img src="../assets/images/image1.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3">
+            <div class="lg:flex lg:flex-col lg:space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+    <div class="lg:row-start-2 lg:row-end-3 lg:col-start-1 lg:col-end-2 ">
+        <img src="../assets/images/image2.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="lg:row-start-2 lg:row-end-3 lg:col-start-2 lg:col-end-3">
+            <div class="lg:flex lg:flex-col lg:space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+    <div class="lg:row-start-3 lg:row-end-4 lg:col-start-1 lg:col-end-2 ">
+        <img src="../assets/images/image3.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="lg:row-start-3 row-end-4 col-start-2 col-end-3">
+            <div class="lg:flex flex-col space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+    <div class="row-start-4 row-end-5 col-start-1 col-end-2 ">
+        <img src="../assets/images/image4.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="row-start-4 row-end-5 col-start-2 col-end-3">
+            <div class="flex flex-col space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+    <div class="row-start-4 row-end-5 col-start-1 col-end-2 ">
+        <img src="../assets/images/image4.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="row-start-4 row-end-5 col-start-2 col-end-3">
+            <div class="flex flex-col space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+    <div class="row-start-5 row-end-6 col-start-1 col-end-2 ">
+        <img src="../assets/images/image5.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="row-start-5 row-end-6 col-start-2 col-end-3">
+            <div class="flex flex-col space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+    <div class="row-start-6 row-end-7 col-start-1 col-end-2 ">
+        <img src="../assets/images/image5.png" alt="" class="w-[443px] h-[339px] ">
+    </div>
+    <div class="row-start-6 row-end-7 col-start-2 col-end-3">
+            <div class="flex flex-col space-y-4">
+                 <h2 class="text-gray-500 opacity-60 text-[20px]">By Ash | Nov 12,2024 | 2 Comments</h2>
+                 <h1 class="text-[32px]">A Very Intresting Description</h1>
+                 <h3 class="text-[16px]">In LifeStyle, Shopping</h3>
+                 <p class="text-[20px]">A lot of speaking and talking about how important shopping
+                    is and how it drastically changed and made our life better and
+                    prettier lifestyle lifestyle...</p>
+                <h2 class="text-orange-500 text-[22px] "><a href="#" class="mt-[25px] block">Continue Reading</a></h2>
+            </div>
+    </div>
+
+
+
+
+    <div class="row-span-6 col-start-3 col-end-4">
+
+        <div class="flex justify-center mt-5 ">
+            <div class="grid grid-cols-[287px] grid-rows-[repeat(5,_50px)]">
+               <h1 class="font-bold flex justify-start text-[24px] ">Categories</h1>
+               <div class="flex justify-between flex-row">
+               <h3 class="text-gray-500 opacity-65 text-[16px]">Life Style</h3>
+               <h3 class="text-gray-500 opacity-65 text-[16px]">3</h3>
+               </div>
+               <div class="flex justify-between flex-row">
+                   <h3 class="text-gray-500 opacity-65 text-[16px]">Shopping</h3>
+                   <h3 class="text-gray-500 opacity-65 text-[16px]">3</h3>
+               </div>
+               <div class="flex justify-between flex-row">
+                   <h3 class="text-gray-500 opacity-65 text-[16px]">Traveling</h3>
+                   <h3 class="text-gray-500 opacity-65 text-[16px]">0</h3>
+               </div>
+               <div class="flex justify-between flex-row">
+                   <h3 class="text-gray-500 opacity-65 text-[16px]">Hobbies</h3>
+                   <h3 class="text-gray-500 opacity-65 text-[16px]">2</h3>
+               </div>
+            </div>
+           </div>
+
+        <div class="flex justify-center mt-5 ">
+    <div class="grid grid-cols-[294px] grid-rows-[323px]">
+       <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center flex justify-center items-center flex-col space-y-6">
+        <h3 class="text-gray-500 opacity-60 text-[10px] ">online & store</h3>
+        <h2>SPRING SALE</h2>
+        <h1 class="font-bold">UP TO 60% OFF</h1>
+        <h1 class="font-bold">FROM $5.99</h1>
+        <button><a href="../index.html">SHOP NOW</a></button>
+       </div>
+    </div>
+</div>
+
+<div class="flex justify-center ">
+<div class="grid grid-cols-[116px_155px] grid-rows-[repeat(5,_90px)] mt-5 gap-4">
+    <div class="col-span-2 row-start-1 row-end-2 flex items-center justify-center">
+        <h1 class=" font-bold text-[24px]">Popular Post</h1>
+    </div>
+    <div class="row-start-2 row-end-3 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost1.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-2 row-end-3 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+
+    <div class="row-start-3 row-end-4 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost2.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-3 row-end-4 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+
+    <div class="row-start-4 row-end-5 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost3.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-4 row-end-5 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+
+    <div class="row-start-5 row-end-6 col-start-1 col-end-2">
+        <img src="../assets/images/PopularPost4.png" alt="" class="w-full h-full object-cover rounded-sm">
+    </div>
+    <div class="row-start-5 row-end-6 col-start-2 col-end-3">
+       <div class="flex flex-col">
+          <h3 class="text-gray-500 opacity-65">Nov 12, 2024</h3>
+          <h2 class="">Some Random Text here.</h2>
+     </div>
+    </div>
+</div>
+</div>
+
+<div class="text-center my-4 mt-[100px]">
+    <h2 class="text-[36px] font-bold ">Browse Tags</h2>
+  </div>
+  
+  <div class="flex flex-wrap gap-3 justify-center ">
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">fashion</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">style</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">women</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">photography</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">travel</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">shopping</span>
+    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-lg">hobbies</span>
+  </div>
+      <div class="grid grid-cols-1 grid-rows-[50px_100px] mt-[50px] gap-3">
+
+    <div class="flex justify-center content-end">
+        <h1 class="text-[36px]">About Blog</h1>
+    </div>
+
+    <div >
+        <p class="text-gray-400 opacity-70 text-[24px] ml-6 ">A lot of random texts here
+            talking about how random
+            randomness is, isn't crazy
+            truly freaky.</p>
+    </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+   <!-- Newsletter Section -->
+   <section class="bg-blue-100 py-8">
+    <div class="max-w-4xl mx-auto flex items-center space-x-4">
+      <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+      <input type="email" placeholder="Email" class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md">
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      
+      <!-- Brand and Description -->
+      <div>
+        <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
+        <p class="text-sm">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+        </p>
+        <p class="text-sm mt-4">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+        </p>
+      </div>
+
+      <!-- Pages Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Pages</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Our Story</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- My Account Links -->
+      <div>
+        <h3 class="font-semibold mb-3">My Account</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Sign up</a></li>
+          <li><a href="#" class="hover:underline">Wishlist</a></li>
+          <li><a href="#" class="hover:underline">View Cart</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Social Media</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">TikTok</a></li>
+          <li><a href="#" class="hover:underline">X</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Customer Service</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Payment</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center mt-8 text-sm text-gray-400">
+      © 2024 Luxy. All Rights Reserved.
+    </div>
+  </footer>
+  
+ 
+
 </body>
 </html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans">
+    <header>
+      <div
+        class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+      >
+        <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+          <p>luxy.contact@gmail.com</p>
+          <p>+212 6204016405</p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+        >
+          <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+          <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+            in your first order
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+        >
+          <p>
+            <a href="./pages/login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------>
+      <!-- nav section  -->
+      <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+        <div class="max-w-6xl w-full flex justify-between">
+          <div class="flex items-center">
+            <div
+              class="menu | sm:hidden h-fit cursor-pointer"
+              id="menu"
+              data-collapse-toggle="navbar-default"
+            >
+              <img
+                width="35"
+                height="20"
+                src="../assets/icons/menu.svg"
+                alt=""
+              />
+            </div>
+            <!-- fisrt child  -->
+            <div class="logo |">
+              <a href="./index.html">
+                <img src="../assets/images/logo.png" alt="luxy logo" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="cards"
+            class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
+          >
+            cards
+          </div>
+          <!-- fisrt child  -->
+          <div class="nav-links flex items-center font-[lato] font-bold">
+            <ul
+              id="left-links"
+              class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+            >
+              <!-- products  -->
+              <li class="flex justify-center">
+                <span class="flex items-center gap-1">
+                  <a href="">Products</a>
+                  <img src="../assets/icons/down.svg" alt=""
+                /></span>
+                <ul class="hidden">
+                  <li>T-shirts</li>
+                  <li>shirts</li>
+                  <li>Shoes</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Our Story</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- fisrt child  -->
+          <div class="right-links flex gap-3 justify-center items-center">
+            <div class="favorite h-fit">
+              <img src="../assets/icons/heart.svg" alt="" />
+            </div>
+            <div class="cart h-fit" id="card-btn">
+              <img src="../assets/icons/shopping-cart.svg" alt="" />
+            </div>
+            <div class="user h-fit relative">
+              <img src="../assets/icons/user.svg" alt="" />
+              <span
+                class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                >user</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- --------  -->
+    <!-- --------  -->
+    <!-- --------  -->
+    <!-- --------  -->
+    <div id="not-found" class=" hidden  h-screen flex-col bg-white">
+     <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
+         alt="" class="h-64 w-full object-cover" />
+
+     <div class="flex flex-1 items-center justify-center">
+         <div class="mx-auto max-w-xl px-4 py-8 text-center">
+             <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                 We can't find that page.
+             </h1>
+
+             <p class="mt-4 text-gray-500">
+                 Try searching again, or return home to start from the beginning.
+             </p>
+
+             <a href="../index.html"
+                 class="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring">
+                 Go Back Home
+             </a>
+         </div>
+     </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="product-detail">
+     <div
+     class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center"
+   >
+     <div class="text-center">
+       <h1 class="text-4xl font-semibold">HERE YOU FIND WHAT YOU WANT</h1>
+       <h2 class="text-2xl text-orange-500 font-bold mt-6">Shop</h2>
+     </div>
+   </div>
+
+
+   
+   <section id="detail" class=" max-w-6xl  p-4 md:p-0 w-full mx-auto gap-12 flex flex-col items-center md:items-start  justify-center i md:flex-row md:justify-between mt-20">
+      
+     
+     
+     <div  class="w-1/2 flex justify-center items-center relative rounded-xl ">
+          <div id="loading" class="absolute h-full w-full bg-slate-300 top-0 left-0 rounded-xl">
+
+          </div>
+        <img
+        id="product-image"
+          src="../assets/images/product-12.jpg"
+          class="bg-cover bg-center rounded-xl md:w-[400px] md:h-[500px]"
+          alt=""
+        />
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div id="product-content" class="flex flex-col flex-wrap w-full md:w-1/2 md:gap-7 ">
+          <h2 id="title" class="font-semibold text-2xl ">loading ...</h2>
+          <div>
+               <h1 id="price" class="text-yellow-400 font-semibold text-4xl">$</h1>
+                    <svg id="heart-btn" class="mt-4 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                         <rect width="24" height="24" fill="url(#pattern0_218_3495)"/>
+                         <defs>
+                         <pattern id="pattern0_218_3495" patternContentUnits="objectBoundingBox" width="1" height="1">
+                         <use xlink:href="#image0_218_3495" transform="scale(0.0416667)"/>
+                         </pattern>
+                         <image id="image0_218_3495" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAFNwAABTcBN+5syQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGlSURBVEiJ3dS9axRBGMfxz50YETs1NoeogZwvKGparQyCRYwg+g8IIpb6B/jWaSHaKgh2aTQiaVNEC1GxFAWJCgoeghBDFF+Ia7HPcsOZS/bMFuIPhpl59vd859ndmeF/007cxDS+ooUJHEMt8dVwPJ61wjuNG8H4QzWcxzyyLm0S67A+xt188zjXUZBLieE+RtDEPlyJCjM8j5bhCy6Hp4nDkVtwLhbwIfyK4Jkun25PfIoiuRWxhXQ2eZPdcDsCd7okFNqBd3gf48V0L5i3RFKGQ0skwUr0lfCNBPMN/IhJs0RiWW0P5rc6ZiLYX+ECG6KfqeNJTI5UuMBo9I/JD0yGOWytAL5NvoUzHIU6HkbgNTYtA745GBmmJIetIf/jxZ/f8hfwAbxNGI1Ow0a8CsMH7O0Bvkt+PpYssIGXYfyM4RLwg5iNnBcLVd6ptXgQCT9xehHvCXwP7yM9bPVVGNO+e67LN0OhGi4kz+9idVl4oRW4lkDGsSbaeBK/2rF4zzqlfZ08i5ZF7ORywKn246N21Z9woCp4oUE8lV8tg1XD/139BthtgcT3C4Z4AAAAAElFTkSuQmCC"/>
+                         </defs>
+                         </svg>
+               
+                    
+               <!-- <img src="../assets/icons/heart.svg" class="mt-4 cursor-pointer hover:bg-red-600 roun" alt=""> -->
+          </div>
+         
+          <p id="description" class="text-gray-500 w-full">
+          </p>
+          <p id="category" class="w-fit px-3 py-1 rounded-md text-gray-500 border border-gray-500 hover:text-white hover:bg-gray-600 duration-300 mt-4">Categorie</p>
+          <button id="panie-btn" class="w-fit ml-auto px-5 py-2  font-semibold rounded-2xl text-white bg-black">Add To Cart</button>
+
+
+         <div class="flex justify-center mt-6">
+          <div class="border  border-black w-[80%] rounded">
+               <div class=" flex border-b-2 border-black p-4">
+                    <div class="flex p-3 justify-center items-center">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_318_2215)">
+                              <path d="M11.6663 31.6667C13.5073 31.6667 14.9997 30.1743 14.9997 28.3333C14.9997 26.4924 13.5073 25 11.6663 25C9.82539 25 8.33301 26.4924 8.33301 28.3333C8.33301 30.1743 9.82539 31.6667 11.6663 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M28.3333 31.6667C30.1743 31.6667 31.6667 30.1743 31.6667 28.3333C31.6667 26.4924 30.1743 25 28.3333 25C26.4924 25 25 26.4924 25 28.3333C25 30.1743 26.4924 31.6667 28.3333 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M8.33301 28.3335H6.99967C5.8951 28.3335 4.99967 27.4381 4.99967 26.3335V21.6668M3.33301 8.3335H19.6663C20.7709 8.3335 21.6663 9.22893 21.6663 10.3335V28.3335M14.9997 28.3335H24.9997M31.6663 28.3335H32.9997C34.1042 28.3335 34.9997 27.4381 34.9997 26.3335V18.3335M34.9997 18.3335H21.6663M34.9997 18.3335L30.5823 10.9712C30.2208 10.3688 29.5698 10.0002 28.8673 10.0002H21.6663" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M8 28H6.66667C5.5621 28 4.66667 27.1046 4.66667 26V21.3333M3 8H19.3333C20.4379 8 21.3333 8.89543 21.3333 10V28M15 28H24.6667M32 28H32.6667C33.7712 28 34.6667 27.1046 34.6667 26V18M34.6667 18H21.3333M34.6667 18L30.2493 10.6377C29.8878 10.0353 29.2368 9.66667 28.5343 9.66667H21.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M5 11.8184H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.81836 15.4546H8.48503" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M5 19.0908H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_318_2215">
+                              <rect width="40" height="40" fill="white"/>
+                              </clipPath>
+                              </defs>
+                              </svg>
+                    </div>
+                    <div>
+                         <h2>Free Delivery</h2>
+                         <p class="underline mt-3">Enter your postal code for Delivery Availability</p>
+                    </div>
+               </div>
+               <div class=" flex p-4 pb-0">
+                    <div class="flex justify-center items-center px-4">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_318_2215)">
+                              <path d="M11.6663 31.6667C13.5073 31.6667 14.9997 30.1743 14.9997 28.3333C14.9997 26.4924 13.5073 25 11.6663 25C9.82539 25 8.33301 26.4924 8.33301 28.3333C8.33301 30.1743 9.82539 31.6667 11.6663 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M28.3333 31.6667C30.1743 31.6667 31.6667 30.1743 31.6667 28.3333C31.6667 26.4924 30.1743 25 28.3333 25C26.4924 25 25 26.4924 25 28.3333C25 30.1743 26.4924 31.6667 28.3333 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M8.33301 28.3335H6.99967C5.8951 28.3335 4.99967 27.4381 4.99967 26.3335V21.6668M3.33301 8.3335H19.6663C20.7709 8.3335 21.6663 9.22893 21.6663 10.3335V28.3335M14.9997 28.3335H24.9997M31.6663 28.3335H32.9997C34.1042 28.3335 34.9997 27.4381 34.9997 26.3335V18.3335M34.9997 18.3335H21.6663M34.9997 18.3335L30.5823 10.9712C30.2208 10.3688 29.5698 10.0002 28.8673 10.0002H21.6663" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M8 28H6.66667C5.5621 28 4.66667 27.1046 4.66667 26V21.3333M3 8H19.3333C20.4379 8 21.3333 8.89543 21.3333 10V28M15 28H24.6667M32 28H32.6667C33.7712 28 34.6667 27.1046 34.6667 26V18M34.6667 18H21.3333M34.6667 18L30.2493 10.6377C29.8878 10.0353 29.2368 9.66667 28.5343 9.66667H21.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M5 11.8184H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.81836 15.4546H8.48503" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M5 19.0908H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_318_2215">
+                              <rect width="40" height="40" fill="white"/>
+                              </clipPath>
+                              </defs>
+                              </svg>
+                    </div>
+                    <div>
+                         <h2>Free Delivery</h2>
+                         <p class="underline">Enter your postal code for Delivery Availability</p>
+                    </div>
+               </div>
+          </div>
+         </div>
+   
+     </div>
+          
+
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <div class="flex justify-center mt-12">
+        <h1 class="text-3xl font-semibold">You may also like</h1>
+      </div>
+      
+      <section>
+
+        <div class="flex gap-10 justify-center mt-12"   id="suggestions">
+          <!-- First Product Card -->
+        
+      
+      
+
+        </div>
+        
+      </section>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- --------  -->
+    <!-- --------  -->
+    <section>
+     <div class="flex justify-center mt-[13%]">
+       <h1 class="text-3xl font-semibold">NEW COLLECTIONS</h1>
+     </div>
+   </section>
+
+   <section
+     class=" grid grid-cols-[repeat(3,370px)] grid-rows-[repeat(2,200px)] mt-16 lg:ml-48 ml-3"
+   >
+     <div
+       class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[url('../assets/images/P1.png')]"
+     >
+       <div class="mt-64 ml-6">
+         <h2 class="text-white text-xs">Clerance</h2>
+         <h1 class="text-white font-semibold">Waterproof</h1>
+         <h1 class="text-white">FROM $99</h1>
+         <button
+           class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+         >
+           Discover now
+         </button>
+       </div>
+     </div>
+     <div
+       class="col-start-2 col-end-3 row-start-1 row-end-2 bg-[url('../assets/images/P2.png')] hidden lg:block"
+     >
+       <div class="mt-16 ml-6">
+         <h2 class="text-white text-xs">Clerance</h2>
+         <h1 class="text-white font-semibold">Waterproof</h1>
+         <h1 class="text-white">FROM $99</h1>
+         <button
+           class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+         >
+           Discover now
+         </button>
+       </div>
+     </div>
+     <div
+       class="col-start-2 col-end-3 row-start-2 row-end-3 bg-[url('../assets/images/P3.png')] hidden lg:block"
+     >
+       <div class="mt-16 ml-6">
+         <h2 class="text-white text-xs">Clerance</h2>
+         <h1 class="text-white font-semibold">Waterproof</h1>
+         <h1 class="text-white">FROM $99</h1>
+         <button
+           class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+         >
+           Discover now
+         </button>
+       </div>
+     </div>
+     <div
+       class="col-start-3 col-end-4 row-start-1 row-end-3 bg-[url('../assets/images/P4.png')] hidden lg:block"
+     >
+       <div class="mt-16 ml-12">
+         <h2 class="text-white text-xs">Clerance</h2>
+         <h1 class="text-white font-semibold">Waterproof</h1>
+         <h1 class="text-white">FROM $99</h1>
+         <button
+           class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+         >
+           Discover now
+         </button>
+       </div>
+     </div>
+   </section>
+</div>
+
+   
+
+    <!-- --------  -->
+    <!-- --------  -->
+    <!-- Detail -->
+
+
+    <!-- --------  -->
+    <!-- --------  -->
+
+  
+    <!-- --------  -->
+    <!-- --------  -->
+    <section class="bg-blue-100 py-8 mt-20">
+      <div class="max-w-4xl mx-auto flex items-center space-x-4">
+        <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-black text-white py-12">
+      <div
+        class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
+      >
+        <div>
+          <img
+            src="../assets/images/1 2.png"
+            alt="Luxy Logo"
+            class="w-24 mb-4"
+          />
+          <p class="text-sm">
+            Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+            augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
+            dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+          </p>
+          <p class="text-sm mt-4">
+            Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+            augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Pages</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Products</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">Our Story</a></li>
+            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="#" class="hover:underline">Login</a></li>
+            <li><a href="#" class="hover:underline">Register</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">My Account</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Login</a></li>
+            <li><a href="#" class="hover:underline">Sign up</a></li>
+            <li><a href="#" class="hover:underline">Wishlist</a></li>
+            <li><a href="#" class="hover:underline">View Cart</a></li>
+            <li><a href="#" class="hover:underline">Help</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div>
+          <h3 class="font-semibold mb-3">Social Media</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Instagram</a></li>
+            <li><a href="#" class="hover:underline">Facebook</a></li>
+            <li><a href="#" class="hover:underline">TikTok</a></li>
+            <li><a href="#" class="hover:underline">X</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Customer Service</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:underline">Payment</a></li>
+            <li><a href="#" class="hover:underline">Shipping</a></li>
+            <li><a href="#" class="hover:underline">Returns</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li>
+              <a href="#" class="hover:underline">Terms and Conditions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 text-sm text-gray-400">
+        © 2024 Luxy. All Rights Reserved.
+      </div>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script type="module" src="./detail.js"></script>
+  </body>
+</html>
