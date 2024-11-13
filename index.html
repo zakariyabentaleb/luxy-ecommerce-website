@@ -20,7 +20,7 @@
       font-family: "Lato", sans-serif;
     }
   </style>
-  <body>
+  <body class="">
     <header>
       <!-- sub nav section  -->
       <div
@@ -72,12 +72,7 @@
             </div>
           </div>
 
-          <div
-            id="cards"
-            class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
-          >
-            cards
-          </div>
+          
           <!-- fisrt child  -->
           <div class="nav-links flex items-center font-[lato] font-bold">
             <ul
@@ -112,8 +107,9 @@
             <div class="favorite h-fit">
               <img src="./assets/icons/heart.svg" alt="" />
             </div>
-            <div class="cart h-fit" id="card-btn">
+            <div class="cart h-fit relative icon-cart" id="card-btn">
               <img src="./assets/icons/shopping-cart.svg" alt="" />
+              <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
             </div>
             <div class="user h-fit relative">
               <img src="./assets/icons/user.svg" alt="" />
@@ -126,6 +122,31 @@
         </div>
       </nav>
     </header>
+
+    <section class="cartTab w-[400px] bg-slate-700 text-white fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_70px] z-[1000] transition-[0.5s]">
+      <h1 class="p-[20px] m-0 font-light">Shopping Cart</h1>
+      <div class="ListCart overflow-auto">
+          <div class="item grid grid-cols-[70px_150px_50px_1fr] gap-[10px] text-center items-center">
+            <div class="image">
+                  <img src="./assets/images/ali.png" alt="" class="w-full">
+            </div>
+            <div class="name">
+                  Ali
+            </div>
+            <div class="totalPrice">200$</div>
+            <div class="quantity">
+              <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer ">a</span>
+              <span class="">1</span>
+              <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">></span>
+            </div>
+          </div>
+          
+      </div>
+      <div class="btn bg-yellow-300 border-none font-medium cursor-pointer grid grid-cols-[repeat(2,1fr)]">
+        <button class="close bg-white text-black">CLOSE</button>
+        <button class="Checkout">CHECK OUT</button>
+      </div>
+    </section>
 
     <!------------------------------------------------>
     <!------------------------------------------------>
@@ -572,7 +593,6 @@
         © 2024 Luxy. All Rights Reserved.
       </div>
     </footer>
-
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
