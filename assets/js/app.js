@@ -1,7 +1,7 @@
 // fetch('http://localhost:3000/29')
 //             .then(res=>res.json())
 //             .then(json=> console.log(json));
-            // `<img src="${json.img}">`
+// `<img src="${json.img}">`
 // Loop through each product ID from 0 to 7
 // for (let i = 0; i < "30"; i++) {
 //     let url = `http://localhost:3000/${i}`; // Construct the URL using template literals
@@ -23,10 +23,10 @@
 //                 </div>
 //             `;
 
-            // Append the product to an existing element in the HTML
-           
-     //    })
-     //    .catch(error => console.error("Error fetching data:", error));
+// Append the product to an existing element in the HTML
+
+//    })
+//    .catch(error => console.error("Error fetching data:", error));
 // }
 // fetch('http://localhost:3000/9')
 //     .then(res => res.json())
@@ -39,7 +39,12 @@
 //             console.error("Element with ID 'products' not found in the DOM.");
 //         }
 //     })
-   
+
+const userNameSpan = document.getElementById("username-span");
+const user = JSON.parse(localStorage.getItem("user"));
+if (user) {
+  userNameSpan.textContent = user.username;
+}
 // DOM Variables for nav
 const leftLinks = document.querySelector("#left-links");
 const cards = document.querySelector("#cards");
