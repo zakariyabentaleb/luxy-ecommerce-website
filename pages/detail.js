@@ -85,33 +85,25 @@ console.log(category);
 
 
 function showSuggestion(products){
-      
-  console.log(products);
-  
-  let content =  products.map( product => {
+  let content = products
+  .map((product) => {
     return `
-
-    <a j>
-      <div class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+    <div class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+      <a  href="/pages/detail.html?id=${product.id}">
         <img
           src="../${product.img}"
-          alt="${product.title}"
-          class="shadow-lg rounded-2xl"
+          class="shadow-lg rounded-2xl w-fit  h-72 "
         />
-        <p class="text-slate-400">Categorie</p>
+        <p class="text-slate-400">${product.category}</p>
         <h1 class="font-semibold">${product.title}</h1>
         <h2 class="text-yellow-500">${product.price}</h2>
-        <img
-          src="../assets/icons/heart.svg"
-          alt="Like Icon"
-          class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24"
-        />
-      </div></a>
-
-  `
+       
+      </a>
+    </div>
+  `;
   })
-  console.log(content);
-  
-      suggestion.innerHTML =content
+  .join(""); // Join the array into a single string
+
+suggestion.innerHTML = content;
 
 }
