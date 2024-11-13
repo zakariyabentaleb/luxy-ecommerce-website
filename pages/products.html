@@ -124,12 +124,12 @@
     </div>
  </section>
  <section>
-  <div class="flex justify-center mt-4">
+  <div class="flex justify-center mt-9">
     <h1 class="text-3xl font-semibold">PRODUCTS</h1>
   </div>
 </section>
 <section>
-  <div class="flex justify-end gap-4 mt-5 ">
+  <div class="flex justify-center gap-4 mt-5 ml-[80%] ">
     <h2 class="mt-2">Sort by:</h2>
     <select  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option selected>most popular</option>
@@ -140,21 +140,157 @@
   </div>
 </section>
 
-<section>
 
-  <div>
-   
+<section class=" w-full grid grid-cols-[repeat(3,400px)] grid-rows-[repeat(6,300px)]">
+   <div class="col-start-1 col-end-2 row-start-1 row-end-6 flex flex-col items-center hidden lg:block mt-24">
+  <div class="ml-14">  
+          <!---------------------------------------------------CATEGORIES------------------------------------------------------------------  -->
+<h3 class="mb-4 font-semibold text-gray-900 dark:text-white ml-14">Categories</h3>
+
+
+
+<ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center ps-3">
+            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+            <label for="vue-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jeans</label>
+        </div>
+    </li>
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center ps-3">
+            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+            <label for="react-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dress</label>
+        </div>
+    </li>
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center ps-3">
+            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+            <label for="angular-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">T-shirt</label>
+        </div>
+    </li>
+    <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+        <div class="flex items-center ps-3">
+            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+            <label for="laravel-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jacket</label>
+        </div>
+    </li>
+</ul>
+
+  </div>
+  <div  class="ml-14">  
+    <!---------------------------------------------------SIZE------------------------------------------------------------------  -->
+<h3 class="mb-4 font-semibold text-gray-900 dark:text-white ml-16 mt-4">Size</h3>
+<ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+  <div class="flex items-center ps-3">
+      <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+      <label for="vue-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">M</label>
+  </div>
+</li>
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+  <div class="flex items-center ps-3">
+      <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+      <label for="react-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">L</label>
+  </div>
+</li>
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+  <div class="flex items-center ps-3">
+      <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+      <label for="angular-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">XL</label>
+  </div>
+</li>
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+  <div class="flex items-center ps-3">
+      <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+      <label for="laravel-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">XXL</label>
+  </div>
+</li>
+</ul>
 
   </div>
 
-
-
-</section>
+  <div  class="ml-14">  
+  <!---------------------------------------------------COLOURS------------------------------------------------------------------  -->
+<h3 class="mb-4 font-semibold text-gray-900 dark:text-white ml-14 mt-4">Colours</h3>
+<ul class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+<div class="flex items-center ps-3">
+    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+    <label for="vue-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">GREY</label>
+</div>
+</li>
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+<div class="flex items-center ps-3">
+    <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+    <label for="react-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">BLACK</label>
+</div>
+</li>
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+<div class="flex items-center ps-3">
+    <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+    <label for="angular-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">WHITE</label>
+</div>
+</li>
+<li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+<div class="flex items-center ps-3">
+    <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+    <label for="laravel-checkbox" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">OTHERS</label>
+</div>
+</li>
+</ul>
+ 
+  </div>
+  <div class=" rounded-lg p-6 w-56 ml-8 ">
+    <div class="mb-4">
+      <label for="price-range" class="block text-gray-700 font-bold mb-2">Price Range</label>
+      <input type="range" id="price-range" class="w-full" min="0" max="1000" value="500" oninput="updatePrice(this.value)">
+    </div>
+    <div class="flex justify-between text-gray-500">
+      <span id="minPrice">$0</span>
+      <span id="maxPrice">$1000</span>
+    </div>
+  </div>
+ </div>
+<!-- ------------------------------------------------------------------------------------------------------------ -->
 
 <!-- --------------------------------------------------------------------------------------------- -->
+<section class="col-start-2 col-end-5 row-start-1 row-end-4 -ml-36  mt-12">
+
+  <div id="products" class=" w-full flex flex-wrap " >
+
+  </div>
+
+</section>
+</section>
+
+<section class="flex justify-center ml-80 -mt-[45%]">
+<nav >
+  <ul class="inline-flex -space-x-px text-sm">
+    <li>
+      <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+    </li>
+    <li>
+      <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">1</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
+    </li>
+    <li>
+      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+    </li>
+    
+    <li>
+      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+    </li>
+  </ul>
+</nav>
+</section>
 
 <!-- Footer Section -->
-<footer class="bg-black text-white py-12 ">
+<footer class="bg-black text-white py-12 mt-14">
   <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
     
     <!-- Brand and Description -->
@@ -224,6 +360,57 @@
   </div>
 </footer>
 
-<script src="../assets/js/app.js"></script>
+<!-- <script src="../assets/js/ALL.js"></script> -->
+<script>
+
+for (let i = 0; i < "12"; i++) {
+  let url = `http://localhost:3000/${i}`; // Construct the URL using template literals
+
+  fetch(url)
+      .then(res => res.json())
+      .then(json => {
+          console.log(json);
+
+          document.getElementById("products").innerHTML += `
+        <div class=" w-1/4 flex flex-col items-center justify-center relative ">
+       <img src="../${json.img}" alt="Product Image" style="width: 200px; heiht: auto;" class="shadow-lg rounded-xl">
+        <div class="flex flex-col items-center  w-1/2">
+       <h3 class="text-grey-200 text-center">${json.title}</h3>
+       <p class="text-yellow-500"> $${json.price}</p>
+       <p class=" text-center text-xs ">${json.description}</p>
+       </div>
+       <svg class="w-6 h-6 text-white cursor-pointer  absolute ml-[50%] -mt-[75%]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg> 
+         </div>
+             `;     
+      })
+      .catch(error => console.error("Error fetching data:", error));
+}
+
+
+// const checkbox = document.querySelector('#vue-checkbox');
+// const text1 = checkbox.innerText;
+
+// // Make sure the checkbox is checked
+// if (checkbox.checked === true) {
+//   // Assuming you have a list of products
+//   for (let i = 0; i < 30; i++) {
+//     // Assuming products is an array of product elements with a 'categories' property
+//     const product = products[i];
+    
+//     // Check if the product's category matches the checked category
+//     if (product.categories === text1) {
+//       // Hide the product if it matches
+//       product.style.display = "none";
+//     } else {
+//       // Optionally, ensure other products are visible
+//       product.style.display = "block";
+//     }
+//   }
+// }
+
+
+</script>
 </body>
 </html>
