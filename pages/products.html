@@ -130,27 +130,30 @@
 </section>
 <section class="flex justify-center mt-12 gap-6  ">
   <div class="flex justify-center gap-4   ">
-    <h2 class="mt-2">Sort by:</h2>
-    <select  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <option selected>most popular</option>
-      <option value="">most popular</option>
-      <option value="">most popular</option>
-      <option value="">most popular</option> 
+    <h2 class="mt-2">Categories</h2>
+    <select id="cat" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <option selected>Choose</option>
+      <option value="Jeans">Jeans</option>
+      <option value="T-shirt">T-shirt</option>
+      <option value="Hoodie">Hoodie</option>
+      <option value="Jackets">Jackets</option> 
+      <option value="Dress">Dress</option> 
+      <option value="Coat">Coat</option> 
     </select>
+    
   </div>
   <div class="flex justify-center gap-4 ">
     <h2 class="mt-2">Sort by:</h2>
-    <select  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <option selected>most popular</option>
-      <option value="">most popular</option>
-      <option value="">most popular</option>
-      <option value="">most popular</option> 
+    <select id="sortDropdown" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+      <option value="">Choose</option>
+      <option value="lowToHigh">Low to High</option>
+      <option value="highToLow">High to Low</option>
     </select>
   </div>
 </section>
 
 
-<section class=" w-full grid grid-cols-[repeat(3,400px)] grid-rows-[repeat(4,310px)] ">
+<section class=" w-full grid grid-cols-[repeat(3,400px)] grid-rows-[repeat(4,350px)] ">
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->
 
@@ -188,11 +191,11 @@
 </nav>
 </section>
 
-<!-- Footer Section -->
+
 <footer class="bg-black text-white py-12 mt-14">
   <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
     
-    <!-- Brand and Description -->
+  
     <div>
       <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
       <p class="text-sm">
@@ -203,7 +206,7 @@
       </p>
     </div>
 
-    <!-- Pages Links -->
+    
     <div>
       <h3 class="font-semibold mb-3">Pages</h3>
       <ul class="text-sm space-y-2">
@@ -216,7 +219,7 @@
       </ul>
     </div>
 
-    <!-- My Account Links -->
+   
     <div>
       <h3 class="font-semibold mb-3">My Account</h3>
       <ul class="text-sm space-y-2">
@@ -229,7 +232,7 @@
       </ul>
     </div>
 
-    <!-- Social Media Links -->
+   
     <div>
       <h3 class="font-semibold mb-3">Social Media</h3>
       <ul class="text-sm space-y-2">
@@ -240,7 +243,7 @@
       </ul>
     </div>
 
-    <!-- Customer Service Links -->
+    
     <div>
       <h3 class="font-semibold mb-3">Customer Service</h3>
       <ul class="text-sm space-y-2">
@@ -253,75 +256,104 @@
     </div>
   </div>
 
-  <!-- Footer Bottom -->
+
   <div class="text-center mt-8 text-sm text-gray-400">
     © 2024 Luxy. All Rights Reserved.
   </div>
 </footer>
-
-<!-- <script src="../assets/js/ALL.js"></script> -->
 <script>
+let page = 3;  // Set initial page number
+const baseUrl = 'http://localhost:3000/products?_page='; 
+let currentProducts = []; // Store fetched products
 
-let page = 3;
-const baseUrl = 'http://localhost:3000/products?_page=';
-
-// Function to fetch and display products
-function fetchProducts(page) {
+// Fetch products with optional category filter
+function fetchProducts(page, category = null) {
   const url = `${baseUrl}${page}`;
+  
   fetch(url)
     .then(res => res.json())
-    .then(product => {
-      document.getElementById("products").innerHTML = product.data.map(product => `
-        <div class="w-1/4 flex flex-col items-center justify-center relative">
-          <a href="/pages/detail.html?id=${product.id}">
-            <img src="../${product.img}" alt="Product Image" style="width: 200px; height: auto;" class="shadow-lg rounded-xl">
-            <div class="flex flex-col items-center w-1/2">
-              <h3 class="text-grey-200 text-center">${product.title}</h3>
-              <p class="text-yellow-500">$${product.price}</p>
-              <p class="text-center text-xs">${product.description}</p>
-            </div>
-          </a>
-        </div>
-      `).join('');
+    .then(productData => {
+      let products = productData.data;
+
+      // Filter products by category if one is selected
+      if (category && category !== "Choose") {
+        products = products.filter(product => product.category === category);
+      }
+
+      // Display a message if no products are found
+      if (products.length === 0) {
+        document.getElementById("products").innerHTML = "<p>No products found for this category.</p>";
+        return;
+      }
+
+      // Store the fetched products in currentProducts for future sorting
+      currentProducts = products;
+      
+      renderProducts(currentProducts); // Render the products
     })
-    .catch(error => console.error("Error fetching data:", error));
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      document.getElementById("products").innerHTML = "<p>Error loading products. Please try again later.</p>";
+    });
 }
 
-// Initial fetch
+// Render the products to the page
+function renderProducts(products) {
+  document.getElementById("products").innerHTML = products.map(product => `
+    <div class="w-1/4 flex flex-col items-center justify-center relative">
+      <a href="/pages/detail.html?id=${product.id}">
+        <img src="../${product.img}" alt="Product Image" style="width: 200px; height: auto;" class="shadow-lg rounded-xl">
+        <div class="flex flex-col items-center w-1/2">
+          <h3 class="text-grey-200 text-center">${product.title}</h3>
+          <button class="border text-white text-base font-medium rounded-lg px-3 py-2">
+            <h3 class="text-black text-center">${product.category}</h3>
+          </button>
+          <p class="text-yellow-500">$${product.price}</p>
+          <p class="text-center text-xs">${product.description}</p>
+        </div>
+      </a>
+    </div>
+  `).join('');
+}
+
+// Initial fetch for products
 fetchProducts(page);
 
-// Add event listeners to pagination links
+// Pagination handling
 document.querySelectorAll('.page-link').forEach(link => {
   link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the default link behavior
-    page = parseInt(event.target.getAttribute('data-page'), 10);
+    event.preventDefault(); // Prevent default link behavior
+    page = parseInt(event.target.getAttribute('data-page'), 10); // Get the page number from the clicked link
     fetchProducts(page);
   });
+});
+
+// Category filter handling
+const categoryFilter = document.getElementById("cat");
+categoryFilter.addEventListener('change', () => {
+  const selectedCategory = categoryFilter.value; 
+  fetchProducts(page, selectedCategory);
+});
+
+// Sorting functionality
+document.getElementById("sortDropdown").addEventListener('change', function(event) {
+  const value = event.target.value;
+  
+  let sortedProducts = [...currentProducts];
+  
+  // Sort based on the selected sorting option
+  if (value === "lowToHigh") {
+    sortedProducts.sort((a, b) => a.price - b.price);
+  } else if (value === "highToLow") {
+    sortedProducts.sort((a, b) => b.price - a.price);
+  }
+
+  renderProducts(sortedProducts);  // Render the sorted products
 });
 
 
 
 
-// const checkbox = document.querySelector('#vue-checkbox');
-// const text1 = checkbox.innerText;
-
-// // Make sure the checkbox is checked
-// if (checkbox.checked === true) {
-//   // Assuming you have a list of products
-//   for (let i = 0; i < 30; i++) {
-//     // Assuming products is an array of product elements with a 'categories' property
-//     const product = products[i];
-    
-//     // Check if the product's category matches the checked category
-//     if (product.categories === text1) {
-//       // Hide the product if it matches
-//       product.style.display = "none";
-//     } else {
-//       // Optionally, ensure other products are visible
-//       product.style.display = "block";
-//     }
-//   }
-// }
 
 
 </script>
