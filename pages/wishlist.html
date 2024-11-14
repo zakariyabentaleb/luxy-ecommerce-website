@@ -1,26 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Login Form in Tailwind CSS</title>
     <link rel="stylesheet" href="../style.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet" />
 </head>
-<style>
-    h1,
-    h2,
-    h3,
-    p {
-        font-family: "Roboto", sans-serif;
-    }
 
-    a {
-        font-family: "Lato", sans-serif;
-    }
-</style>
 
 <body>
     <header>
@@ -38,7 +28,7 @@
             </div>
             <div class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs">
                 <p>
-                    <a href="./pages/login.html">Login</a>
+                    <a href="./login.html">Login</a>
                 </p>
             </div>
         </div>
@@ -49,12 +39,12 @@
             <div class="max-w-6xl w-full flex justify-between">
                 <div class="flex items-center">
                     <div class="menu | sm:hidden h-fit cursor-pointer" id="menu" data-collapse-toggle="navbar-default">
-                        <img width="35" height="20" src="./assets/icons/menu.svg" alt="" />
+                        <img width="35" height="20" src="../assets/icons/menu.svg" alt="" />
                     </div>
                     <!-- fisrt child  -->
                     <div class="logo |">
                         <a href="./index.html">
-                            <img src="./assets/images/logo.png" alt="luxy logo" />
+                            <img src="../assets/images/logo.png" alt="luxy logo" />
                         </a>
                     </div>
                 </div>
@@ -71,7 +61,7 @@
                         <li class="flex justify-center">
                             <span class="flex items-center gap-1">
                                 <a href="">Products</a>
-                                <img src="./assets/icons/down.svg" alt="" /></span>
+                                <img src="../assets/icons/down.svg" alt="" /></span>
                             <ul class="hidden">
                                 <li>T-shirts</li>
                                 <li>shirts</li>
@@ -82,7 +72,7 @@
                             <a href="#">Our Story</a>
                         </li>
                         <li>
-                            <a href="./pages/Blog.html">Blog</a>
+                            <a href="#">Blog</a>
                         </li>
                         <li>
                             <a href="#">Contact</a>
@@ -92,13 +82,13 @@
                 <!-- fisrt child  -->
                 <div class="right-links flex gap-3 justify-center items-center">
                     <div class="favorite h-fit">
-                        <img src="./assets/icons/heart.svg" alt="" />
+                        <img src="../assets/icons/heart.svg" alt="" />
                     </div>
                     <div class="cart h-fit" id="card-btn">
-                        <img src="./assets/icons/shopping-cart.svg" alt="" />
+                        <img src="../assets/icons/shopping-cart.svg" alt="" />
                     </div>
                     <div class="user h-fit relative">
-                        <img src="./assets/icons/user.svg" alt="" />
+                        <img src="../assets/icons/user.svg" alt="" />
                         <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
                     </div>
                 </div>
@@ -114,48 +104,72 @@
     </div>
 
 
-    <nav class=" py-4 ">
-        <div class="container mx-auto flex justify-start space-x-6 ml-2 mb-2">
-            <a href="#" class="text-gray-800 hover:text-black lg:text-[25px]">Home </a>
-            <a href="#" class="text-gray-800 hover:text-black lg:text-[25px]">Blog </a>
-            <a href="#" class="text-gray-800 hover:text-black lg:text-[25px]">Listing</a>
+
+
+
+    <!--  -->
+
+    <section class="wishlist-section my-8">
+
+        <nav class="flex space-x-6 justify-start ml-2 mb-4">
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Home</a>
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Shop</a>
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Wishlist</a>
+        </nav>
+
+        <div class="container mx-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <tbody id="wishlist-items">
+
+                </tbody>
+                <thead class="bg-gray-100 border-b">
+                    <tr>
+                        <th class="py-3 px-5 text-left text-gray-700">Product</th>
+                        <th class="py-3 px-5 text-left text-gray-700">Price</th>
+                        <th class="py-3 px-5 text-left text-gray-700">Stock Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-3 px-5 flex items-center space-x-4">
+                            <img src="path/to/shoe-image.jpg" alt="Shoe" class="w-12 h-12 object-cover rounded-md">
+                            <span>Very good looking shoes</span>
+                        </td>
+                        <td class="py-3 px-5">$84.00</td>
+                        <td class="py-3 px-5 flex items-center space-x-2 text-green-600">
+                            <span>In stock</span>
+                            <button class="bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200">Select
+                                options</button>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 px-5 flex items-center space-x-4">
+                            <img src="path/to/jacket-image.jpg" alt="Jacket" class="w-12 h-12 object-cover rounded-md">
+                            <span>Gucci jacket</span>
+                        </td>
+                        <td class="py-3 px-5">$76.82</td>
+                        <td class="py-3 px-5 flex items-center space-x-2 text-green-600">
+                            <span>In stock</span>
+                            <button class="bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200">Add to
+                                cart</button>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 px-5 flex items-center space-x-4">
+                            <img src="path/to/bag-image.jpg" alt="Bag" class="w-12 h-12 object-cover rounded-md">
+                            <span>Yes that expensive</span>
+                        </td>
+                        <td class="py-3 px-5">$90.99</td>
+                        <td class="py-3 px-5 flex items-center space-x-2 text-red-500">
+                            <span>Out of stock</span>
+                            <button class="bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200">Out of
+                                stock</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </nav>
-
-
- <!--  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
 
     <footer class="bg-black text-white py-12">
@@ -231,3 +245,66 @@
             © 2024 Luxy. All Rights Reserved.
         </div>
     </footer>
+
+    <script>
+
+        function displayFavorites() {
+            const wishlistItemsContainer = document.getElementById("wishlist-items");
+
+            // get array from local storage :
+            const faviArray = localStorage.getItem("favi")
+
+            if (faviArray == null || faviArray == "") {
+                faviArray = []
+
+            } else {
+                const ids = JSON.parse(faviArray)
+            }
+
+            // fetch data 
+            const url = "http://localhost:3000/products"
+            // store data in variable 
+            // let products = [];
+
+
+
+            fetch(url)
+                .then(response => response.json())
+                .then(products => {
+                    // Clear the wishlist items container
+                    wishlistItemsContainer.innerHTML = "";
+
+                    // Loop through `faviArray` to match products in the wishlist
+                    faviArray.forEach((id) => {
+                        const item = products.find(product => product.id === id);  // Find product by ID
+                        if (item) {
+                            const row = document.createElement("tr");
+                            row.className = "border-b";
+
+                            row.innerHTML = `
+                          <td class="py-3 px-5 flex items-center space-x-4">
+                            <img src="${item.imageUrl}" alt="${item.name}" class="w-12 h-12 object-cover rounded-md">
+                            <span>${item.name}</span>
+                          </td>
+                          <td class="py-3 px-5">${item.price}</td>
+                          <td class="py-3 px-5 flex items-center space-x-2 text-green-600">
+                            <span>${item.stock}</span>
+                            <button class="bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200">Add to cart</button>
+                          </td>
+                        `;
+
+                            wishlistItemsContainer.appendChild(row);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching products:", error);
+                });
+        }
+
+        // Call displayFavorites on page load
+        document.addEventListener("DOMContentLoaded", displayFavorites);
+
+    </script>
+
+    <script src="../assets/js/app.js"></script>
