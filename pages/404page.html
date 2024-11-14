@@ -83,9 +83,10 @@
                     <div class="favorite h-fit">
                         <img src="../assets/icons/heart.svg" alt="" />
                     </div>
-                    <div class="cart h-fit" id="card-btn">
+                    <div class="cart h-fit relative icon-cart" id="card-btn">
                         <img src="../assets/icons/shopping-cart.svg" alt="" />
-                    </div>
+                        <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
+                      </div>
                     <div class="user h-fit relative">
                         <img src="../assets/icons/user.svg" alt="" />
                         <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
@@ -94,6 +95,17 @@
             </div>
         </nav>
     </header>
+
+    <section class="cartTab w-[400px] bg-slate-700 text-white fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_70px] z-[1000] transition-[0.5s]">
+        <h1 class="p-[20px] m-0 font-light">Shopping Cart</h1>
+        <div class="ListCart overflow-auto">
+        </div>
+        <div class="cartTotal text-center font-semibold">Total: $0.00</div>
+        <div class="btn bg-yellow-300 border-none font-medium cursor-pointer grid grid-cols-[repeat(2,1fr)]">
+          <button class="close bg-white text-black">CLOSE</button>
+          <button class="Checkout"> <a href="ShoppingCard.html">CHECK OUT</a></button>
+        </div>
+      </section>
 
     <div class="flex h-screen flex-col bg-white">
         <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"

@@ -42,7 +42,7 @@
             class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
           >
             <p>
-              <a href="./pages/login.html">Login</a>
+              <a href="../pages/login.html">Login</a>
             </p>
           </div>
         </div>
@@ -60,14 +60,14 @@
                 <img
                   width="35"
                   height="20"
-                  src="./assets/icons/menu.svg"
+                  src="../assets/icons/menu.svg"
                   alt=""
                 />
               </div>
               <!-- fisrt child  -->
               <div class="logo |">
-                <a href="./index.html">
-                  <img src="./assets/images/logo.png" alt="luxy logo" />
+                <a href="../index.html">
+                  <img src="../assets/images/logo.png" alt="luxy logo" />
                 </a>
               </div>
             </div>
@@ -88,7 +88,7 @@
                 <li class="flex justify-center">
                   <span class="flex items-center gap-1">
                     <a href="">Products</a>
-                    <img src="./assets/icons/down.svg" alt=""
+                    <img src="../assets/icons/down.svg" alt=""
                   /></span>
                   <ul class="hidden">
                     <li>T-shirts</li>
@@ -110,13 +110,14 @@
             <!-- fisrt child  -->
             <div class="right-links flex gap-3 justify-center items-center">
               <div class="favorite h-fit">
-                <img src="./assets/icons/heart.svg" alt="" />
+                <img src="../assets/icons/heart.svg" alt="" />
               </div>
-              <div class="cart h-fit" id="card-btn">
-                <img src="./assets/icons/shopping-cart.svg" alt="" />
+              <div class="cart h-fit relative icon-cart" id="card-btn">
+                <img src="../assets/icons/shopping-cart.svg" alt="" />
+                <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
               </div>
               <div class="user h-fit relative">
-                <img src="./assets/icons/user.svg" alt="" />
+                <img src="../assets/icons/user.svg" alt="" />
                 <span
                   class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
                   >user</span
@@ -126,6 +127,17 @@
           </div>
         </nav>
       </header>
+
+      <section class="cartTab w-[400px] bg-slate-700 text-white fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_70px] z-[1000] transition-[0.5s]">
+        <h1 class="p-[20px] m-0 font-light">Shopping Cart</h1>
+        <div class="ListCart overflow-auto">
+        </div>
+        <div class="cartTotal text-center font-semibold">Total: $0.00</div>
+        <div class="btn bg-yellow-300 border-none font-medium cursor-pointer grid grid-cols-[repeat(2,1fr)]">
+          <button class="close bg-white text-black">CLOSE</button>
+          <button class="Checkout"> <a href="ShoppingCard.html">CHECK OUT</a></button>
+        </div>
+      </section>
 
     <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
         <div class="text-center">
