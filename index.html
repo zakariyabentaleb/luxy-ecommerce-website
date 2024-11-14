@@ -1,603 +1,520 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <style>
-    h1,
-    h2,
-    h3,
-    p {
-      font-family: "Roboto", sans-serif;
-    }
-    a {
-      font-family: "Lato", sans-serif;
-    }
-  </style>
-  <body class="">
-    <header>
-      <!-- sub nav section  -->
-      <div
-        class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
-      >
-        <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
-          <p>luxy.contact@gmail.com</p>
-          <p>+212 6204016405</p>
-        </div>
-        <div
-          class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
-        >
-          <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
-          <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
-            in your first order
-          </p>
-        </div>
-        <div
-          class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
-        >
-          <p>
-            <a href="./pages/login.html">Login</a>
-          </p>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+</head>
+<style>
+  h1,
+  h2,
+  h3,
+  p {
+    font-family: "Roboto", sans-serif;
+  }
+
+  a {
+    font-family: "Lato", sans-serif;
+  }
+</style>
+
+<body>
+  <header>
+    <!-- sub nav section  -->
+    <div class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2">
+      <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+        <p>luxy.contact@gmail.com</p>
+        <p>+212 6204016405</p>
       </div>
-
-      <!------------------------------>
-      <!-- nav section  -->
-      <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
-        <div class="max-w-6xl w-full flex justify-between">
-          <div class="flex items-center">
-            <div
-              class="menu | sm:hidden h-fit cursor-pointer"
-              id="menu"
-              data-collapse-toggle="navbar-default"
-            >
-              <img
-                width="35"
-                height="20"
-                src="./assets/icons/menu.svg"
-                alt=""
-              />
-            </div>
-            <!-- fisrt child  -->
-            <div class="logo |">
-              <a href="./">
-                <img src="./assets/images/logo.png" alt="luxy logo" />
-              </a>
-            </div>
-          </div>
-
-          
-          <!-- fisrt child  -->
-          <div class="nav-links flex items-center font-[lato] font-bold">
-            <ul
-              id="left-links"
-              class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
-            >
-              <!-- products  -->
-              <li class="flex justify-center">
-                <span class="flex items-center gap-1">
-                  <a href="./pages/products.html">Products</a>
-                  <img src="./assets/icons/down.svg" alt=""
-                /></span>
-                <ul class="hidden">
-                  <li>T-shirts</li>
-                  <li>shirts</li>
-                  <li>Shoes</li>
-                </ul>
-              </li>
-              <li>
-                <a href="./pages/about.html">Our Story</a>
-              </li>
-              <li>
-                <a href="./pages/blog.html">Blog</a>
-              </li>
-              <li>
-                <a href="./pages/contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <!-- fisrt child  -->
-          <div class="right-links flex gap-3 justify-center items-center">
-            <div class="favorite h-fit">
-              <a href="./pages/faviris.html">
-
-                <img src="./assets/icons/heart.svg" alt="" />
-              </a>
-            </div>
-            <div class="cart h-fit relative icon-cart" id="card-btn">
-              <img src="./assets/icons/shopping-cart.svg" alt="" />
-              <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
-            </div>
-            <div class="user h-fit relative">
-              <img src="./assets/icons/user.svg" alt="" />
-              <span id="username-span"
-                class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-                >guest</span
-              >
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section class="cartTab w-[400px] bg-slate-700 text-white fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_70px] z-[1000] transition-[0.5s]">
-      <h1 class="p-[20px] m-0 font-light">Shopping Cart</h1>
-      <div class="ListCart overflow-auto">
-          <div class="item grid grid-cols-[70px_150px_50px_1fr] gap-[10px] text-center items-center">
-            <div class="image">
-                  <img src="./assets/images/ali.png" alt="" class="w-full">
-            </div>
-            <div class="name">
-                  Ali
-            </div>
-            <div class="totalPrice">200$</div>
-            <div class="quantity">
-              <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer ">a</span>
-              <span class="">1</span>
-              <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">></span>
-            </div>
-          </div>
-          
-      </div>
-      <div class="btn bg-yellow-300 border-none font-medium cursor-pointer grid grid-cols-[repeat(2,1fr)]">
-        <button class="close bg-white text-black">CLOSE</button>
-        <button class="Checkout">CHECK OUT</button>
-      </div>
-    </section>
-
-    <!------------------------------------------------>
-    <!------------------------------------------------>
-    <!------------------------------------------------>
-    <section class="p-1 sm:p-0 max-w-6xl w-full mt-14 mx-auto">
-      <div class="flex align-middle gap-4">
-        <div
-          class="h-44 sm:min-h-60 w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/hero-women.png')] bg-cover bg-center hover:opacity-85 shadow-md"
-        >
-          <h2>NEW COLLECTION</h2>
-          <h2>SHOP WOMENS</h2>
-          <div class="w-1/2 border border-white bg-white"></div>
-        </div>
-        <div
-          class="h-44 sm:min-h-60 w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/hero-men.png')] bg-cover bg-center hover:opacity-85 shadow-md"
-        >
-          <h2>NEW COLLECTION</h2>
-          <h2>SHOP MEN</h2>
-          <div class="w-1/2 border border-white bg-white"></div>
-        </div>
-      </div>
-
-      <div class="text-[10px] sm:text-xl flex align-middle gap-4 mt-4">
-        <div
-          class="h-28 sm:min-h-60 w-1/3 flex flex-col justify-center gap-1 sm:gap-5 font-semibold text-white bg-[url('./assets/images/hero-1.png')] bg-cover bg-center hover:opacity-85 shadow-lg"
-        >
-          <h2 class="pl-[50%]">Flip Flop</h2>
-          <h2 class="pl-[50%]">SUMMER</h2>
-          <h2 class="pl-[50%]">SALE -70% OFF</h2>
-          <h2 class="pl-[50%]">SHOP NOW</h2>
-          <div class="ml-[50%] w-1/3 border border-white bg-white"></div>
-        </div>
-        <div
-          class="h-28 sm:min-h-60 sm:font-semibold w-1/3 flex flex-col justify-center pl-5 gap-1 sm:gap-5 text-white bg-[url('./assets/images/hero-2.png')] bg-cover bg-center hover:opacity-85"
-        >
-          <h2 class="text-gray-500">ACCESSORIES</h2>
-          <h2>2019 WINTER UP</h2>
-          <h2>TO 50% OFF</h2>
-          <h2 class="text-gray-500">SHOP NOW</h2>
-
-          <div class="w-1/2 border border-gray-500"></div>
-        </div>
-
-        <div
-          class="h-28 sm:min-h-60 w-1/3 flex flex-col pl-5 justify-center gap-1 sm:gap-5 text-black font-semibold bg-[url('./assets/images/hero-3.png')] bg-cover bg-center hover:opacity-85"
-        >
-          <h2>ACCESSORIES</h2>
-          <div>
-            <h2>2019 WINTER UP</h2>
-            <h2>TO 50% OFF</h2>
-          </div>
-          <h2>SHOP NOW</h2>
-          <div class="w-1/2 border border-black"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- zakaria section   -->
-
-    <section>
-      <div class="flex justify-center mt-12">
-        <h1 class="text-3xl font-semibold">TOP PRODUCTS</h1>
-      </div>
-    </section>
-    <section>
-      <div class="flex gap-10 justify-center mt-12">
-        <div
-          class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300"
-        >
-          <img
-            src="../assets/images/product1.png"
-            alt=""
-            class="shadow-lg rounded-2xl "
-          />
-          <p class="text-slate-400">women</p>
-          <h1 class="font-semibold">Bround paperbag waist pencil</h1>
-          <h2 class="text-yellow-500">99$</h2>
-          <img
-            src="../assets/icons/heart.svg"
-            alt=""
-            class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24  "
-          />
-        </div>
-        <div
-          class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300"
-        >
-          <img
-            src="../assets/images/product2.png"
-            alt=""
-            class="shadow-lg rounded-2xl"
-          />
-          <p class="text-slate-400">women</p>
-          <h1 class="font-semibold">Bround paperbag waist pencil</h1>
-          <h2 class="text-yellow-500">99$</h2>
-          <img
-            src="../assets/icons/heart.svg"
-            alt=""
-            class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24  "
-          />
-        </div>
-        <div
-          class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300"
-        >
-          <img
-            src="../assets/images/product3.png"
-            alt=""
-            class="shadow-lg rounded-2xl"
-          />
-          <p class="text-slate-400">women</p>
-          <h1 class="font-semibold">Bround paperbag waist pencil</h1>
-          <h2 class="text-yellow-500">99$</h2>
-          <img
-            src="../assets/icons/heart.svg"
-            alt=""
-            class="lg:-mt-[125%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24  "
-          />
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="flex justify-center mt-[13%]">
-        <h1 class="text-3xl font-semibold">NEW COLLECTIONS</h1>
-      </div>
-    </section>
-
-    <section
-      class="grid grid-cols-[repeat(3,370px)] grid-rows-[repeat(2,200px)] mt-16 lg:ml-48 ml-3"
-    >
-      <div
-        class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[url('../assets/images/P1.png')]"
-      >
-        <div class="mt-64 ml-6">
-          <h2 class="text-white text-xs">Clerance</h2>
-          <h1 class="text-white font-semibold">Waterproof</h1>
-          <h1 class="text-white">FROM $99</h1>
-          <button
-            class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          >
-            Discover now
-          </button>
-        </div>
-      </div>
-      <div
-        class="col-start-2 col-end-3 row-start-1 row-end-2 bg-[url('../assets/images/P2.png')] hidden lg:block "
-      >
-        <div class="mt-16 ml-6">
-          <h2 class="text-white text-xs">Clerance</h2>
-          <h1 class="text-white font-semibold">Waterproof</h1>
-          <h1 class="text-white">FROM $99</h1>
-          <button
-            class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          >
-            Discover now
-          </button>
-        </div>
-      </div>
-      <div
-        class="col-start-2 col-end-3 row-start-2 row-end-3 bg-[url('../assets/images/P3.png')] hidden lg:block "
-      >
-        <div class="mt-16 ml-6">
-          <h2 class="text-white text-xs">Clerance</h2>
-          <h1 class="text-white font-semibold">Waterproof</h1>
-          <h1 class="text-white">FROM $99</h1>
-          <button
-            class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          >
-            Discover now
-          </button>
-        </div>
-      </div>
-      <div
-        class="col-start-3 col-end-4 row-start-1 row-end-3 bg-[url('../assets/images/P4.png')] hidden lg:block "
-      >
-        <div class="mt-16 ml-12">
-          <h2 class="text-white text-xs">Clerance</h2>
-          <h1 class="text-white font-semibold">Waterproof</h1>
-          <h1 class="text-white">FROM $99</h1>
-          <button
-            class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          >
-            Discover now
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!------------------------------------------------>
-    <!------------------------------------------------>
-    <!------------------------------------------------>
-
-    <!-- <div class="h-44 sm:min-h-60  w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/quality-section.png')]  bg-cover bg-center hover:opacity-85 shadow-md"> -->
-    <section
-      class="mt-16 bg-center sm:bg-center bg-cover bg-no-repeat bg-blend-multiply bg-[url('./assets/images/quality-section.png')]"
-    >
-      <div class="px-4 mx-auto max-w-screen-xl text-center py-16 lg:py-32">
-        <h1
-          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
-        >
-          Quality
-        </h1>
-        <p
-          class="mb-8 text-sm sm:text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
-        >
-          By creating an account, you’ll be able to build a personalized profile
-          that showcases your abilities. Add your skills and previous
-          experiences to increase your visibility to employers. You can select
-          your country to help employers find local talent or expand your job
-          search to international opportunities. Tailor your job applications
-          based on your interests and get matched with positions that align with
-          your career goals. Whether you're a seasoned professional or just
-          starting out, having an account ensures that the best job offers are
-          within your reach.
+      <div class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center">
+        <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+        <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+          in your first order
         </p>
-        <div
-          class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
-        >
-          <a
-            href="#"
-            class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#7B66FF] hover:bg-[#4c3ac4] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
-          >
-            See All Products
-          </a>
-        </div>
       </div>
-    </section>
-
-    <!-- ---------------------------------------------  -->
-
-    <section class="text-gray-600 body-font max-w-6xl w-full mx-auto">
-      <div class="container px-4 mx-auto mt-5">
-        <!-- <div class="flex flex-col text-center w-full"> -->
-        <h1
-          class="text-center my-11 w-full sm:text-3xl text-2xl font-medium title-font text-gray-900"
-        >
-          Features
-        </h1>
-        <!-- </div> -->
-        <div class="flex flex-wrap -m-4 text-center">
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-              <svg
-                width="73"
-                height="63"
-                viewBox="0 0 73 63"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12 mb-3 inline-block"
-              >
-                <path
-                  d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
-                  stroke="#7B66FF"
-                  stroke-width="7.08333"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h2 class="title-font font-medium text-3xl text-gray-900">
-                Free Shiping
-              </h2>
-              <p class="leading-relaxed mt-3">
-                Sometimes features require a short description
-              </p>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-              <svg
-                width="73"
-                height="63"
-                viewBox="0 0 73 63"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12 mb-3 inline-block"
-              >
-                <path
-                  d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
-                  stroke="#7B66FF"
-                  stroke-width="7.08333"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h2 class="title-font font-medium text-3xl text-gray-900">
-                Money Back
-              </h2>
-              <p class="leading-relaxed mt-3">
-                Sometimes features require a short description
-              </p>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-              <svg
-                width="73"
-                height="63"
-                viewBox="0 0 73 63"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12 mb-3 inline-block"
-              >
-                <path
-                  d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
-                  stroke="#7B66FF"
-                  stroke-width="7.08333"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h2 class="title-font font-medium text-3xl text-gray-900">
-                Payement
-              </h2>
-              <p class="leading-relaxed mt-3">
-                Sometimes features require a short description
-              </p>
-            </div>
-          </div>
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-              <svg
-                width="73"
-                height="63"
-                viewBox="0 0 73 63"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 h-12 mb-3 inline-block"
-              >
-                <path
-                  d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
-                  stroke="#7B66FF"
-                  stroke-width="7.08333"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h2 class="title-font font-medium text-3xl text-gray-900">
-                Quality
-              </h2>
-              <p class="leading-relaxed mt-3">
-                Sometimes features require a short description
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs">
+        <p>
+          <a href="./pages/login.html">Login</a>
+        </p>
       </div>
-    </section>
+    </div>
 
-    <!------------------------------------------------>
-    <!------------------------------------------------>
-    <!------------------------------------------------>
-    <!-- Newsletter Section -->
-    <section class="bg-blue-100 py-8 mt-16">
-      <div class="max-w-4xl mx-auto flex items-center space-x-4">
-        <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
-        <input
-          type="email"
-          placeholder="Email"
-          class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md"
-        />
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-black text-white py-12">
-      <div
-        class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
-      >
-        <!-- Brand and Description -->
-        <div>
-          <img
-            src="../assets/images/1 2.png"
-            alt="Luxy Logo"
-            class="w-24 mb-4"
-          />
-          <p class="text-sm">
-            Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
-            augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
-            dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-          </p>
-          <p class="text-sm mt-4">
-            Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
-            augue, eu vulputate magna eros eu erat. Aliquam erat vo.
-          </p>
+    <!------------------------------>
+    <!-- nav section  -->
+    <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+      <div class="max-w-6xl w-full flex justify-between">
+        <div class="flex items-center">
+          <div class="menu | sm:hidden h-fit cursor-pointer" id="menu" data-collapse-toggle="navbar-default">
+            <img width="35" height="20" src="./assets/icons/menu.svg" alt="" />
+          </div>
+          <!-- fisrt child  -->
+          <div class="logo |">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png" alt="luxy logo" />
+            </a>
+          </div>
         </div>
 
-        <!-- Pages Links -->
-        <div>
-          <h3 class="font-semibold mb-3">Pages</h3>
-          <ul class="text-sm space-y-2">
-            <li><a href="#" class="hover:underline">Products</a></li>
-            <li><a href="#" class="hover:underline">Contact</a></li>
-            <li><a href="#" class="hover:underline">Our Story</a></li>
-            <li><a href="#" class="hover:underline">Blog</a></li>
-            <li><a href="#" class="hover:underline">Login</a></li>
-            <li><a href="#" class="hover:underline">Register</a></li>
-          </ul>
+        <div id="cards"
+          class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden">
+          cards
         </div>
-
-        <!-- My Account Links -->
-        <div>
-          <h3 class="font-semibold mb-3">My Account</h3>
-          <ul class="text-sm space-y-2">
-            <li><a href="#" class="hover:underline">Login</a></li>
-            <li><a href="#" class="hover:underline">Sign up</a></li>
-            <li><a href="#" class="hover:underline">Wishlist</a></li>
-            <li><a href="#" class="hover:underline">View Cart</a></li>
-            <li><a href="#" class="hover:underline">Help</a></li>
-            <li><a href="#" class="hover:underline">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Social Media Links -->
-        <div>
-          <h3 class="font-semibold mb-3">Social Media</h3>
-          <ul class="text-sm space-y-2">
-            <li><a href="#" class="hover:underline">Instagram</a></li>
-            <li><a href="#" class="hover:underline">Facebook</a></li>
-            <li><a href="#" class="hover:underline">TikTok</a></li>
-            <li><a href="#" class="hover:underline">X</a></li>
-          </ul>
-        </div>
-
-        <!-- Customer Service Links -->
-        <div>
-          <h3 class="font-semibold mb-3">Customer Service</h3>
-          <ul class="text-sm space-y-2">
-            <li><a href="#" class="hover:underline">Payment</a></li>
-            <li><a href="#" class="hover:underline">Shipping</a></li>
-            <li><a href="#" class="hover:underline">Returns</a></li>
-            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+        <!-- fisrt child  -->
+        <div class="nav-links flex items-center font-[lato] font-bold">
+          <ul id="left-links"
+            class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300">
+            <!-- products  -->
+            <li class="flex justify-center">
+              <span class="flex items-center gap-1">
+                <a href="">Products</a>
+                <img src="./assets/icons/down.svg" alt="" /></span>
+              <ul class="hidden">
+                <li>T-shirts</li>
+                <li>shirts</li>
+                <li>Shoes</li>
+              </ul>
+            </li>
             <li>
-              <a href="#" class="hover:underline">Terms and Conditions</a>
+              <a href="#">Our Story</a>
+            </li>
+            <li>
+              <a href="./pages/Blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
             </li>
           </ul>
         </div>
+        <!-- fisrt child  -->
+        <div class="right-links flex gap-3 justify-center items-center">
+          <div class="favorite h-fit">
+            <img src="./assets/icons/heart.svg" alt="" />
+          </div>
+          <div class="cart h-fit" id="card-btn">
+            <img src="./assets/icons/shopping-cart.svg" alt="" />
+          </div>
+          <div class="user h-fit relative">
+            <img src="./assets/icons/user.svg" alt="" />
+            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!------------------------------------------------>
+  <!------------------------------------------------>
+  <!------------------------------------------------>
+  <section class="p-1 sm:p-0 max-w-6xl w-full mt-14 mx-auto">
+    <div class="flex align-middle gap-4">
+      <div
+        class="h-44 sm:min-h-60 w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/hero-women.png')] bg-cover bg-center hover:opacity-85 shadow-md">
+        <h2>NEW COLLECTION</h2>
+        <h2>SHOP WOMENS</h2>
+        <div class="w-1/2 border border-white bg-white"></div>
+      </div>
+      <div
+        class="h-44 sm:min-h-60 w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/hero-men.png')] bg-cover bg-center hover:opacity-85 shadow-md">
+        <h2>NEW COLLECTION</h2>
+        <h2>SHOP MEN</h2>
+        <div class="w-1/2 border border-white bg-white"></div>
+      </div>
+    </div>
+
+    <div class="text-[10px] sm:text-xl flex align-middle gap-4 mt-4">
+      <div
+        class="h-28 sm:min-h-60 w-1/3 flex flex-col justify-center gap-1 sm:gap-5 font-semibold text-white bg-[url('./assets/images/hero-1.png')] bg-cover bg-center hover:opacity-85 shadow-lg">
+        <h2 class="pl-[50%]">Flip Flop</h2>
+        <h2 class="pl-[50%]">SUMMER</h2>
+        <h2 class="pl-[50%]">SALE -70% OFF</h2>
+        <h2 class="pl-[50%]">SHOP NOW</h2>
+        <div class="ml-[50%] w-1/3 border border-white bg-white"></div>
+      </div>
+      <div
+        class="h-28 sm:min-h-60 sm:font-semibold w-1/3 flex flex-col justify-center pl-5 gap-1 sm:gap-5 text-white bg-[url('./assets/images/hero-2.png')] bg-cover bg-center hover:opacity-85">
+        <h2 class="text-gray-500">ACCESSORIES</h2>
+        <h2>2019 WINTER UP</h2>
+        <h2>TO 50% OFF</h2>
+        <h2 class="text-gray-500">SHOP NOW</h2>
+
+        <div class="w-1/2 border border-gray-500"></div>
       </div>
 
-      <!-- Footer Bottom -->
-      <div class="text-center mt-8 text-sm text-gray-400">
-        © 2024 Luxy. All Rights Reserved.
+      <div
+        class="h-28 sm:min-h-60 w-1/3 flex flex-col pl-5 justify-center gap-1 sm:gap-5 text-black font-semibold bg-[url('./assets/images/hero-3.png')] bg-cover bg-center hover:opacity-85">
+        <h2>ACCESSORIES</h2>
+        <div>
+          <h2>2019 WINTER UP</h2>
+          <h2>TO 50% OFF</h2>
+        </div>
+        <h2>SHOP NOW</h2>
+        <div class="w-1/2 border border-black"></div>
       </div>
-    </footer>
-    <a href="./pages/detail.html?id=5">HAAAA</a>
-    <a href="./pages/ProductList.html">Listt</a>
-    <script src="./assets/js/app.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <!-- zakaria section   -->
+
+  <section>
+    <div class="flex justify-center mt-12">
+      <h1 class="text-3xl font-semibold">TOP PRODUCTS</h1>
+    </div>
+  </section>
+  <section>
+    <div class="flex gap-10 justify-center mt-12 mb-80" id="product-list">
+    </div>
+  </section>
+
+  <section>
+    <div class="flex justify-center mt-[13%]">
+      <h1 class="text-3xl font-semibold">NEW COLLECTIONS</h1>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-[repeat(3,370px)] grid-rows-[repeat(2,200px)] mt-16 lg:ml-48 ml-3">
+    <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[url('../assets/images/P1.png')]">
+      <div class="mt-64 ml-6">
+        <h2 class="text-white text-xs">Clerance</h2>
+        <h1 class="text-white font-semibold">Waterproof</h1>
+        <h1 class="text-white">FROM $99</h1>
+        <button class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+          Discover now
+        </button>
+      </div>
+    </div>
+    <div class="col-start-2 col-end-3 row-start-1 row-end-2 bg-[url('../assets/images/P2.png')] hidden lg:block ">
+      <div class="mt-16 ml-6">
+        <h2 class="text-white text-xs">Clerance</h2>
+        <h1 class="text-white font-semibold">Waterproof</h1>
+        <h1 class="text-white">FROM $99</h1>
+        <button class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+          Discover now
+        </button>
+      </div>
+    </div>
+    <div class="col-start-2 col-end-3 row-start-2 row-end-3 bg-[url('../assets/images/P3.png')] hidden lg:block ">
+      <div class="mt-16 ml-6">
+        <h2 class="text-white text-xs">Clerance</h2>
+        <h1 class="text-white font-semibold">Waterproof</h1>
+        <h1 class="text-white">FROM $99</h1>
+        <button class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+          Discover now
+        </button>
+      </div>
+    </div>
+    <div class="col-start-3 col-end-4 row-start-1 row-end-3 bg-[url('../assets/images/P4.png')] hidden lg:block ">
+      <div class="mt-16 ml-12">
+        <h2 class="text-white text-xs">Clerance</h2>
+        <h1 class="text-white font-semibold">Waterproof</h1>
+        <h1 class="text-white">FROM $99</h1>
+        <button class="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+          Discover now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex justify-center mt-12">
+      <h1 class="text-3xl font-semibold">EXPLORE MORE </h1>
+    </div>
+  </section>
+  <section>
+    <div class="flex gap-10 justify-center mt-12 mb-80 " id="explore-more">
+    </div>
+  </section>
+
+  <!-- <div class="h-44 sm:min-h-60  w-1/2 flex flex-col justify-center items-center gap-5 text-white bg-[url('./assets/images/quality-section.png')]  bg-cover bg-center hover:opacity-85 shadow-md"> -->
+  <section
+    class="mt-16 bg-center sm:bg-center bg-cover bg-no-repeat bg-blend-multiply bg-[url('./assets/images/quality-section.png')]">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-16 lg:py-32">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        Quality
+      </h1>
+      <p class="mb-8 text-sm sm:text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+        By creating an account, you’ll be able to build a personalized profile
+        that showcases your abilities. Add your skills and previous
+        experiences to increase your visibility to employers. You can select
+        your country to help employers find local talent or expand your job
+        search to international opportunities. Tailor your job applications
+        based on your interests and get matched with positions that align with
+        your career goals. Whether you're a seasoned professional or just
+        starting out, having an account ensures that the best job offers are
+        within your reach.
+      </p>
+      <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        <a href="#"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#7B66FF] hover:bg-[#4c3ac4] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+          See All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------  -->
+
+  <section class="text-gray-600 body-font max-w-6xl w-full mx-auto">
+    <div class="container px-4 mx-auto mt-5">
+      <!-- <div class="flex flex-col text-center w-full"> -->
+      <h1 class="text-center my-11 w-full sm:text-3xl text-2xl font-medium title-font text-gray-900">
+        Features
+      </h1>
+      <!-- </div> -->
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg width="73" height="63" viewBox="0 0 73 63" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="w-12 h-12 mb-3 inline-block">
+              <path
+                d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
+                stroke="#7B66FF" stroke-width="7.08333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <h2 class="title-font font-medium text-3xl text-gray-900">
+              Free Shiping
+            </h2>
+            <p class="leading-relaxed mt-3">
+              Sometimes features require a short description
+            </p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg width="73" height="63" viewBox="0 0 73 63" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="w-12 h-12 mb-3 inline-block">
+              <path
+                d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
+                stroke="#7B66FF" stroke-width="7.08333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <h2 class="title-font font-medium text-3xl text-gray-900">
+              Money Back
+            </h2>
+            <p class="leading-relaxed mt-3">
+              Sometimes features require a short description
+            </p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg width="73" height="63" viewBox="0 0 73 63" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="w-12 h-12 mb-3 inline-block">
+              <path
+                d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
+                stroke="#7B66FF" stroke-width="7.08333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <h2 class="title-font font-medium text-3xl text-gray-900">
+              Payement
+            </h2>
+            <p class="leading-relaxed mt-3">
+              Sometimes features require a short description
+            </p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg width="73" height="63" viewBox="0 0 73 63" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="w-12 h-12 mb-3 inline-block">
+              <path
+                d="M21.2917 32.5835H38.0208M21.2917 20.4168H51.7083M30.4167 47.7918H18.8583C15.4514 47.7918 13.7478 47.7918 12.4466 47.1287C11.3019 46.5457 10.3713 45.6149 9.78805 44.4703C9.125 43.1691 9.125 41.4655 9.125 38.0585V14.9418C9.125 11.5348 9.125 9.83134 9.78805 8.53006C10.3713 7.38539 11.3019 6.45476 12.4466 5.87155C13.7478 5.2085 15.4514 5.2085 18.8583 5.2085H54.1417C57.5486 5.2085 59.2523 5.2085 60.5535 5.87155C61.6981 6.45476 62.6288 7.38539 63.2119 8.53006C63.875 9.83134 63.875 11.5349 63.875 14.9418V15.8543M42.5833 50.8335L48.7427 49.6016C49.2796 49.4942 49.5481 49.4404 49.7985 49.3422C50.0208 49.2552 50.2322 49.142 50.4278 49.0055C50.6486 48.8515 50.8421 48.6581 51.2296 48.2706L63.875 35.6252C65.5549 33.9453 65.5549 31.2217 63.875 29.5418C62.1951 27.8619 59.4716 27.8619 57.7917 29.5418L45.1462 42.1873C44.7587 42.5748 44.5653 42.7682 44.4114 42.989C44.2748 43.1846 44.1617 43.396 44.0747 43.6184C43.9764 43.8687 43.9226 44.1373 43.8152 44.6741L42.5833 50.8335Z"
+                stroke="#7B66FF" stroke-width="7.08333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <h2 class="title-font font-medium text-3xl text-gray-900">
+              Quality
+            </h2>
+            <p class="leading-relaxed mt-3">
+              Sometimes features require a short description
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------------------------------------------>
+  <!------------------------------------------------>
+  <!------------------------------------------------>
+  <!-- Newsletter Section -->
+  <section class="bg-blue-100 py-8 mt-16">
+    <div class="max-w-4xl mx-auto flex items-center space-x-4">
+      <h2 class="text-2xl font-semibold -ml-24">Join Our Newsletter</h2>
+      <input type="email" placeholder="Email" class="px-4 py-2 rounded-full shadow-md w-1/2 max-w-md" />
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <!-- Brand and Description -->
+      <div>
+        <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4" />
+        <p class="text-sm">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+          augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
+          dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+        </p>
+        <p class="text-sm mt-4">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+          augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+        </p>
+      </div>
+
+      <!-- Pages Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Pages</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Our Story</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- My Account Links -->
+      <div>
+        <h3 class="font-semibold mb-3">My Account</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Sign up</a></li>
+          <li><a href="#" class="hover:underline">Wishlist</a></li>
+          <li><a href="#" class="hover:underline">View Cart</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Social Media</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">TikTok</a></li>
+          <li><a href="#" class="hover:underline">X</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Customer Service</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Payment</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li>
+            <a href="#" class="hover:underline">Terms and Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center mt-8 text-sm text-gray-400">
+      © 2024 Luxy. All Rights Reserved.
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Fonction pour obtenir des produits aléatoires
+        function getRandomProducts(data, count) {
+            const shuffled = data.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // Fetch pour la section TOP PRODUCTS
+        fetch("http://localhost:3000/products")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const productList = document.getElementById("product-list");
+
+                if (!productList) {
+                    console.error("Element with id 'product-list' not found.");
+                    return;
+                }
+
+                // Obtenir trois produits aléatoires
+                const randomProducts = getRandomProducts(data, 3);
+
+                randomProducts.forEach(product => {
+                    const productDiv = document.createElement("div");
+                    productDiv.classList.add(
+                        "w-64", "h-48", "flex", "flex-col", "items-center",
+                        "transition-transform", "transform", "hover:scale-110", "duration-300"
+                    );
+
+                    productDiv.innerHTML = `
+                        <a href="./pages/detail.html?id=${product.id}">
+                            <img src="${product.img}" alt="${product.title}" class="shadow-lg rounded-2xl w-[346px] h-[346px]">
+                            <p class="text-slate-400 mt-[15px]">${product.category}</p>
+                            <h1 class="font-semibold">${product.title}</h1>
+                            <h2 class="text-yellow-500">$${product.price}</h2>
+                            <img src="./assets/icons/heart.svg" alt="" class="lg:-mt-[160%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24">
+                        </a>
+                    `;
+
+                    productList.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error("Error loading the data:", error));
+
+        // Fetch pour la section EXPLORE MORE
+        fetch("http://localhost:3000/products")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const exploreMoreList = document.getElementById("explore-more");
+
+                if (!exploreMoreList) {
+                    console.error("Element with id 'explore-more' not found.");
+                    return;
+                }
+
+                // Obtenir trois autres produits aléatoires
+                const randomProducts = getRandomProducts(data, 3);
+
+                randomProducts.forEach(product => {
+                    const productDiv = document.createElement("div");
+                    productDiv.classList.add(
+                        "w-64", "h-48", "flex", "flex-col", "items-center",
+                        "transition-transform", "transform", "hover:scale-110", "duration-300"
+                    );
+
+                    productDiv.innerHTML = `
+                        <a href="./pages/detail.html?id=${product.id}">
+                            <img src="${product.img}" alt="${product.title}" class="shadow-lg rounded-2xl w-[346px] h-[346px]">
+                            <p class="text-slate-400 mt-[15px]">${product.category}</p>
+                            <h1 class="font-semibold">${product.title}</h1>
+                            <h2 class="text-yellow-500">$${product.price}</h2>
+                            <img src="./assets/icons/heart.svg" alt="" class="lg:-mt-[160%] p-2 lg:ml-[80%] bg-white w-7 rounded-full -mt-56 ml-24">
+                        </a>
+                    `;
+
+                    exploreMoreList.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error("Error loading the data:", error));
+    });
+</script>
+
+    
+  <script src="./assets/js/app.js"></script>
+</body>
 </html>
