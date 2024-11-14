@@ -1,10 +1,4 @@
-{
-  /* <a href="/product-detail.html?id=1">Product 1</a> */
-}
-
-import {addToPanie,addToFavi} from "../assets/js/models/functions"
-  
-  // DOM Variables:
+import { addToPanie, addToFavi } from "../assets/js/models/functions";
 
 const title = document.getElementById("title");
 const price = document.getElementById("price");
@@ -16,94 +10,196 @@ const heartBtn = document.getElementById("heart-btn");
 
 const notfound = document.getElementById("not-found");
 const page = document.getElementById("product-detail");
-const suggestion = document.getElementById("suggestions")
-//  ----------------------
+const suggestion = document.getElementById("suggestions");
+
+const cartIcon = document.getElementById("card-btn");
+const closeCartBtn = document.querySelector(".close");
+const cartList = document.querySelector(".ListCart");
+const cartTotal = document.querySelector(".cartTotal");
+const cartItemCount = document.querySelector(".icon-cart span"); 
+
+
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+updateCartItemCount();
+
+
+cartIcon.addEventListener("click", () => {
+  document.body.classList.toggle("showCart");
+  console.log("Cart icon clicked; toggle class showCart");
+});
+
+closeCartBtn.addEventListener("click", () => {
+  document.body.classList.remove("showCart");
+  console.log("Cart modal closed.");
+});
+
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
 if (productId === null) {
-  showNotFoundPage()
-  console.log("error id");
+  showNotFoundPage();
+  console.log("Error: No product ID provided.");
 } else {
   const url = `http://localhost:3000/products/${productId}`;
 
   fetch(url)
     .then((res) => res.json())
     .then((product) => {
-      // -------------------
       uploadProduct(product);
-      handleSuggestion(product.category)
+      handleSuggestion(product.category);
     })
     .catch((e) => {
-      console.log(e);
-      
-      showNotFoundPage()
-
+      console.log("Error fetching product data:", e);
+      showNotFoundPage();
     });
 }
+
 
 function uploadProduct(product) {
   document.getElementById("loading").classList.add("hidden");
   title.textContent = product.title;
-  price.textContent = product.price;
+  price.textContent = `$${product.price}`;
   description.textContent = product.description;
   category.textContent = product.category;
   img.src = `../${product.img}`;
 
-  panieBtn.addEventListener("click", () => {
-    addToPanie(product.id);
-  });
-  heartBtn.addEventListener("click",()=>{
-     addToFavi(product.id);
-
-  })
+  
+  panieBtn.addEventListener("click", () => addToCart(product));
+  
+  heartBtn.addEventListener("click", () => addToFavi(product.id));
 }
 
 
-
-
-function showNotFoundPage(){
+function showNotFoundPage() {
   notfound.classList.add("flex");
   notfound.classList.remove("hidden");
   page.classList.add("hidden");
 }
 
 
-function handleSuggestion(category){
-
-console.log(category);
-
+function handleSuggestion(category) {
   fetch(`http://localhost:3000/products?category=${category}&_limit=3`)
-  .then( res => res.json())
-  .then(showSuggestion)
-  .catch(e => {
-    console.log(e)
-  })
-  // suggestion.innerHTML
+    .then((res) => res.json())
+    .then(showSuggestion)
+    .catch((e) => console.log("Error fetching suggestions:", e));
 }
 
 
-function showSuggestion(products){
-  let content = products
-  .map((product) => {
-    return `
-    <div class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
-      <a  href="/pages/detail.html?id=${product.id}">
-        <img
-          src="../${product.img}"
-          class="shadow-lg rounded-2xl w-fit  h-72 "
-        />
-        <p class="text-slate-400">${product.category}</p>
-        <h1 class="font-semibold">${product.title}</h1>
-        <h2 class="text-yellow-500">${product.price}</h2>
-       
-      </a>
-    </div>
-  `;
-  })
-  .join(""); // Join the array into a single string
+function showSuggestion(products) {
+  const content = products
+    .map((product) => {
+      return `
+      <div class="w-64 h-48 flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+        <a href="/pages/detail.html?id=${product.id}">
+          <img src="../${product.img}" class="shadow-lg rounded-2xl w-fit h-72" />
+          <p class="text-slate-400">${product.category}</p>
+          <h1 class="font-semibold">${product.title}</h1>
+          <h2 class="text-yellow-500">$${product.price}</h2>
+        </a>
+      </div>
+    `;
+    })
+    .join("");
+  suggestion.innerHTML = content;
+}
 
-suggestion.innerHTML = content;
 
+function addToCart(product) {
+  const existingCartItem = cart.find(item => item.id === product.id);
+
+  
+  if (existingCartItem) {
+    existingCartItem.quantity += 1;
+  } else {
+    
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  updateCartItemCount();
+  updateCartDisplay();
+}
+
+
+function updateCartItemCount() {
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+  cartItemCount.textContent = totalItems > 0 ? totalItems : '';
+}
+
+
+function updateCartDisplay() {
+  cartList.innerHTML = ''; 
+
+  cart.forEach(item => {
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item", "grid", "grid-cols-[70px_150px_50px_1fr]", "gap-[10px]", "text-center", "items-center");
+    cartItem.setAttribute("data-id", item.id);
+    cartItem.innerHTML = `
+      <div class="image">
+        <img src="../${item.img}" alt="${item.title}" class="w-full">
+      </div>
+      <div class="name">${item.title}</div>
+      <div class="totalPrice">$${item.price}</div>
+      <div class="quantity">
+        <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">-</span>
+        <span class="count">${item.quantity}</span>
+        <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">+</span>
+      </div>
+    `;
+    cartList.appendChild(cartItem);
+
+    
+    cartItem.querySelector(".plus").addEventListener("click", () => updateQuantity(cartItem, 1, item.price));
+    cartItem.querySelector(".minus").addEventListener("click", () => updateQuantity(cartItem, -1, item.price));
+  });
+
+  updateCartTotal();
+}
+
+
+function updateQuantity(cartItem, change, productPrice) {
+  const quantityElem = cartItem.querySelector(".quantity .count");
+  let quantity = parseInt(quantityElem.textContent) + change;
+  
+  if (quantity < 1) {
+   
+    const cartItemId = cartItem.getAttribute("data-id");
+    cart = cart.filter(item => item.id !== cartItemId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    cartItem.remove(); 
+    updateCartItemCount(); 
+    updateCartTotal(); 
+  } else {
+    quantityElem.textContent = quantity;
+
+    const totalPriceElem = cartItem.querySelector(".totalPrice");
+    totalPriceElem.textContent = `$${(productPrice * quantity).toFixed(2)}`;
+
+    
+    const cartItemId = cartItem.getAttribute("data-id");
+    const cartItemIndex = cart.findIndex(item => item.id === cartItemId);
+    cart[cartItemIndex].quantity = quantity;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    updateCartItemCount(); 
+    updateCartTotal(); 
+  }
+}
+
+
+
+
+function updateCartTotal() {
+  const cartItems = cartList.querySelectorAll(".cart-item");
+  let total = 0;
+  cartItems.forEach((item) => {
+    const price = parseFloat(item.querySelector(".totalPrice").textContent.replace("$", ""));
+    total += price;
+  });
+  cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
