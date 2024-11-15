@@ -30,103 +30,91 @@
 
         <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
             <div class="max-w-6xl w-full flex justify-between">
-              <div class="flex items-center">
-                <div
-                  class="menu | sm:hidden h-fit cursor-pointer"
-                  id="menu"
-                  data-collapse-toggle="navbar-default"
-                >
-                  <img
-                    width="35"
-                    height="20"
-                    src="../assets/icons/menu.svg"
-                    alt=""
-                  />
+                <div class="flex items-center">
+                    <div class="menu | sm:hidden h-fit cursor-pointer" id="menu" data-collapse-toggle="navbar-default">
+                        <img width="35" height="20" src="../assets/icons/menu.svg" alt="" />
+                    </div>
+                    <!-- fisrt child  -->
+                    <div class="logo |">
+                        <a href="../">
+                            <img src="../assets/images/logo.png" alt="luxy logo" />
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- fisrt child  -->
+                <div class="nav-links flex items-center font-[lato] font-bold">
+                    <ul id="left-links"
+                        class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300">
+                        <!-- products  -->
+                        <li class="flex justify-center">
+                            <span class="flex items-center gap-1">
+                                <a href="./products.html">Products</a>
+                                <img src="../assets/icons/down.svg" alt="" /></span>
+                            <ul class="hidden">
+                                <li>T-shirts</li>
+                                <li>shirts</li>
+                                <li>Shoes</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./about.html">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="./blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
                 <!-- fisrt child  -->
-                <div class="logo |">
-                  <a href="../">
-                    <img src="../assets/images/logo.png" alt="luxy logo" />
-                  </a>
+                <div class="right-links flex gap-3 justify-center items-center">
+                    <div class="favorite h-fit">
+                        <a href="./whishlist.html">
+
+                            <img src="../assets/icons/heart.svg" alt="" />
+                        </a>
+                    </div>
+                    <div class="cart h-fit relative icon-cart" id="card-btn">
+                        <img src="../assets/icons/shopping-cart.svg" alt="" />
+                        <span
+                            class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
+                    </div>
+                    <div class="user h-fit relative">
+                        <img src="../assets/icons/user.svg" alt="" />
+                        <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                            id="username-span">guest</span>
+                    </div>
                 </div>
-              </div>
-      
-              
-              <!-- fisrt child  -->
-              <div class="nav-links flex items-center font-[lato] font-bold">
-                <ul
-                  id="left-links"
-                  class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
-                >
-                  <!-- products  -->
-                  <li class="flex justify-center">
-                    <span class="flex items-center gap-1">
-                      <a href="./products.html">Products</a>
-                      <img src="../assets/icons/down.svg" alt=""
-                    /></span>
-                    <ul class="hidden">
-                      <li>T-shirts</li>
-                      <li>shirts</li>
-                      <li>Shoes</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="./about.html">Our Story</a>
-                  </li>
-                  <li>
-                    <a href="./blog.html">Blog</a>
-                  </li>
-                  <li>
-                    <a href="./contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- fisrt child  -->
-              <div class="right-links flex gap-3 justify-center items-center">
-                <div class="favorite h-fit">
-                  <a href="./whishlist.html">
-      
-                    <img src="../assets/icons/heart.svg" alt="" />
-                  </a>
-                </div>
-                <div class="cart h-fit relative icon-cart" id="card-btn">
-                  <img src="../assets/icons/shopping-cart.svg" alt="" />
-                  <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
-                </div>
-                <div class="user h-fit relative">
-                  <img src="../assets/icons/user.svg" alt="" />
-                  <span
-                    class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-                    id="username-span"
-                    >guest</span
-                  >
-                </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
 
     <div id="overlay" class="fixed inset-0 bg-whte bg-opacity-50 hidden z-[999] rounded"></div>
-    <section class="cartTab bg-whte mt-[105px] w-[400px] fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_80px] z-[1000] shadow-lg transition-all duration-500 rounded-sm ">
-      <h1 class="p-5 m-0 text-lg font-bold border-b bg-white  text-black">Shopping Cart</h1>
-      
-      <div class="ListCart bg-white overflow-y-auto p-4 space-y-4"></div>
+    <section
+        class="cartTab bg-whte mt-[105px] w-[400px] fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_80px] z-[1000] shadow-lg transition-all duration-500 rounded-sm ">
+        <h1 class="p-5 m-0 text-lg font-bold border-b bg-white  text-black">Shopping Cart</h1>
+
+        <div class="ListCart bg-white overflow-y-auto p-4 space-y-4"></div>
         <!-- Cart items will be dynamically added here -->
 
-      <div class="cartTotal flex items-center justify-between p-4 border-t border-gray-700 text-lg font-semibold bg-white">
-        <span>Total:</span>
-        <span class="">$114.98</span>
-      </div>
-      
-      <div class="btn bg-gray-800 text-gray-100 font-medium cursor-pointer grid grid-cols-2 divide-x divide-gray-700">
-        <button class="close py-3 font-semibold hover:bg-gray-700 transition">Close</button>
-        <button class="Checkout py-3 font-semibold bg-yellow-500 hover:bg-yellow-400 transition">
-          <a href="ShoppingCard.html" class="block w-full h-full text-center">Checkout</a>
-        </button>
-      </div>
+        <div
+            class="cartTotal flex items-center justify-between p-4 border-t border-gray-700 text-lg font-semibold bg-white">
+            <span>Total:</span>
+            <span class="">$114.98</span>
+        </div>
+
+        <div class="btn bg-gray-800 text-gray-100 font-medium cursor-pointer grid grid-cols-2 divide-x divide-gray-700">
+            <button class="close py-3 font-semibold hover:bg-gray-700 transition">Close</button>
+            <button class="Checkout py-3 font-semibold bg-yellow-500 hover:bg-yellow-400 transition">
+                <a href="ShoppingCard.html" class="block w-full h-full text-center">Checkout</a>
+            </button>
+        </div>
     </section>
-   </div>
+    </div>
     <!-- Wishlist Section -->
     <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
         <div class="text-center">
@@ -160,77 +148,77 @@
     <!-- Footer -->
     <footer class="bg-black text-white py-12">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-          <div>
-            <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4" />
-            <p class="text-sm">
-              Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
-              augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
-              dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-            </p>
-            <p class="text-sm mt-4">
-              Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
-              augue, eu vulputate magna eros eu erat. Aliquam erat vo.
-            </p>
-          </div>
-    
-          <div>
-            <h3 class="font-semibold mb-3">Pages</h3>
-            <ul class="text-sm space-y-2">
-              <li><a href="#" class="hover:underline">Products</a></li>
-              <li><a href="#" class="hover:underline">Contact</a></li>
-              <li><a href="#" class="hover:underline">Our Story</a></li>
-              <li><a href="#" class="hover:underline">Blog</a></li>
-              <li><a href="#" class="hover:underline">Login</a></li>
-              <li><a href="#" class="hover:underline">Register</a></li>
-            </ul>
-          </div>
-    
-          <div>
-            <h3 class="font-semibold mb-3">My Account</h3>
-            <ul class="text-sm space-y-2">
-              <li><a href="#" class="hover:underline">Login</a></li>
-              <li><a href="#" class="hover:underline">Sign up</a></li>
-              <li><a href="#" class="hover:underline">Wishlist</a></li>
-              <li><a href="#" class="hover:underline">View Cart</a></li>
-              <li><a href="#" class="hover:underline">Help</a></li>
-              <li><a href="#" class="hover:underline">Contact</a></li>
-            </ul>
-          </div>
-    
-          <!-- Social Media Links -->
-          <div>
-            <h3 class="font-semibold mb-3">Social Media</h3>
-            <ul class="text-sm space-y-2">
-              <li><a href="#" class="hover:underline">Instagram</a></li>
-              <li><a href="#" class="hover:underline">Facebook</a></li>
-              <li><a href="#" class="hover:underline">TikTok</a></li>
-              <li><a href="#" class="hover:underline">X</a></li>
-            </ul>
-          </div>
-    
-          <div>
-            <h3 class="font-semibold mb-3">Customer Service</h3>
-            <ul class="text-sm space-y-2">
-              <li><a href="#" class="hover:underline">Payment</a></li>
-              <li><a href="#" class="hover:underline">Shipping</a></li>
-              <li><a href="#" class="hover:underline">Returns</a></li>
-              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-              <li>
-                <a href="#" class="hover:underline">Terms and Conditions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    
-        <div class="text-center mt-8 text-sm text-gray-400">
-          © 2024 Luxy. All Rights Reserved.
-        </div>
-      </footer>
+            <div>
+                <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4" />
+                <p class="text-sm">
+                    Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+                    augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
+                    dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                </p>
+                <p class="text-sm mt-4">
+                    Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+                    augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+                </p>
+            </div>
 
-      <script src="../assets/js/app.js"></script>
-      <script type="module" src="./detail.js"> </script>
-      
-          <script>
+            <div>
+                <h3 class="font-semibold mb-3">Pages</h3>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:underline">Products</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                    <li><a href="#" class="hover:underline">Our Story</a></li>
+                    <li><a href="#" class="hover:underline">Blog</a></li>
+                    <li><a href="#" class="hover:underline">Login</a></li>
+                    <li><a href="#" class="hover:underline">Register</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-semibold mb-3">My Account</h3>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:underline">Login</a></li>
+                    <li><a href="#" class="hover:underline">Sign up</a></li>
+                    <li><a href="#" class="hover:underline">Wishlist</a></li>
+                    <li><a href="#" class="hover:underline">View Cart</a></li>
+                    <li><a href="#" class="hover:underline">Help</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div>
+                <h3 class="font-semibold mb-3">Social Media</h3>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:underline">Instagram</a></li>
+                    <li><a href="#" class="hover:underline">Facebook</a></li>
+                    <li><a href="#" class="hover:underline">TikTok</a></li>
+                    <li><a href="#" class="hover:underline">X</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-semibold mb-3">Customer Service</h3>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:underline">Payment</a></li>
+                    <li><a href="#" class="hover:underline">Shipping</a></li>
+                    <li><a href="#" class="hover:underline">Returns</a></li>
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-8 text-sm text-gray-400">
+            © 2024 Luxy. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+    <script type="module" src="./detail.js"> </script>
+
+    <script>
         function displayFavorites() {
             const wishlistItemsContainer = document.getElementById("wishlist-items");
             let faviArray = localStorage.getItem("favi");
@@ -252,17 +240,27 @@
                             row.className = "border-b";
                             row.innerHTML = `
                                 <td class="py-3 px-5 flex items-center space-x-4">
-                                    <img src="${item.imageUrl}" alt="${item.name}" class="w-12 h-12 object-cover rounded-md">
-                                    <span>${item.name}</span>
+                                    <img src="/${item.img}" alt="${item.title}" class="w-12 h-12 object-cover rounded-md">
+                                    <span>${item.title}</span>
                                 </td>
                                 <td class="py-3 px-5">${item.price}</td>
                                 <td class="py-3 px-5 flex items-center space-x-2 ${item.stock ? 'text-green-600' : 'text-red-500'}">
                                     <span>${item.stock ? 'In stock' : 'Out of stock'}</span>
-                                    <button class="bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200">${item.stock ? 'Add to cart' : 'Out of stock'}</button>
+                                    <button class="remove-button bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200" data-id="${id}">Remove</button>
                                 </td>
                             `;
                             wishlistItemsContainer.appendChild(row);
                         }
+                    });
+
+                    const removeButtons = document.querySelectorAll('.remove-button');
+                    removeButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            const idToRemove = this.getAttribute('data-id');
+                            faviArray = faviArray.filter(id => id !== idToRemove);
+                            localStorage.setItem("favi", JSON.stringify(faviArray));
+                            displayFavorites();
+                        });
                     });
                 })
                 .catch(error => {
@@ -272,6 +270,7 @@
 
         document.addEventListener("DOMContentLoaded", displayFavorites);
     </script>
+
 </body>
 
 </html>
