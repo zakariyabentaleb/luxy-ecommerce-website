@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist Page</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2">
+            <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+                <p>luxy.contact@gmail.com</p>
+                <p>+212 6204016405</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center">
+                <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+                <p class="text-[10px] font-light lg:font-semibold lg:text-xl">in your first order</p>
+            </div>
+            <div class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs">
+                <p><a href="./login.html">Login</a></p>
+            </div>
+        </div>
+
+        <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+            <div class="max-w-6xl w-full flex justify-between">
+                <div class="flex items-center">
+                    <div class="menu | sm:hidden h-fit cursor-pointer" id="menu" data-collapse-toggle="navbar-default">
+                        <img width="35" height="20" src="../assets/icons/menu.svg" alt="" />
+                    </div>
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="../assets/images/logo.png" alt="luxy logo" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="right-links flex gap-3 justify-center items-center">
+                    <div class="favorite h-fit">
+                        <img src="../assets/icons/heart.svg" alt="" />
+                    </div>
+                    <div class="cart h-fit" id="card-btn">
+                        <img src="../assets/icons/shopping-cart.svg" alt="" />
+                    </div>
+                    <div class="user h-fit relative">
+                        <img src="../assets/icons/user.svg" alt="" />
+                        <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Wishlist Section -->
+    <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
+        <div class="text-center">
+            <h1 class="text-4xl">Wish-List</h1>
+            <h2 class="text-2xl text-orange-500">Shop</h2>
+        </div>
+    </div>
+
+    <section class="wishlist-section my-8">
+        <nav class="flex space-x-6 justify-start ml-2 mb-4">
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Home</a>
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Shop</a>
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Wishlist</a>
+        </nav>
+
+        <div class="container mx-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <thead class="bg-gray-100 border-b">
+                    <tr>
+                        <th class="py-3 px-5 text-left text-gray-700">Product</th>
+                        <th class="py-3 px-5 text-left text-gray-700">Price</th>
+                        <th class="py-3 px-5 text-left text-gray-700">Stock Status</th>
+                    </tr>
+                </thead>
+                <tbody id="wishlist-items">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div>
+            <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4" />
+            <p class="text-sm">
+              Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+              augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
+              dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+            </p>
+            <p class="text-sm mt-4">
+              Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas
+              augue, eu vulputate magna eros eu erat. Aliquam erat vo.
+            </p>
+          </div>
+    
+          <div>
+            <h3 class="font-semibold mb-3">Pages</h3>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:underline">Products</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+              <li><a href="#" class="hover:underline">Our Story</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Login</a></li>
+              <li><a href="#" class="hover:underline">Register</a></li>
+            </ul>
+          </div>
+    
+          <div>
+            <h3 class="font-semibold mb-3">My Account</h3>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:underline">Login</a></li>
+              <li><a href="#" class="hover:underline">Sign up</a></li>
+              <li><a href="#" class="hover:underline">Wishlist</a></li>
+              <li><a href="#" class="hover:underline">View Cart</a></li>
+              <li><a href="#" class="hover:underline">Help</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+    
+          <!-- Social Media Links -->
+          <div>
+            <h3 class="font-semibold mb-3">Social Media</h3>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:underline">Instagram</a></li>
+              <li><a href="#" class="hover:underline">Facebook</a></li>
+              <li><a href="#" class="hover:underline">TikTok</a></li>
+              <li><a href="#" class="hover:underline">X</a></li>
+            </ul>
+          </div>
+    
+          <div>
+            <h3 class="font-semibold mb-3">Customer Service</h3>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:underline">Payment</a></li>
+              <li><a href="#" class="hover:underline">Shipping</a></li>
+              <li><a href="#" class="hover:underline">Returns</a></li>
+              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+              <li>
+                <a href="#" class="hover:underline">Terms and Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="text-center mt-8 text-sm text-gray-400">
+          © 2024 Luxy. All Rights Reserved.
+        </div>
+      </footer>
+      <script src="../assets/js/app.js"></script>
+    <script>
+        function displayFavorites() {
+            const wishlistItemsContainer = document.getElementById("wishlist-items");
+            let faviArray = localStorage.getItem("favi");
+
+            if (faviArray == null || faviArray === "") {
+                faviArray = [];
+            } else {
+                faviArray = JSON.parse(faviArray);
+            }
+
+            fetch("http://localhost:3000/products")
+                .then(response => response.json())
+                .then(products => {
+                    wishlistItemsContainer.innerHTML = "";
+                    faviArray.forEach(id => {
+                        const item = products.find(product => product.id === id);
+                        if (item) {
+                            const row = document.createElement("tr");
+                            row.className = "border-b";
+                            row.innerHTML = `
+                                <td class="py-3 px-5 flex items-center space-x-4">
+                                    <img src="${item.imageUrl}" alt="${item.name}" class="w-12 h-12 object-cover rounded-md">
+                                    <span>${item.name}</span>
+                                </td>
+                                <td class="py-3 px-5">${item.price}</td>
+                                <td class="py-3 px-5 flex items-center space-x-2 ${item.stock ? 'text-green-600' : 'text-red-500'}">
+                                    <span>${item.stock ? 'In stock' : 'Out of stock'}</span>
+                                    <button class="bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200">${item.stock ? 'Add to cart' : 'Out of stock'}</button>
+                                </td>
+                            `;
+                            wishlistItemsContainer.appendChild(row);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching products:", error);
+                });
+        }
+
+        document.addEventListener("DOMContentLoaded", displayFavorites);
+    </script>
+</body>
+
+</html>
