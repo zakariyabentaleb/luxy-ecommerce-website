@@ -1,3 +1,7 @@
+
+
+
+
 import { addToPanie, addToFavi } from "../assets/js/models/functions";
 
 const title = document.getElementById("title");
@@ -22,15 +26,33 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartItemCount();
 updateCartDisplay();
 
+
+
+
+// Overlay creation
+const overlay = document.createElement("div");
+overlay.id = "overlay";
+overlay.className = "fixed inset-0 bg-black bg-opacity-50 hidden z-[999]";
+document.body.appendChild(overlay);
+
+// Open cart and show overlay
 cartIcon.addEventListener("click", () => {
   document.body.classList.toggle("showCart");
-  console.log("Cart icon clicked; toggle class showCart");
+  document.querySelector(".cartTab").style.right = document.body.classList.contains("showCart") ? "0" : "-400px";
+  overlay.classList.toggle("hidden", !document.body.classList.contains("showCart"));
+  console.log("Cart icon clicked; toggle cart visibility and overlay");
 });
 
-closeCartBtn.addEventListener("click", () => {
+// Close cart when clicking close button or overlay
+closeCartBtn.addEventListener("click", closeCart);
+overlay.addEventListener("click", closeCart);
+
+function closeCart() {
   document.body.classList.remove("showCart");
+  document.querySelector(".cartTab").style.right = "-400px";
+  overlay.classList.add("hidden");
   console.log("Cart modal closed.");
-});
+}
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
@@ -89,6 +111,7 @@ function showSuggestion(products) {
           <h1 class="font-semibold">${product.title}</h1>
           <h2 class="text-yellow-500">$${product.price}</h2>
         </a>
+        <hr>
       </div>
     `;
     })

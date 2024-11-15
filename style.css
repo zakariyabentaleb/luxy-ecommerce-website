@@ -1,22 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.listCart .item:nth-child(even){
+.listCart .item:nth-child(even) {
     background-color: black;
 }
-
-body.showCart .cartTab{
-    inset: 0 0 0 auto;
-}
 body.showCart {
-    transform: translate(-250px)
+    overflow: hidden; 
 }
-
-.cartTab{
-    transition: .5s;
+.cartTab {
+    position: fixed;
+    top: 0;
+    right: -400px; 
+    bottom: 0;
+    width: 400px;
+    background-color: #2d3748; 
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
 }
-.container{
-    transition: .5s;
+body.showCart .cartTab {
+    right: 0; 
+}
+.container {
+    transition: 0.5s;
 }
