@@ -1,22 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.listCart .item:nth-child(even){
+.listCart .item:nth-child(even) {
     background-color: black;
 }
-
-body.showCart .cartTab{
-    inset: 0 0 0 auto;
-}
 body.showCart {
-    transform: translate(-250px)
+    overflow: hidden; 
 }
+.cartTab {
+    position: fixed;
+    top: 0;
+    right: -400px; 
+    bottom: 0;
+    width: 400px;
+    background-color: #2d3748; 
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+body.showCart .cartTab {
+    right: 0; 
+}
+.container {
+    transition: 0.3s;
+}
+.cart-item {
+    border: 1px solid #ccc;        
+    border-radius: 8px;            
+    padding: 10px;                
+    background-color: #f9f9f9;     
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px;           
+  }
 
-.cartTab{
-    transition: .5s;
-}
-.container{
-    transition: .5s;
-}
+  .cart-item:hover {
+    border-color: #888;           
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease;    
+  }
+  
