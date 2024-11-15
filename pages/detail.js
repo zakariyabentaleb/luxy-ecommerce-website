@@ -16,12 +16,11 @@ const cartIcon = document.getElementById("card-btn");
 const closeCartBtn = document.querySelector(".close");
 const cartList = document.querySelector(".ListCart");
 const cartTotal = document.querySelector(".cartTotal");
-const cartItemCount = document.querySelector(".icon-cart span"); 
+const cartItemCount = document.querySelector(".icon-cart span");
 
-
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartItemCount();
-
+updateCartDisplay();
 
 cartIcon.addEventListener("click", () => {
   document.body.classList.toggle("showCart");
@@ -32,7 +31,6 @@ closeCartBtn.addEventListener("click", () => {
   document.body.classList.remove("showCart");
   console.log("Cart modal closed.");
 });
-
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
@@ -55,7 +53,6 @@ if (productId === null) {
     });
 }
 
-
 function uploadProduct(product) {
   document.getElementById("loading").classList.add("hidden");
   title.textContent = product.title;
@@ -64,12 +61,9 @@ function uploadProduct(product) {
   category.textContent = product.category;
   img.src = `../${product.img}`;
 
-  
   panieBtn.addEventListener("click", () => addToCart(product));
-  
   heartBtn.addEventListener("click", () => addToFavi(product.id));
 }
-
 
 function showNotFoundPage() {
   notfound.classList.add("flex");
@@ -77,14 +71,12 @@ function showNotFoundPage() {
   page.classList.add("hidden");
 }
 
-
 function handleSuggestion(category) {
   fetch(`http://localhost:3000/products?category=${category}&_limit=3`)
     .then((res) => res.json())
     .then(showSuggestion)
     .catch((e) => console.log("Error fetching suggestions:", e));
 }
-
 
 function showSuggestion(products) {
   const content = products
@@ -104,31 +96,24 @@ function showSuggestion(products) {
   suggestion.innerHTML = content;
 }
 
-
 function addToCart(product) {
   const existingCartItem = cart.find(item => item.id === product.id);
 
-  
   if (existingCartItem) {
     existingCartItem.quantity += 1;
   } else {
-    
     cart.push({ ...product, quantity: 1 });
   }
 
-  
   localStorage.setItem('cart', JSON.stringify(cart));
-
   updateCartItemCount();
   updateCartDisplay();
 }
-
 
 function updateCartItemCount() {
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
   cartItemCount.textContent = totalItems > 0 ? totalItems : '';
 }
-
 
 function updateCartDisplay() {
   cartList.innerHTML = ''; 
@@ -151,7 +136,6 @@ function updateCartDisplay() {
     `;
     cartList.appendChild(cartItem);
 
-    
     cartItem.querySelector(".plus").addEventListener("click", () => updateQuantity(cartItem, 1, item.price));
     cartItem.querySelector(".minus").addEventListener("click", () => updateQuantity(cartItem, -1, item.price));
   });
@@ -159,40 +143,31 @@ function updateCartDisplay() {
   updateCartTotal();
 }
 
-
 function updateQuantity(cartItem, change, productPrice) {
   const quantityElem = cartItem.querySelector(".quantity .count");
   let quantity = parseInt(quantityElem.textContent) + change;
-  
+
   if (quantity < 1) {
-   
     const cartItemId = cartItem.getAttribute("data-id");
-    cart = cart.filter(item => item.id !== cartItemId);
+    cart = cart.filter(item => item.id != cartItemId);
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    cartItem.remove(); 
-    updateCartItemCount(); 
-    updateCartTotal(); 
+    cartItem.remove();
+    updateCartItemCount();
+    updateCartTotal();
   } else {
     quantityElem.textContent = quantity;
+    cartItem.querySelector(".totalPrice").textContent = `$${(productPrice * quantity).toFixed(2)}`;
 
-    const totalPriceElem = cartItem.querySelector(".totalPrice");
-    totalPriceElem.textContent = `$${(productPrice * quantity).toFixed(2)}`;
-
-    
     const cartItemId = cartItem.getAttribute("data-id");
-    const cartItemIndex = cart.findIndex(item => item.id === cartItemId);
+    const cartItemIndex = cart.findIndex(item => item.id == cartItemId);
     cart[cartItemIndex].quantity = quantity;
 
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    updateCartItemCount(); 
-    updateCartTotal(); 
+    updateCartItemCount();
+    updateCartTotal();
   }
 }
-
-
-
 
 function updateCartTotal() {
   const cartItems = cartList.querySelectorAll(".cart-item");

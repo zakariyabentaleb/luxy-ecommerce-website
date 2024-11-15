@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans">
+    <header>
+      <div
+        class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+      >
+        <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+          <p>luxy.contact@gmail.com</p>
+          <p>+212 6204016405</p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+        >
+          <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+          <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+            in your first order
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+        >
+          <p>
+            <a href="./login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------>
+     <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+        <div class="max-w-6xl w-full flex justify-between">
+          <div class="flex items-center">
+            <div
+              class="menu | sm:hidden h-fit cursor-pointer"
+              id="menu"
+              data-collapse-toggle="navbar-default"
+            >
+              <img
+                width="35"
+                height="20"
+                src="../assets/icons/menu.svg"
+                alt=""
+              />
+            </div>
+            <!-- fisrt child  -->
+            <div class="logo |">
+              <a href="../">
+                <img src="../assets/images/logo.png" alt="luxy logo" />
+              </a>
+            </div>
+          </div>
+
+          
+          <!-- fisrt child  -->
+          <div class="nav-links flex items-center font-[lato] font-bold">
+            <ul
+              id="left-links"
+              class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+            >
+              <!-- products  -->
+              <li class="flex justify-center">
+                <span class="flex items-center gap-1">
+                  <a href="./products.html">Products</a>
+                  <img src="../assets/icons/down.svg" alt=""
+                /></span>
+                <ul class="hidden">
+                  <li>T-shirts</li>
+                  <li>shirts</li>
+                  <li>Shoes</li>
+                </ul>
+              </li>
+              <li>
+                <a href="./about.html">Our Story</a>
+              </li>
+              <li>
+                <a href="./blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- fisrt child  -->
+          <div class="right-links flex gap-3 justify-center items-center">
+            <div class="favorite h-fit">
+              <a href="./faviris.html">
+
+                <img src="../assets/icons/heart.svg" alt="" />
+              </a>
+            </div>
+            <div class="user h-fit relative">
+              <img src="../assets/icons/user.svg" alt="" />
+              <span
+                class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                >user</span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
+        <div class="text-center">
+            <h1 class="text-4xl">Shopping List</h1>
+            <h2 class="text-2xl text-orange-500">Checkout</h2>
+        </div>
+    </div> 
+    <div class="grid grid-rows-1 grid-cols-[113px_repeat(4,1fr)] text-center items-center mt-6">
+      <div class="col-start-3 col-end-4  ">
+        <h1>Price</h1
+          ></div>
+        <div>
+        <h1>Quantity</h1>
+      </div>
+      
+    </div>
+    <div class="shopping-cart">
+      <hr>
+        <div class="cart-items" id="shopping-cart-items"></div>
+        <div class="cart-summary mt-5" >
+          <hr>
+          <p class="flex justify-end mr-[70px]">Total: <span id="shopping-cart-total">$0.00</span></p>
+        </div>
+      </div>
+
+
+      <!-- Footer Section -->
+  <footer class="bg-black text-white py-12 mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+      <!-- Brand and Description -->
+      <div>
+        <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4">
+        <p class="text-sm">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat.
+          Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+        </p>
+        <p class="text-sm mt-4">
+          Praesent dapibus, neque id cursus ullamcorper, tortor neque egestas augue, eu vulputate magna eros eu erat.
+          Aliquam erat vo.
+        </p>
+      </div>
+
+      <!-- Pages Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Pages</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover:underline">Our Story</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- My Account Links -->
+      <div>
+        <h3 class="font-semibold mb-3">My Account</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Login</a></li>
+          <li><a href="#" class="hover:underline">Sign up</a></li>
+          <li><a href="#" class="hover:underline">Wishlist</a></li>
+          <li><a href="#" class="hover:underline">View Cart</a></li>
+          <li><a href="#" class="hover:underline">Help</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Social Media</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">TikTok</a></li>
+          <li><a href="#" class="hover:underline">X</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service Links -->
+      <div>
+        <h3 class="font-semibold mb-3">Customer Service</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">Payment</a></li>
+          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover:underline">Returns</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center mt-8 text-sm text-gray-400">
+      © 2024 Luxy. All Rights Reserved.
+    </div>
+  </footer>
+  <script src="shopping.js" ></script>
+  <script src="detail.js"></script>
+  </body>
