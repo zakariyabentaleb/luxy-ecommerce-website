@@ -143,19 +143,20 @@ function updateCartDisplay() {
 
   cart.forEach(item => {
     const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item", "grid", "grid-cols-[70px_150px_50px_1fr]", "gap-[10px]", "text-center", "items-center");
+    cartItem.classList.add("cart-item", "grid", "grid-cols-[70px_150px_50px_1fr]", "gap-[10px]", "text-center", "items-center", "border-bold");
     cartItem.setAttribute("data-id", item.id);
     cartItem.innerHTML = `
       <div class="image">
         <img src="../${item.img}" alt="${item.title}" class="w-full">
       </div>
-      <div class="name">${item.title}</div>
+      <div class="name text-black">${item.title}</div>
       <div class="totalPrice">$${item.price}</div>
       <div class="quantity">
-        <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">-</span>
+        <span class="minus inline-block w-[20px] h-[20px] bg-white text-black border rounded-full cursor-pointer">-</span>
         <span class="count">${item.quantity}</span>
-        <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">+</span>
+        <span class="plus inline-block w-[20px] h-[20px] bg-white text-black border rounded-full cursor-pointer">+</span>
       </div>
+      
     `;
     cartList.appendChild(cartItem);
 
