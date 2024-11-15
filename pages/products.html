@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login Form in Tailwind CSS</title>
   <link rel="stylesheet" href="../style.css" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+  rel="stylesheet"
+/>
 </head>
 
 
 <body>
+ 
   <header>
-    <!-- sub nav section  -->
     <div
       class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
     >
@@ -36,8 +40,7 @@
     </div>
 
     <!------------------------------>
-    <!-- nav section  -->
-    <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+   <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
       <div class="max-w-6xl w-full flex justify-between">
         <div class="flex items-center">
           <div
@@ -54,18 +57,13 @@
           </div>
           <!-- fisrt child  -->
           <div class="logo |">
-            <a href="./index.html">
+            <a href="../">
               <img src="../assets/images/logo.png" alt="luxy logo" />
             </a>
           </div>
         </div>
 
-        <div
-          id="cards"
-          class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
-        >
-          cards
-        </div>
+        
         <!-- fisrt child  -->
         <div class="nav-links flex items-center font-[lato] font-bold">
           <ul
@@ -75,7 +73,7 @@
             <!-- products  -->
             <li class="flex justify-center">
               <span class="flex items-center gap-1">
-                <a href="">Products</a>
+                <a href="./products.html">Products</a>
                 <img src="../assets/icons/down.svg" alt=""
               /></span>
               <ul class="hidden">
@@ -85,20 +83,23 @@
               </ul>
             </li>
             <li>
-              <a href="#">Our Story</a>
+              <a href="./about.html">Our Story</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="./blog.html">Blog</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="./contact.html">Contact</a>
             </li>
           </ul>
         </div>
         <!-- fisrt child  -->
         <div class="right-links flex gap-3 justify-center items-center">
           <div class="favorite h-fit">
-            <img src="../assets/icons/heart.svg" alt="" />
+            <a href="./whishlist.html">
+
+              <img src="../assets/icons/heart.svg" alt="" />
+            </a>
           </div>
           <div class="cart h-fit relative icon-cart" id="card-btn">
             <img src="../assets/icons/shopping-cart.svg" alt="" />
@@ -108,8 +109,8 @@
             <img src="../assets/icons/user.svg" alt="" />
             <span
               class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-              >user</span
-            >
+              id="username-span"
+              >guest</span>
           </div>
         </div>
       </div>
@@ -273,6 +274,9 @@
     © 2024 Luxy. All Rights Reserved.
   </div>
 </footer>
+
+<script src="../assets/js/app.js"></script>
+<script type="module" src="./detail.js"></script>
 <script>
 let page = 3;  // Set initial page number
 const baseUrl = 'http://localhost:3000/products?_page='; 

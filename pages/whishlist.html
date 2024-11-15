@@ -30,31 +30,80 @@
 
         <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
             <div class="max-w-6xl w-full flex justify-between">
-                <div class="flex items-center">
-                    <div class="menu | sm:hidden h-fit cursor-pointer" id="menu" data-collapse-toggle="navbar-default">
-                        <img width="35" height="20" src="../assets/icons/menu.svg" alt="" />
-                    </div>
-                    <div class="logo">
-                        <a href="./index.html">
-                            <img src="../assets/images/logo.png" alt="luxy logo" />
-                        </a>
-                    </div>
+              <div class="flex items-center">
+                <div
+                  class="menu | sm:hidden h-fit cursor-pointer"
+                  id="menu"
+                  data-collapse-toggle="navbar-default"
+                >
+                  <img
+                    width="35"
+                    height="20"
+                    src="../assets/icons/menu.svg"
+                    alt=""
+                  />
                 </div>
-
-                <div class="right-links flex gap-3 justify-center items-center">
-                    <div class="favorite h-fit">
-                        <img src="../assets/icons/heart.svg" alt="" />
-                    </div>
-                    <div class="cart h-fit" id="card-btn">
-                        <img src="../assets/icons/shopping-cart.svg" alt="" />
-                    </div>
-                    <div class="user h-fit relative">
-                        <img src="../assets/icons/user.svg" alt="" />
-                        <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
-                    </div>
+                <!-- fisrt child  -->
+                <div class="logo |">
+                  <a href="../">
+                    <img src="../assets/images/logo.png" alt="luxy logo" />
+                  </a>
                 </div>
+              </div>
+      
+              
+              <!-- fisrt child  -->
+              <div class="nav-links flex items-center font-[lato] font-bold">
+                <ul
+                  id="left-links"
+                  class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+                >
+                  <!-- products  -->
+                  <li class="flex justify-center">
+                    <span class="flex items-center gap-1">
+                      <a href="./products.html">Products</a>
+                      <img src="../assets/icons/down.svg" alt=""
+                    /></span>
+                    <ul class="hidden">
+                      <li>T-shirts</li>
+                      <li>shirts</li>
+                      <li>Shoes</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="./about.html">Our Story</a>
+                  </li>
+                  <li>
+                    <a href="./blog.html">Blog</a>
+                  </li>
+                  <li>
+                    <a href="./contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- fisrt child  -->
+              <div class="right-links flex gap-3 justify-center items-center">
+                <div class="favorite h-fit">
+                  <a href="./whishlist.html">
+      
+                    <img src="../assets/icons/heart.svg" alt="" />
+                  </a>
+                </div>
+                <div class="cart h-fit relative icon-cart" id="card-btn">
+                  <img src="../assets/icons/shopping-cart.svg" alt="" />
+                  <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
+                </div>
+                <div class="user h-fit relative">
+                  <img src="../assets/icons/user.svg" alt="" />
+                  <span
+                    class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                    id="username-span"
+                    >guest</span
+                  >
+                </div>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
 
     <!-- Wishlist Section -->
@@ -156,8 +205,11 @@
           © 2024 Luxy. All Rights Reserved.
         </div>
       </footer>
+
       <script src="../assets/js/app.js"></script>
-    <script>
+      <script type="module" src="./detail.js"> </script>
+      
+          <script>
         function displayFavorites() {
             const wishlistItemsContainer = document.getElementById("wishlist-items");
             let faviArray = localStorage.getItem("favi");
