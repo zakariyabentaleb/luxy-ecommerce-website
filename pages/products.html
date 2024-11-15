@@ -143,9 +143,9 @@
 </section>
 <section class="flex justify-center mt-12 gap-6  ">
   <div class="flex justify-center gap-4   ">
-    <h2 class="mt-2">Categories</h2>
-    <select id="cat" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <option selected>Choose</option>
+    <h2 class="mt-2 bg-white">Categories</h2>
+    <select id="cat" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+      <option selected class="">Choose</option>
       <option value="Jeans">Jeans</option>
       <option value="T-shirt">T-shirt</option>
       <option value="Hoodie">Hoodie</option>
@@ -185,21 +185,17 @@
 <section class="flex justify-center">
 <nav >
   <ul class="inline-flex -space-x-px text-sm">
+    
     <li>
-      <a href="?page=1" data-page="1"  class=" page-link flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+      <a href="?page=1" data-page="1"  aria-current="page" class=" page-link flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700   dark:text-gray-400  dark:hover:text-white">1</a>
     </li>
     <li>
-      <a href="?page=1" data-page="1"  aria-current="page" class=" page-link flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">1</a>
+      <a  href="?page=2" data-page="2"  class=" page-link flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700   dark:text-gray-400  dark:hover:text-white">2</a>
     </li>
     <li>
-      <a  href="?page=2" data-page="2"   class=" page-link flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+      <a href="?page=3"  data-page="3" class=" page-link flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700   dark:text-gray-400  dark:hover:text-white">3</a>
     </li>
-    <li>
-      <a href="?page=3"  data-page="3" class=" page-link flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
-    </li>
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-    </li>
+   
   </ul>
 </nav>
 </section>
