@@ -21,112 +21,114 @@
     }
   </style>
 <body>
-    <header>
-        <!-- sub nav section  -->
-        <div
-          class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
-        >
-          <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
-            <p>luxy.contact@gmail.com</p>
-            <p>+212 6204016405</p>
-          </div>
+  <header>
+    <div
+      class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
+    >
+      <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
+        <p>luxy.contact@gmail.com</p>
+        <p>+212 6204016405</p>
+      </div>
+      <div
+        class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+      >
+        <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
+        <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
+          in your first order
+        </p>
+      </div>
+      <div
+        class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
+      >
+        <p>
+          <a href="./login.html">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <!------------------------------>
+   <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
+      <div class="max-w-6xl w-full flex justify-between">
+        <div class="flex items-center">
           <div
-            class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center"
+            class="menu | sm:hidden h-fit cursor-pointer"
+            id="menu"
+            data-collapse-toggle="navbar-default"
           >
-            <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
-            <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
-              in your first order
-            </p>
+            <img
+              width="35"
+              height="20"
+              src="../assets/icons/menu.svg"
+              alt=""
+            />
           </div>
-          <div
-            class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs"
-          >
-            <p>
-              <a href="../pages/login.html">Login</a>
-            </p>
+          <!-- fisrt child  -->
+          <div class="logo |">
+            <a href="../">
+              <img src="../assets/images/logo.png" alt="luxy logo" />
+            </a>
           </div>
         </div>
-  
-        <!------------------------------>
-        <!-- nav section  -->
-        <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
-          <div class="max-w-6xl w-full flex justify-between">
-            <div class="flex items-center">
-              <div
-                class="menu | sm:hidden h-fit cursor-pointer"
-                id="menu"
-                data-collapse-toggle="navbar-default"
-              >
-                <img
-                  width="35"
-                  height="20"
-                  src="../assets/icons/menu.svg"
-                  alt=""
-                />
-              </div>
-              <!-- fisrt child  -->
-              <div class="logo |">
-                <a href="../index.html">
-                  <img src="../assets/images/logo.png" alt="luxy logo" />
-                </a>
-              </div>
-            </div>
-  
-            <div
-              id="cards"
-              class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden"
-            >
-              cards
-            </div>
-            <!-- fisrt child  -->
-            <div class="nav-links flex items-center font-[lato] font-bold">
-              <ul
-                id="left-links"
-                class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
-              >
-                <!-- products  -->
-                <li class="flex justify-center">
-                  <span class="flex items-center gap-1">
-                    <a href="">Products</a>
-                    <img src="../assets/icons/down.svg" alt=""
-                  /></span>
-                  <ul class="hidden">
-                    <li>T-shirts</li>
-                    <li>shirts</li>
-                    <li>Shoes</li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Our Story</a>
-                </li>
-                <li>
-                  <a href="./pages/Blog.html">Blog</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
+
+        
+        <!-- fisrt child  -->
+        <div class="nav-links flex items-center font-[lato] font-bold">
+          <ul
+            id="left-links"
+            class="absolute top-[130px] left-[-800px] sm:relative sm:top-0 sm:left-0 bg-slate-200 text-center py-9 flex flex-col sm:bg-transparent sm:py-0 sm:flex-row gap-4 w-3/4 sm:w-full rounded-lg duration-300"
+          >
+            <!-- products  -->
+            <li class="flex justify-center">
+              <span class="flex items-center gap-1">
+                <a href="./products.html">Products</a>
+                <img src="../assets/icons/down.svg" alt=""
+              /></span>
+              <ul class="hidden">
+                <li>T-shirts</li>
+                <li>shirts</li>
+                <li>Shoes</li>
               </ul>
-            </div>
-            <!-- fisrt child  -->
-            <div class="right-links flex gap-3 justify-center items-center">
-              <div class="favorite h-fit">
-                <img src="../assets/icons/heart.svg" alt="" />
-              </div>
-              <div class="cart h-fit relative icon-cart" id="card-btn">
-                <img src="../assets/icons/shopping-cart.svg" alt="" />
-                <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
-              </div>
-              <div class="user h-fit relative">
-                <img src="../assets/icons/user.svg" alt="" />
-                <span
-                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-                  >user</span
-                >
-              </div>
-            </div>
+            </li>
+            <li>
+              <a href="./about.html">Our Story</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- fisrt child  -->
+        <div class="right-links flex gap-3 justify-center items-center">
+          <div class="favorite h-fit">
+            <a href="./whishlist.html">
+
+              <img src="../assets/icons/heart.svg" alt="" />
+            </a>
           </div>
-        </nav>
-      </header>
+
+
+          <div class="cart h-fit relative icon-cart" id="card-btn">
+            <img src="../assets/icons/shopping-cart.svg" alt="" />
+            <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
+          </div>
+
+          
+
+          <div class="user h-fit relative">
+            <img src="../assets/icons/user.svg" alt="" />
+            <span
+              class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+              id="username-span"
+                >guest</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
       <section class="cartTab w-[400px] bg-slate-700 text-white fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_70px] z-[1000] transition-[0.5s]">
         <h1 class="p-[20px] m-0 font-light">Shopping Cart</h1>
@@ -647,6 +649,9 @@
     </div>
   </footer>
   
+  <script src="../assets/js/app.js"></script>
+  <script type="module" src="./detail.js"></script>
+
  
 
 </body>
