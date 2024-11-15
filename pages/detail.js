@@ -151,7 +151,7 @@ function updateCartDisplay() {
       </div>
       <div class="name text-black">${item.title}</div>
       <div class="totalPrice">$${item.price}</div>
-      <div class="quantity">
+      <div class="quantity flex flex-row">
         <span class="minus inline-block w-[20px] h-[20px] bg-white text-black border rounded-full cursor-pointer">-</span>
         <span class="count">${item.quantity}</span>
         <span class="plus inline-block w-[20px] h-[20px] bg-white text-black border rounded-full cursor-pointer">+</span>
