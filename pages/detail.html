@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>Detail || LUXY</title>
     <link rel="stylesheet" href="../style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -11,6 +11,9 @@
     />
   </head>
   <body class="font-sans">
+
+
+
     <header>
       <div
         class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2"
@@ -93,7 +96,7 @@
           <!-- fisrt child  -->
           <div class="right-links flex gap-3 justify-center items-center">
             <div class="favorite h-fit">
-              <a href="./faviris.html">
+              <a href="./whishlist.html">
 
                 <img src="../assets/icons/heart.svg" alt="" />
               </a>
@@ -106,8 +109,8 @@
               <img src="../assets/icons/user.svg" alt="" />
               <span
                 class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-                >user</span
-              >
+                id="username-span"
+                >guest</span              >
             </div>
           </div>
         </div>
@@ -121,7 +124,7 @@
       <div class="cartTotal text-center font-semibold">Total: $0.00</div>
       <div class="btn bg-yellow-300 border-none font-medium cursor-pointer grid grid-cols-[repeat(2,1fr)]">
         <button class="close bg-white text-black">CLOSE</button>
-        <button class="Checkout">CHECK OUT</button>
+        <button class="Checkout"> <a href="ShoppingCard.html">CHECK OUT</a></button>
       </div>
     </section>
     
@@ -143,7 +146,7 @@
                  Try searching again, or return home to start from the beginning.
              </p>
 
-             <a href="../index.html"
+             <a href="../"
                  class="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring">
                  Go Back Home
              </a>
@@ -476,12 +479,11 @@
         <div>
           <h3 class="font-semibold mb-3">Pages</h3>
           <ul class="text-sm space-y-2">
-            <li><a href="#" class="hover:underline">Products</a></li>
-            <li><a href="#" class="hover:underline">Contact</a></li>
-            <li><a href="#" class="hover:underline">Our Story</a></li>
-            <li><a href="#" class="hover:underline">Blog</a></li>
-            <li><a href="#" class="hover:underline">Login</a></li>
-            <li><a href="#" class="hover:underline">Register</a></li>
+            <li><a href="./products.html" class="hover:underline">Products</a></li>
+            <li><a href="./contact.html" class="hover:underline">Contact</a></li>
+            <li><a href="./about.html" class="hover:underline">Our Story</a></li>
+            <li><a href="./blog.html" class="hover:underline">Blog</a></li>
+            <li><a href="./login.html" class="hover:underline">Login</a></li>
           </ul>
         </div>
 
@@ -526,7 +528,10 @@
         © 2024 Luxy. All Rights Reserved.
       </div>
     </footer>
-    <script src="../assets/js/app.js"></script>
-    <script type="module" src="./detail.js"></script>
+    <script>
+      
+    </script>
+  <script src="../assets/js/app.js"></script>
+  <script type="module" src="./detail.js"></script>
   </body>
 </html>
