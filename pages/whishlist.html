@@ -252,8 +252,8 @@
                             row.className = "border-b";
                             row.innerHTML = `
                                 <td class="py-3 px-5 flex items-center space-x-4">
-                                    <img src="${item.imageUrl}" alt="${item.name}" class="w-12 h-12 object-cover rounded-md">
-                                    <span>${item.name}</span>
+                                    <img src="/${item.img}" alt="${item.title}" class="w-12 h-12 object-cover rounded-md">
+                                    <span>${item.title}</span>
                                 </td>
                                 <td class="py-3 px-5">${item.price}</td>
                                 <td class="py-3 px-5 flex items-center space-x-2 ${item.stock ? 'text-green-600' : 'text-red-500'}">
