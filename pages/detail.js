@@ -1,3 +1,7 @@
+
+
+
+
 import { addToPanie, addToFavi } from "../assets/js/models/functions";
 
 const title = document.getElementById("title");
@@ -16,23 +20,39 @@ const cartIcon = document.getElementById("card-btn");
 const closeCartBtn = document.querySelector(".close");
 const cartList = document.querySelector(".ListCart");
 const cartTotal = document.querySelector(".cartTotal");
-const cartItemCount = document.querySelector(".icon-cart span"); 
+const cartItemCount = document.querySelector(".icon-cart span");
 
-
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 updateCartItemCount();
+updateCartDisplay();
 
 
+
+
+// Overlay creation
+const overlay = document.createElement("div");
+overlay.id = "overlay";
+overlay.className = "fixed inset-0 bg-black bg-opacity-50 hidden z-[999]";
+document.body.appendChild(overlay);
+
+// Open cart and show overlay
 cartIcon.addEventListener("click", () => {
   document.body.classList.toggle("showCart");
-  console.log("Cart icon clicked; toggle class showCart");
+  document.querySelector(".cartTab").style.right = document.body.classList.contains("showCart") ? "0" : "-400px";
+  overlay.classList.toggle("hidden", !document.body.classList.contains("showCart"));
+  console.log("Cart icon clicked; toggle cart visibility and overlay");
 });
 
-closeCartBtn.addEventListener("click", () => {
+// Close cart when clicking close button or overlay
+closeCartBtn.addEventListener("click", closeCart);
+overlay.addEventListener("click", closeCart);
+
+function closeCart() {
   document.body.classList.remove("showCart");
+  document.querySelector(".cartTab").style.right = "-400px";
+  overlay.classList.add("hidden");
   console.log("Cart modal closed.");
-});
-
+}
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
@@ -55,7 +75,6 @@ if (productId === null) {
     });
 }
 
-
 function uploadProduct(product) {
   document.getElementById("loading").classList.add("hidden");
   title.textContent = product.title;
@@ -64,12 +83,9 @@ function uploadProduct(product) {
   category.textContent = product.category;
   img.src = `../${product.img}`;
 
-  
   panieBtn.addEventListener("click", () => addToCart(product));
-  
   heartBtn.addEventListener("click", () => addToFavi(product.id));
 }
-
 
 function showNotFoundPage() {
   notfound.classList.add("flex");
@@ -77,14 +93,12 @@ function showNotFoundPage() {
   page.classList.add("hidden");
 }
 
-
 function handleSuggestion(category) {
   fetch(`http://localhost:3000/products?category=${category}&_limit=3`)
     .then((res) => res.json())
     .then(showSuggestion)
     .catch((e) => console.log("Error fetching suggestions:", e));
 }
-
 
 function showSuggestion(products) {
   const content = products
@@ -97,6 +111,7 @@ function showSuggestion(products) {
           <h1 class="font-semibold">${product.title}</h1>
           <h2 class="text-yellow-500">$${product.price}</h2>
         </a>
+        <hr>
       </div>
     `;
     })
@@ -104,54 +119,47 @@ function showSuggestion(products) {
   suggestion.innerHTML = content;
 }
 
-
 function addToCart(product) {
   const existingCartItem = cart.find(item => item.id === product.id);
 
-  
   if (existingCartItem) {
     existingCartItem.quantity += 1;
   } else {
-    
     cart.push({ ...product, quantity: 1 });
   }
 
-  
   localStorage.setItem('cart', JSON.stringify(cart));
-
   updateCartItemCount();
   updateCartDisplay();
 }
-
 
 function updateCartItemCount() {
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
   cartItemCount.textContent = totalItems > 0 ? totalItems : '';
 }
 
-
 function updateCartDisplay() {
   cartList.innerHTML = ''; 
 
   cart.forEach(item => {
     const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item", "grid", "grid-cols-[70px_150px_50px_1fr]", "gap-[10px]", "text-center", "items-center");
+    cartItem.classList.add("cart-item", "grid", "grid-cols-[70px_150px_50px_1fr]", "gap-[10px]", "text-center", "items-center", "border-bold");
     cartItem.setAttribute("data-id", item.id);
     cartItem.innerHTML = `
       <div class="image">
         <img src="../${item.img}" alt="${item.title}" class="w-full">
       </div>
-      <div class="name">${item.title}</div>
+      <div class="name text-black">${item.title}</div>
       <div class="totalPrice">$${item.price}</div>
-      <div class="quantity">
-        <span class="minus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">-</span>
+      <div class="quantity flex flex-row">
+        <span class="minus inline-block w-[20px] h-[20px] bg-white text-black border rounded-full cursor-pointer">-</span>
         <span class="count">${item.quantity}</span>
-        <span class="plus inline-block w-[20px] h-[25px] bg-white text-black border rounded-full cursor-pointer">+</span>
+        <span class="plus inline-block w-[20px] h-[20px] bg-white text-black border rounded-full cursor-pointer">+</span>
       </div>
+      
     `;
     cartList.appendChild(cartItem);
 
-    
     cartItem.querySelector(".plus").addEventListener("click", () => updateQuantity(cartItem, 1, item.price));
     cartItem.querySelector(".minus").addEventListener("click", () => updateQuantity(cartItem, -1, item.price));
   });
@@ -159,40 +167,31 @@ function updateCartDisplay() {
   updateCartTotal();
 }
 
-
 function updateQuantity(cartItem, change, productPrice) {
   const quantityElem = cartItem.querySelector(".quantity .count");
   let quantity = parseInt(quantityElem.textContent) + change;
-  
+
   if (quantity < 1) {
-   
     const cartItemId = cartItem.getAttribute("data-id");
-    cart = cart.filter(item => item.id !== cartItemId);
+    cart = cart.filter(item => item.id != cartItemId);
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    cartItem.remove(); 
-    updateCartItemCount(); 
-    updateCartTotal(); 
+    cartItem.remove();
+    updateCartItemCount();
+    updateCartTotal();
   } else {
     quantityElem.textContent = quantity;
+    cartItem.querySelector(".totalPrice").textContent = `$${(productPrice * quantity).toFixed(2)}`;
 
-    const totalPriceElem = cartItem.querySelector(".totalPrice");
-    totalPriceElem.textContent = `$${(productPrice * quantity).toFixed(2)}`;
-
-    
     const cartItemId = cartItem.getAttribute("data-id");
-    const cartItemIndex = cart.findIndex(item => item.id === cartItemId);
+    const cartItemIndex = cart.findIndex(item => item.id == cartItemId);
     cart[cartItemIndex].quantity = quantity;
 
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    updateCartItemCount(); 
-    updateCartTotal(); 
+    updateCartItemCount();
+    updateCartTotal();
   }
 }
-
-
-
 
 function updateCartTotal() {
   const cartItems = cartList.querySelectorAll(".cart-item");

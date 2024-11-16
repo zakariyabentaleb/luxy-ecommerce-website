@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title> Products ||  LUXY</title>
     <link rel="stylesheet" href="../style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -105,18 +105,19 @@
           <!-- fisrt child  -->
           <div class="right-links flex gap-3 justify-center items-center">
             <div class="favorite h-fit">
-              <img src="../assets/icons/heart.svg" alt="" />
+              <a href="./whishlist.html">              <img src="../assets/icons/heart.svg" alt="" />
+              </a>
             </div>
             <div class="cart h-fit relative icon-cart" id="card-btn">
               <img src="../assets/icons/shopping-cart.svg" alt="" />
-              <span id="setConteur" class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2"></span>
+              <span class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
             </div>
             <div class="user h-fit relative">
               <img src="../assets/icons/user.svg" alt="" />
               <span
                 class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
-                >user</span
-              >
+                id="username-span"
+                >guest</span>
             </div>
           </div>
         </div>
@@ -168,4 +169,6 @@
       </div>
     </div>
     <script src="../main.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script type="module" src="./detail.js"></script>
   </body>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Form in Tailwind CSS</title>
+    <title>Wishlist Page</title>
     <link rel="stylesheet" href="../style.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -12,8 +12,8 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <!-- sub nav section  -->
         <div class="flex justify-between items-center bg-black text-[#EBE7E7] text-[8px] lg:justify-between px-3 py-2">
             <div class="lg:flex w-1/3 lg:gap-2 lg:text-xs items-center">
                 <p>luxy.contact@gmail.com</p>
@@ -21,19 +21,13 @@
             </div>
             <div class="flex flex-col md:flex-row md:gap-1 md:justify-center items-center w-1/3 text-white text-center">
                 <h2 class="text-[12px] font-semibold md:text-xl">Promotion -20%</h2>
-                <p class="text-[10px] font-light lg:font-semibold lg:text-xl">
-                    in your first order
-                </p>
+                <p class="text-[10px] font-light lg:font-semibold lg:text-xl">in your first order</p>
             </div>
             <div class="flex w-1/3 float-right justify-end items-center text-center lg:text-xs">
-                <p>
-                    <a href="./login.html">Login</a>
-                </p>
+                <p><a href="./login.html">Login</a></p>
             </div>
         </div>
 
-        <!------------------------------>
-        <!-- nav section  -->
         <nav class="bg-white shadow-md flex justify-center p-3 overflow-hidden">
             <div class="max-w-6xl w-full flex justify-between">
                 <div class="flex items-center">
@@ -42,16 +36,13 @@
                     </div>
                     <!-- fisrt child  -->
                     <div class="logo |">
-                        <a href="./index.html">
+                        <a href="../">
                             <img src="../assets/images/logo.png" alt="luxy logo" />
                         </a>
                     </div>
                 </div>
 
-                <div id="cards"
-                    class="bg-slate-200 absolute top-[130px] right-5 py-8 w-0 rounded-lg duration-300 overflow-hidden">
-                    cards
-                </div>
+
                 <!-- fisrt child  -->
                 <div class="nav-links flex items-center font-[lato] font-bold">
                     <ul id="left-links"
@@ -59,7 +50,7 @@
                         <!-- products  -->
                         <li class="flex justify-center">
                             <span class="flex items-center gap-1">
-                                <a href="">Products</a>
+                                <a href="./products.html">Products</a>
                                 <img src="../assets/icons/down.svg" alt="" /></span>
                             <ul class="hidden">
                                 <li>T-shirts</li>
@@ -68,60 +59,95 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Our Story</a>
+                            <a href="./about.html">Our Story</a>
                         </li>
                         <li>
-                            <a href="#">Blog</a>
+                            <a href="./blog.html">Blog</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="./contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
                 <!-- fisrt child  -->
                 <div class="right-links flex gap-3 justify-center items-center">
                     <div class="favorite h-fit">
-                        <img src="../assets/icons/heart.svg" alt="" />
+                        <a href="./whishlist.html">
+
+                            <img src="../assets/icons/heart.svg" alt="" />
+                        </a>
                     </div>
-                    <div class="cart h-fit" id="card-btn">
+                    <div class="cart h-fit relative icon-cart" id="card-btn">
                         <img src="../assets/icons/shopping-cart.svg" alt="" />
+                        <span
+                            class="flex items-center justify-center w-[20px] h-[20px] bg-red-600 text-white rounded-full absolute right-[-10px] transform -translate-y-1/2">0</span>
                     </div>
                     <div class="user h-fit relative">
                         <img src="../assets/icons/user.svg" alt="" />
-                        <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2">user</span>
+                        <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 translate-y-1/2"
+                            id="username-span">guest</span>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="flex h-screen flex-col bg-white">
-        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
-            alt="" class="h-64 w-full object-cover" />
 
-        <div class="flex flex-1 items-center justify-center">
-            <div class="mx-auto max-w-xl px-4 py-8 text-center">
-                <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    We can't find that page.
-                </h1>
+    <div id="overlay" class="fixed inset-0 bg-whte bg-opacity-50 hidden z-[999] rounded"></div>
+    <section
+        class="cartTab bg-whte mt-[105px] w-[400px] fixed top-0 right-[-400px] bottom-0 left-auto grid grid-rows-[70px_1fr_80px] z-[1000] shadow-lg transition-all duration-500 rounded-sm ">
+        <h1 class="p-5 m-0 text-lg font-bold border-b bg-white  text-black">Shopping Cart</h1>
 
-                <p class="mt-4 text-gray-500">
-                    Try searching again, or return home to start from the beginning.
-                </p>
+        <div class="ListCart bg-white overflow-y-auto p-4 space-y-4"></div>
+        <!-- Cart items will be dynamically added here -->
 
-                <a href="#"
-                    class="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring">
-                    Go Back Home
-                </a>
-            </div>
+        <div
+            class="cartTotal flex items-center justify-between p-4 border-t border-gray-700 text-lg font-semibold bg-white">
+            <span>Total:</span>
+            <span class="">$114.98</span>
+        </div>
+
+        <div class="btn bg-gray-800 text-gray-100 font-medium cursor-pointer grid grid-cols-2 divide-x divide-gray-700">
+            <button class="close py-3 font-semibold hover:bg-gray-700 transition">Close</button>
+            <button class="Checkout py-3 font-semibold bg-yellow-500 hover:bg-yellow-400 transition">
+                <a href="ShoppingCard.html" class="block w-full h-full text-center">Checkout</a>
+            </button>
+        </div>
+    </section>
+    </div>
+    <!-- Wishlist Section -->
+    <div class="bg-[url('../assets/images/HeaderBlog.png')] bg-cover bg-center h-48 flex justify-center items-center">
+        <div class="text-center">
+            <h1 class="text-4xl">Wish-List</h1>
+            <h2 class="text-2xl text-orange-500">Shop</h2>
         </div>
     </div>
 
+    <section class="wishlist-section my-8">
+        <nav class="flex space-x-6 justify-start ml-2 mb-4">
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Home</a>
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Shop</a>
+            <a href="#" class="text-gray-800 hover:text-black lg:text-lg">Wishlist</a>
+        </nav>
 
+        <div class="container mx-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <thead class="bg-gray-100 border-b">
+                    <tr>
+                        <th class="py-3 px-5 text-left text-gray-700">Product</th>
+                        <th class="py-3 px-5 text-left text-gray-700">Price</th>
+                        <th class="py-3 px-5 text-left text-gray-700">Stock Status</th>
+                    </tr>
+                </thead>
+                <tbody id="wishlist-items">
+                </tbody>
+            </table>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer class="bg-black text-white py-12">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            <!-- Brand and Description -->
             <div>
                 <img src="../assets/images/1 2.png" alt="Luxy Logo" class="w-24 mb-4" />
                 <p class="text-sm">
@@ -135,7 +161,6 @@
                 </p>
             </div>
 
-            <!-- Pages Links -->
             <div>
                 <h3 class="font-semibold mb-3">Pages</h3>
                 <ul class="text-sm space-y-2">
@@ -148,7 +173,6 @@
                 </ul>
             </div>
 
-            <!-- My Account Links -->
             <div>
                 <h3 class="font-semibold mb-3">My Account</h3>
                 <ul class="text-sm space-y-2">
@@ -172,7 +196,6 @@
                 </ul>
             </div>
 
-            <!-- Customer Service Links -->
             <div>
                 <h3 class="font-semibold mb-3">Customer Service</h3>
                 <ul class="text-sm space-y-2">
@@ -187,10 +210,67 @@
             </div>
         </div>
 
-        <!-- Footer Bottom -->
         <div class="text-center mt-8 text-sm text-gray-400">
             © 2024 Luxy. All Rights Reserved.
         </div>
     </footer>
+
     <script src="../assets/js/app.js"></script>
+    <script type="module" src="./detail.js"> </script>
+
+    <script>
+        function displayFavorites() {
+            const wishlistItemsContainer = document.getElementById("wishlist-items");
+            let faviArray = localStorage.getItem("favi");
+
+            if (faviArray == null || faviArray === "") {
+                faviArray = [];
+            } else {
+                faviArray = JSON.parse(faviArray);
+            }
+
+            fetch("http://localhost:3000/products")
+                .then(response => response.json())
+                .then(products => {
+                    wishlistItemsContainer.innerHTML = "";
+                    faviArray.forEach(id => {
+                        const item = products.find(product => product.id === id);
+                        if (item) {
+                            const row = document.createElement("tr");
+                            row.className = "border-b";
+                            row.innerHTML = `
+                                <td class="py-3 px-5 flex items-center space-x-4">
+                                    <img src="/${item.img}" alt="${item.title}" class="w-12 h-12 object-cover rounded-md">
+                                    <span>${item.title}</span>
+                                </td>
+                                <td class="py-3 px-5">${item.price}</td>
+                                <td class="py-3 px-5 flex items-center space-x-2 ${item.stock ? 'text-green-600' : 'text-red-500'}">
+                                    <span>${item.stock ? 'In stock' : 'Out of stock'}</span>
+                                    <button class="remove-button bg-gray-100 text-xs text-gray-600 px-3 py-1 rounded hover:bg-gray-200" data-id="${id}">Remove</button>
+                                </td>
+                            `;
+                            wishlistItemsContainer.appendChild(row);
+                        }
+                    });
+
+                    const removeButtons = document.querySelectorAll('.remove-button');
+                    removeButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            const idToRemove = this.getAttribute('data-id');
+                            faviArray = faviArray.filter(id => id !== idToRemove);
+                            localStorage.setItem("favi", JSON.stringify(faviArray));
+                            displayFavorites();
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching products:", error);
+                });
+        }
+
+        document.addEventListener("DOMContentLoaded", displayFavorites);
+    </script>
+
 </body>
+
+</html>
