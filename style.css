@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .listCart .item:nth-child(even) {
     background-color: black;
 }
